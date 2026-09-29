@@ -339,15 +339,15 @@
 - **Organization:** Amazon (In-House Technical Training)
 - **Year:** 2023
 - **Delivered Courses:**
-  1. *Managing Data Science Experiments for Autonomous Systems*
-  2. *Code Style and Code Navigation*
-  3. *General Purpose GPU Programming (GPGPU)*
-  4. *How to Schedule and Manage Jobs on HPC Clusters (On-Premises and AWS Cloud)*
-  5. *Introduction to Git/GitHub and Git Best Practices for Software Developers*
-  6. *QA and Software Release Management for Managers*
-  7. *Setting up a Development Environment with Virtual Machines*
-  8. *Train the Trainer: Developing Text and Video Training for Hybrid Workplaces*
-  9. *IOTA Documentation – Version 1.0* ([docs.iota.org](https://docs.iota.org))
+  - *Managing Data Science Experiments for Autonomous Systems*
+  - *Code Style and Code Navigation*
+  - *General Purpose GPU Programming (GPGPU)*
+  - *How to Schedule and Manage Jobs on HPC Clusters (On-Premises and AWS Cloud)*
+  - *Introduction to Git/GitHub and Git Best Practices for Software Developers*
+  - *QA and Software Release Management for Managers*
+  - *Setting up a Development Environment with Virtual Machines*
+  - *Train the Trainer: Developing Text and Video Training for Hybrid Workplaces*
+  - *IOTA Documentation – Version 1.0* ([docs.iota.org](https://docs.iota.org))
 
 ## Technical Reports – Research & Aerospace
 
