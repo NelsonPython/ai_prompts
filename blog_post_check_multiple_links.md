@@ -6,7 +6,7 @@
 
 Part 1, [Can AI uncover broken links in your website?](blog_post_curl_check_links.md) introduced using AI Prompts to help automate checking for broken links.  This article follows up with AI guidance on understanding HTTP status codes.
 
-In my [Portfolio](https://github.com/NelsonPython/publications) there are 212 links.  The following Python function is part of a script that verified 179 links, but was not able to fully access 33 links.
+In my [Portfolio](https://github.com/NelsonPython/publications) there are 212 links.  The following Python function is part of a script that verified 179 links, but was not able to fully access 33 links.  Some link checks resulted in HTTP 403 and others in HTTP 405.
 
 ```
 def check_link_with_curl(url):
@@ -27,6 +27,7 @@ def check_link_with_curl(url):
     except Exception as e:
         print(f'{e}')
         return error_code
+```
 
 curl: The command-line tool used for transferring data to or from a server
 
@@ -39,11 +40,12 @@ curl: The command-line tool used for transferring data to or from a server
 -L (Location): If the website responds with a 301 or 302 redirect, curl will automatically follow redirects to the final destination page
 
 --max-time 10: If the server takes longer than 10 seconds to respond, curl will abort the request.
-```
+
+---
 
 ## Alternative Methods
 
-When asked, Gemini recommended alternative methods for checking links.
+When asked, Gemini recommended alternative methods for link checks with status 403 and 405.
 
 ### Status 403
 
