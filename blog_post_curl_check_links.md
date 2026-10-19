@@ -111,7 +111,7 @@ done
 
 <img src="images/curl_loop.png" width=500>
 
-As you can see `curl` returned a status code of 301 when attempting to access `www.google.com`.  Re-use the prompt to find out what 301 means.
+Notice that `curl` returned a status code of 301 when attempting to access `www.google.com`.  Re-use the AI prompt to find out what 301 means.
 
 <img src="images/gemini_response.png" width=500>
 
