@@ -245,11 +245,11 @@ This response contains a hallucination:
 
 [https://stackoverflow.com/questions/3542079/what-is-curl-and-how-do-i-use-it](https://stackoverflow.com/questions/3542079/what-is-curl-and-how-do-i-use-it)
 
-![](images/wrong_topic.png)
+<img src="images/wrong_topic.png" alt="AI hallucinated the wrong topic" width=400 />
 
 Stackoverflow question 3542079 opens Windows API and SendMessage() and what-is-curl-and-how-do-i-use-it opens a search result list.
 
-![](images/curl.png)
+<img src="images/curl.png" alt="AI reported a topic that does not exist" width=400 />
 
 ### Conclusion
 
