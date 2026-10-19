@@ -2,7 +2,7 @@
 
 ## Can AI check broken links in your website?
 
-
+Google Gemini reported, "I cannot directly crawl webpages or run automated link-checking tools to test whether hyperlinks are broken or active in real time."  AI can help with writing scripts to automate link checking and explaining errors and output from these scripts.
 
 ### Using curl to Check for Broken Links
 
