@@ -4,7 +4,7 @@
 
 ## How to Check Multiple Links
 
-[Can AI uncover broken links in your website?](blog_post_curl_check_links.md) introduced using AI Prompts to help automate checking for broken links.  This article follows up with checking multiple links.
+In part 1, [Can AI uncover broken links in your website?](blog_post_curl_check_links.md) introduced using AI Prompts to help automate checking for broken links.  This article follows up with AI guidance on checking multiple links.
 
 In my [Portfolio](https://github.com/NelsonPython/publications) there are 212 links.  The following Python function verified 179, but was not able to fully access 33.
 
