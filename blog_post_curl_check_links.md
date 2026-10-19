@@ -23,7 +23,7 @@ curl -L -I http://example.com
 *  `-I` tells `curl` to display the HTTP headers including the status code
 *  `http://example.com` is the URL of the website to check for broken links
 
-## Test Drive a Link Checker
+## Test Drive the Link Checker
 
 To run curl from your MacBook Pro, open Finder, go to Apps, and open a Terminal window.  Enter the curl command and press enter.
 
@@ -50,7 +50,6 @@ age: 6262
 cf-cache-status: HIT
 cf-ray: a4d094672bc153cb-LAX
 alt-svc: h3=":443"; ma=86400
-
 ```
 
 Gemini often provides a comprehensive response, as well as anticipating future questions.  You may get a long-winded reply.  In this case, Gemini anticipated that I wanted markdown format.  I did a quick copy-and-paste so you can see the entire message.
@@ -83,7 +82,7 @@ Here is a breakdown of what each line of your `curl` header output means:
 
 ---
 
-### Verify the AI Prompt Response
+## Verify the AI Prompt Response
 
 Google adds this disclaimer to responses, *"Gemini isn’t human. It can make mistakes, so double-check it."*
 
@@ -95,7 +94,7 @@ In this example, the first part of the response `1. The Status Line` revealed th
 
 <img src="images/example_com.png" width=500>
 
-### Automate Checking Multiple Links
+## Automate Checking Multiple Links
 
 If you want to check the HTTP status codes for more than one link, use a loop:
 
@@ -112,17 +111,9 @@ Notice that `curl` returned a status code of 301 when attempting to access `www.
 <img src="images/gemini_response.png" width=500>
 
 
-### Recap and Next Steps
+## Recap and Next Steps
 
 This example introduced using AI Prompts to write `curl` command line code to check exposed links.  Some links are protected by security features that cause `curl` to output other response codes.  Google Gemini can help decipher these codes.  Upcoming articles dive deeper into how to use AI Prompts to further automate link checks.   *To be continued...*
-
-
-
-
-
-
-
-
 
 
 
