@@ -51,7 +51,7 @@ echo -e "Toward V&V of neural network based controllers\n"
 curl "https://api.unpaywall.org/v2/10.1145/582128.582141?email=Real@email.com"
 ```
 
-The original URL was located the ACM Digital Library which has strict automated security checks causing automated validation scripts to return HTTP 403 Forbidden.  Bypass the access restrictions and retrieve open-access metadata by using the Unpaywall API.
+The original URL was located the ACM Digital Library which has strict automated security checks causing automated validation scripts to return HTTP 403 Forbidden.  According to [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.4), the 403 (Forbidden) status code indicates that the server understood the request but refuses to fulfill it.  Bypass the access restrictions and retrieve open-access metadata by using the Unpaywall API.
 
 ### Status 405
 
@@ -62,7 +62,14 @@ Another NASA report is available at the Astrophysics Data System (ADS) at Harvar
 
 echo -e "\nPlanning for V&V of the Mars Science Laboratory rover software\n"
 curl -I -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" "https://ui.adsabs.harvard.edu/abs/2004aero....1...83F/abstract"
-```
+
+---
+
+ **References**
+
+IANA Internet Assigned Numbers Authority [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.rfc-editor.org/info/rfc9110/#section-15.5.6)
+
+
 
 
 
