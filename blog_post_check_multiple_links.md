@@ -41,15 +41,24 @@ curl: The command-line tool used for transferring data to or from a server
 --max-time 10: If the server takes longer than 10 seconds to respond, curl will abort the request.
 ```
 
-One of the links was to a NASA report titled *Toward V&V of neural network based controllers*.  This report is available at:  https://dl.acm.org/doi/10.1145/582128.582141.  Since this website has extra security checks, the script returns a status code of 403. 
-
-Gemini suggested the following alternative link on api.unpaywall.org
+### Status 403
+When checking the link to a NASA report titled *Toward V&V of neural network based controllers*, the script returned a 403 status.  Gemini suggested the following alternative link.The original URL was located the ACM Digital Library which has strict automated security checkes causing validation scripts to return HTTP 403 Forbidden.  Bypass the access restrictions and retrieve open-access metadata by using the Unpaywall API.
 
 ```
 #!/bin/bash
 
 echo -e "Toward V&V of neural network based controllers\n"
-curl "https://api.unpaywall.org/v2/10.1145/582128.582141?email=RoboThot.ai@gmail.com"
+curl "https://api.unpaywall.org/v2/10.1145/582128.582141?email=Real@email.com"
+```
+
+The original URL was located the ACM Digital Library which has strict automated security checkes causing validation scripts to return HTTP 403 Forbidden.  Bypass the access restrictions and retrieve open-access metadata by using the Unpaywall API.
+
+#### Verification Script
+```bash
+#!/bin/bash
+
+echo -e "Toward V&V of neural network based controllers\n"
+curl "[https://api.unpaywall.org/v2/10.1145/582128.582141?email=RoboThot.ai@gmail.com](https://api.unpaywall.org/v2/10.1145/582128.582141?email=RoboThot.ai@gmail.com)"
 ```
 
 Another NASA report is available at the Astrophysics Data System (ADS) at Harvard University. 
@@ -63,6 +72,30 @@ curl -I -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" "https://ui.adsabs.harvar
 
 Status 405
 
+
+
+
+
+
+---
+
+### 2. "Planning for V&V of the Mars Science Laboratory Rover Software"
+
+* **Source:** Harvard Astrophysics Data System (ADS)
+* **URL:** [ADS Abstract Link](https://ui.adsabs.harvard.edu/abs/2004aero....1...83F/abstract)
+* **Issue:** Automated checks using certain head-request configurations return an **HTTP 405 Method Not Allowed** status code. 
+
+#### Verification Script
+To ensure proper handling of request headers and avoid method restrictions, the check is structured as follows:
+
+```bash
+#!/bin/bash
+
+echo -e "\nPlanning for V&V of the Mars Science Laboratory rover software\n"
+curl -I -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" "[https://ui.adsabs.harvard.edu/abs/2004aero....1...83F/abstract](https://ui.adsabs.harvard.edu/abs/2004aero....1...83F/abstract)"
+```
+
+> **Note:** If automated tests consistently flag or block automated validation scripts, consider caching the reference metadata locally or updating the User-Agent strings to mimic standard browser traffic compliant with site policies.
 
 
 
