@@ -113,18 +113,12 @@ done
 
 As you can see `curl` returned a status code of 301 when attempting to access `www.google.com`.  Re-use the prompt to find out what 301 means.
 
-```
-You are a command line expert.
-
-Explain what this output means:
+<img src="images/gemini_response.png" width=500>
 
 
+### Conclusion
 
-### Next Steps
-
-
-
-*To be continued...*
+This example introduced using AI Prompts to write `curl` command line code to check exposed links.  Some links are protected by security features that cause `curl` to output other response codes.  Google Gemini can help decipher these codes, as well as provide scripts to check for you.  More about that in upcoming articles.  *To be continued...*
 
 
 
