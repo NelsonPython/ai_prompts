@@ -41,17 +41,27 @@ curl: The command-line tool used for transferring data to or from a server
 --max-time 10: If the server takes longer than 10 seconds to respond, curl will abort the request.
 ```
 
-One of the links was to a NASA report titled *Toward V&V of neural network based controllers* about using neural networks in flight control systems.  This is available at:  https://dl.acm.org/doi/10.1145/582128.582141.  This website has extra security checks so the script returned a status code of 403. 
+One of the links was to a NASA report titled *Toward V&V of neural network based controllers*.  This report is available at:  https://dl.acm.org/doi/10.1145/582128.582141.  Since this website has extra security checks, the script returns a status code of 403. 
 
+Gemini suggested the following alternative link on api.unpaywall.org
 
+```
 #!/bin/bash
 
 echo -e "Toward V&V of neural network based controllers\n"
 curl "https://api.unpaywall.org/v2/10.1145/582128.582141?email=RoboThot.ai@gmail.com"
+```
+
+Another NASA report is available at the Astrophysics Data System (ADS) at Harvard University. 
+
+```
+#!/bin/bash
 
 echo -e "\nPlanning for V&V of the Mars Science Laboratory rover software\n"
 curl -I -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" "https://ui.adsabs.harvard.edu/abs/2004aero....1...83F/abstract"
+```
 
+Status 405
 
 
 
