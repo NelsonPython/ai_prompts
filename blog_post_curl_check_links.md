@@ -1,11 +1,11 @@
 # Blog
 
 ## Can AI check broken links in your website?
-As a technical documentation manager, it is important to ensure that all the links on your webpages function correctly.  Broken links can lead to a poor user experience, and in some cases, can even cause security issues.  This blog post explores how AI may be helpful in automating link verification.
+As a technical documentation manager, it is important to ensure that readers can open all the links on your webpages.  Broken links can lead to a poor user experience, and in some cases, can even cause security issues.  When I was a content manager at Intel, I was responsible for maintaining over 700 external links!  It took me awhile to develop an automated system for checking and reporting broken links.  This blog post explores how AI may help improve this process.
 
-### Using curl to Check for Broken Links
+### AI Capabilities
 
-When asked, Google Gemini confirmed, *"I cannot directly crawl webpages or run automated link-checking tools to test whether hyperlinks are broken or active in real time. I can assist in writing scripts to automate link checking while explaining errors and output from these scripts."*
+When asked, Google Gemini confirmed, *"I cannot directly crawl webpages or run automated link-checking tools to test whether hyperlinks are broken or active in real time. I can assist in writing scripts to automate link checking while explaining errors and output from these scripts.  Here's an example of a command line tool called `curl`"*
 
 ### What is Curl?
 
