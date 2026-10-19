@@ -109,6 +109,19 @@ for url in "http://example.com" "https://google.com" "https://github.com"; do
 done
 ```
 
+<img src="images/curl_loop.png" width=500>
+
+As you can see `curl` returned a status code of 301 when attempting to access `www.google.com`.  Re-use the prompt to find out what 301 means.
+
+```
+You are a command line expert.
+
+Explain what this output means:
+
+
+
+### Next Steps
+
 
 
 *To be continued...*
