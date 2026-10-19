@@ -34,11 +34,11 @@ The output from this curl command can be explained by Google Gemini.  Below is a
 
 #### Prompt:
 
+```
 You are an expert bash shell script programmer.
 
 Read this output and explain what happened.
 
-```
 $ curl -L -I http://example.com | grep -v '200 OK' | grep -v '302 Found' | grep -v '301 Moved Permanently'
   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
                                  Dload  Upload  Total   Spent   Left   Speed
