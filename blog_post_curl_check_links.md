@@ -240,7 +240,11 @@ This response contains a hallucination:
 
 [https://stackoverflow.com/questions/3542079/what-is-curl-and-how-do-i-use-it](https://stackoverflow.com/questions/3542079/what-is-curl-and-how-do-i-use-it)
 
+![](images/wrong_topic.png)
+
 Stackoverflow question 3542079 opens Windows API and SendMessage() and what-is-curl-and-how-do-i-use-it opens a search result list.
+
+![](images/curl.png)
 
 ### Conclusion
 
