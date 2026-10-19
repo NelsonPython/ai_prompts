@@ -4,4 +4,4 @@
 
 ## Checking Multiple Links
 
-
+[](blog_post_curl_check_links.md)
