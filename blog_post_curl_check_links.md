@@ -1,6 +1,6 @@
 <img src="images/link_rot.png" width=1000 height=200>
 
-# Technical Documentation Blog
+# AI Prompt Investigator
 
 ## Can AI uncover broken links on your web content?
 As a technical documentation manager, ensuring that readers can easily navigate your content is important.  Broken links can frustrate users, degrade the overall user experience, and in some cases, even introduce security or compliance issues.  
