@@ -22,6 +22,7 @@ curl -L -I http://example.com | grep -v '200 OK' | grep -v '302 Found' | grep -v
 
 The resulting output will be a list of URLs and status codes indicating that the link cannot be found or accessed by curl.
 
+
 ### Using Gemini to explain bash shell output:
 
 The output from this curl command can be explained by Google Gemini.  Below is a prompt asking Gemini to explain the output.  It includes a statement telling Gemini what mode to use.  In this example, the mode is “expert bash shell script programmer”.  Then, the prompt tells Gemini what to do, “Read this output and explain what happened.”  Then provide a copy of the command and the result.
@@ -49,7 +50,6 @@ cf-cache-status: HIT
 CF-RAY: a4cbb1db5cb6eb4e-LAX
 alt-svc: h3=":443"; ma=86400
 
-
 $ curl -L -I https://example.com | grep -v '200 OK' | grep -v '302 Found' | grep -v '301 Moved Permanently'
  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
                                  Dload  Upload  Total   Spent   Left   Speed
@@ -66,19 +66,19 @@ age: 7
 cf-cache-status: HIT
 cf-ray: a4cbb27499285b4c-LAX
 alt-svc: h3=":443"; ma=86400
+```
 
 #### Gemini’s Response:
 
-Here is an explanation of what is happening in your terminal output.
-
-Understanding the Command Components
-
+Here is an explanation of what is happening in your terminal output.  Understanding the Command Components:
+```
 curl -L -I:
         -I (or --head) tells curl to fetch only the HTTP headers (metadata like server type and content type) instead of downloading the webpage body.
         -L tells curl to follow redirects automatically (such as when an HTTP site redirects to HTTPS).
 
     | grep -v ...: The grep -v command filters out lines matching specific strings (200 OK, 302 Found, 301 Moved Permanently).
     The Progress Meter (% Total...): This text is output by curl to stderr (standard error) so it bypasses the pipe (|) and prints to your screen.
+```
 
 Breaking Down the Two Commands
 
@@ -108,13 +108,11 @@ Because your grep filter was looking for the precise string '200 OK' (which incl
 
 #### Verification:
 
-One way to verify software output is to run the same prompt with a different model.  In this example, the model used is and open-source ollama model designed to run code:
-
-```
-$ ollama run qwen2.5-coder:1.5b
+AI responses must be verified.  One way to verify software output is to run the same prompt with a different model.  In this example, the model used is and open-source ollama model designed to run code:  ```ollama run qwen2.5-coder:1.5b```
 
 Prompt:
 
+```
 >>> You are an expert bash shell script programmer.
 ... 
 ... Read this output and explain what happened.
@@ -154,6 +152,7 @@ Prompt:
 ... cf-cache-status: HIT
 ... cf-ray: a4cbb27499285b4c-LAX
 ... alt-svc: h3=":443"; ma=86400
+```
 
 ### Ollama Response:
 
