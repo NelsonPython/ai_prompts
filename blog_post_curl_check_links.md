@@ -23,15 +23,13 @@ curl -L -I http://example.com
 *  `-I` tells `curl` to display the HTTP headers including the status code
 *  `http://example.com` is the URL of the website to check for broken links
 
-## Take a Test Drive
+## Test Drive a Link Checker
 
 To run curl from your MacBook Pro, open Finder, go to Apps, and open a Terminal window.  Enter the curl command and press enter.
 
 <img src="images/curl_mac.png" width=500>
 
 `HTTP/2 200` indicates that curl found `https://www.example.com`.   
-
-### Technical Explainer AI Prompt
 
 To understand the technical output from curl, write a prompt directing Gemini to explain it.  Tell Gemini what role it is undertaking, `You are a command line expert`, then direct Gemini to perform the task, `Explain what this output means...`
 
@@ -56,8 +54,6 @@ alt-svc: h3=":443"; ma=86400
 ```
 
 Gemini often provides a comprehensive response, as well as anticipating future questions.  You may get a long-winded reply.  In this case, Gemini anticipated that I wanted markdown format.  I did a quick copy-and-paste so you can see the entire message.
-
-### Gemini Explanation
 
 ---
 
@@ -87,7 +83,7 @@ Here is a breakdown of what each line of your `curl` header output means:
 
 ---
 
-### AI Prompt Response Verification
+### Verify the AI Prompt Response
 
 Google adds this disclaimer to responses, *"Gemini isn’t human. It can make mistakes, so double-check it."*
 
@@ -99,7 +95,7 @@ In this example, the first part of the response `1. The Status Line` revealed th
 
 <img src="images/example_com.png" width=500>
 
-### Automated Link Checks
+### Automate Checking Multiple Links
 
 If you want to check the HTTP status codes for more than one link, use a loop:
 
@@ -116,7 +112,7 @@ Notice that `curl` returned a status code of 301 when attempting to access `www.
 <img src="images/gemini_response.png" width=500>
 
 
-### Conclusion
+### Recap and Next Steps
 
 This example introduced using AI Prompts to write `curl` command line code to check exposed links.  Some links are protected by security features that cause `curl` to output other response codes.  Google Gemini can help decipher these codes.  Upcoming articles dive deeper into how to use AI Prompts to further automate link checks.   *To be continued...*
 
