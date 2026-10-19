@@ -95,7 +95,9 @@ When asked, Gemini explains further, *"AI-generated responses are provided for i
 
 How much time you spend verifying an AI Prompt response depends on your environment and your needs.  In a regulated environment, you must perform a complete fact-check.
 
-In this example, the first part `1. The Status Line` revealed the status `HTTP/2 200`.  That is enough information when checking exposed links without extra security features.  However, many sites have security that prevents `curl` from scraping their content.  More about that in the next blog post.   
+In this example, the first part of the response `1. The Status Line` revealed the status `HTTP/2 200`.  It is easy to verify that Gemini provided a `curl` command that functioned properly by entering the link into a browser.
+
+<img src="images/example_com.png" width=500>
 
 *To be continued...*
 
