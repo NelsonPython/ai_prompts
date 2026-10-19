@@ -30,11 +30,12 @@ The resulting output will be a list of URLs and status codes indicating that the
 
 ### Using Gemini to explain bash shell output:
 
-The output from this curl command can be explained by Google Gemini.  Below is a prompt asking Gemini to explain the output.  It includes a statement telling Gemini what mode to use.  In this example, the mode is “expert bash shell script programmer”.  Then, the prompt tells Gemini what to do, “Read this output and explain what happened.”  Then provide a copy of the command and the result.
+The output from this curl command can be explained by Google Gemini.  Below is a prompt asking Gemini to explain the output.  It includes a statement telling Gemini what mode to use.  In this example, the mode is `expert bash shell script programmer`.  Then, the prompt tells Gemini what to do, `Read this output and explain what happened.`  Then provide a copy of the command and the result.
 
 #### Prompt:
 
 You are an expert bash shell script programmer.
+
 Read this output and explain what happened.
 
 ```
