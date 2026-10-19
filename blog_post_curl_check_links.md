@@ -220,7 +220,7 @@ Explanation
 - **cf-ray**: A unique identifier for the request, used for tracking and debugging.
 - **Response Code**: The HTTP status code is `200 OK`, indicating that the request was successful.
 
-### Summary
+Summary
 
 The output shows the same HTTP response for both `http://example.com` and `https://example.com`, but with the HTTP status code filtered out. The  response includes the necessary headers to describe the server's response to the HTTP request.
 
@@ -254,3 +254,6 @@ Stackoverflow question 3542079 opens Windows API and SendMessage() and what-is-c
 ### Conclusion
 
 Checking for broken links on a website is an essential task for any web developer. Using `curl` to check for broken links is a simple and effective way to do so. By following these examples, you can automate the process of checking for broken links and ensure that your website is functioning correctly.
+
+
+
