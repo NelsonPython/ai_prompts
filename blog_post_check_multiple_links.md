@@ -4,9 +4,9 @@
 
 ## How to Check Multiple Links
 
-In part 1, [Can AI uncover broken links in your website?](blog_post_curl_check_links.md) introduced using AI Prompts to help automate checking for broken links.  This article follows up with AI guidance on checking multiple links.
+Part 1, [Can AI uncover broken links in your website?](blog_post_curl_check_links.md) introduced using AI Prompts to help automate checking for broken links.  This article follows up with AI guidance on checking multiple links.
 
-In my [Portfolio](https://github.com/NelsonPython/publications) there are 212 links.  The following Python function verified 179, but was not able to fully access 33.
+In my [Portfolio](https://github.com/NelsonPython/publications) there are 212 links.  The following Python function is part of a script that verified 179 links, but was not able to fully access 33 links.
 
 ```
 def check_link_with_curl(url):
@@ -41,8 +41,13 @@ curl: The command-line tool used for transferring data to or from a server
 --max-time 10: If the server takes longer than 10 seconds to respond, curl will abort the request.
 ```
 
+## Alternative Methods
+
+When asked, Gemini recommended alternative methods for checking links.
+
 ### Status 403
-When checking the link to a NASA report titled *Toward V&V of neural network based controllers*, the script returned a 403 status.  Gemini suggested the following alternative link.The original URL was located the ACM Digital Library which has strict automated security checkes causing validation scripts to return HTTP 403 Forbidden.  Bypass the access restrictions and retrieve open-access metadata by using the Unpaywall API.
+
+When checking the link to a NASA report I wrote, titled *Toward V&V of neural network based controllers*, the script returned a 403 status.  The original URL is part of the ACM Digital Library which has strict automated security checks causing validation scripts to return HTTP 403 Forbidden.  According to [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.4), the 403 (Forbidden) status code indicates that the server understood the request but refuses to fulfill it.  Status code 403 indicates that the link is not broken.  That may be sufficient evidence.  Gemini suggested trying an alternative, the Unpaywall API to retrieve open-access metadata.
 
 ```
 #!/bin/bash
@@ -51,7 +56,6 @@ echo -e "Toward V&V of neural network based controllers\n"
 curl "https://api.unpaywall.org/v2/10.1145/582128.582141?email=Real@email.com"
 ```
 
-The original URL was located the ACM Digital Library which has strict automated security checks causing automated validation scripts to return HTTP 403 Forbidden.  According to [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.4), the 403 (Forbidden) status code indicates that the server understood the request but refuses to fulfill it.  Bypass the access restrictions and retrieve open-access metadata by using the Unpaywall API.
 
 ### Status 405
 
