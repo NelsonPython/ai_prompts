@@ -51,17 +51,11 @@ echo -e "Toward V&V of neural network based controllers\n"
 curl "https://api.unpaywall.org/v2/10.1145/582128.582141?email=Real@email.com"
 ```
 
-The original URL was located the ACM Digital Library which has strict automated security checkes causing validation scripts to return HTTP 403 Forbidden.  Bypass the access restrictions and retrieve open-access metadata by using the Unpaywall API.
+The original URL was located the ACM Digital Library which has strict automated security checks causing automated validation scripts to return HTTP 403 Forbidden.  Bypass the access restrictions and retrieve open-access metadata by using the Unpaywall API.
 
-#### Verification Script
-```bash
-#!/bin/bash
+### Status 405
 
-echo -e "Toward V&V of neural network based controllers\n"
-curl "[https://api.unpaywall.org/v2/10.1145/582128.582141?email=RoboThot.ai@gmail.com](https://api.unpaywall.org/v2/10.1145/582128.582141?email=RoboThot.ai@gmail.com)"
-```
-
-Another NASA report is available at the Astrophysics Data System (ADS) at Harvard University. 
+Another NASA report is available at the Astrophysics Data System (ADS) at Harvard University.  This website is configured so that automated link checkers receive an HTTP 405 Method Not Allowed status.  
 
 ```
 #!/bin/bash
@@ -69,34 +63,6 @@ Another NASA report is available at the Astrophysics Data System (ADS) at Harvar
 echo -e "\nPlanning for V&V of the Mars Science Laboratory rover software\n"
 curl -I -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" "https://ui.adsabs.harvard.edu/abs/2004aero....1...83F/abstract"
 ```
-
-Status 405
-
-
-
-
-
-
----
-
-### 2. "Planning for V&V of the Mars Science Laboratory Rover Software"
-
-* **Source:** Harvard Astrophysics Data System (ADS)
-* **URL:** [ADS Abstract Link](https://ui.adsabs.harvard.edu/abs/2004aero....1...83F/abstract)
-* **Issue:** Automated checks using certain head-request configurations return an **HTTP 405 Method Not Allowed** status code. 
-
-#### Verification Script
-To ensure proper handling of request headers and avoid method restrictions, the check is structured as follows:
-
-```bash
-#!/bin/bash
-
-echo -e "\nPlanning for V&V of the Mars Science Laboratory rover software\n"
-curl -I -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" "[https://ui.adsabs.harvard.edu/abs/2004aero....1...83F/abstract](https://ui.adsabs.harvard.edu/abs/2004aero....1...83F/abstract)"
-```
-
-> **Note:** If automated tests consistently flag or block automated validation scripts, consider caching the reference metadata locally or updating the User-Agent strings to mimic standard browser traffic compliant with site policies.
-
 
 
 
