@@ -55,7 +55,7 @@ alt-svc: h3=":443"; ma=86400
 
 Gemini often anticipates future questions and provides a comprehensive response, in this case, the response was in markdown format.
 
-### Gemini Response
+### Gemini Explanation
 
 Here is a breakdown of what each line of your `curl` header output means:
 
@@ -85,5 +85,8 @@ Here is a breakdown of what each line of your `curl` header output means:
 * **`cf-ray: a4d094672bc153cb-LAX`**: Cloudflare's unique tracking ID for this specific request, routing through their Los Angeles (`LAX`) data center edge.
 * **`alt-svc: h3=":443"; ma=86400`**: Advertises that HTTP/3 (`h3`) is available on port 443 for future faster connections.
 ### Automating `curl`
+
+
+### Verifying Correctness
 
 
