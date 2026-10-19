@@ -1,6 +1,6 @@
 # Blog
 
-## Can AI check broken links in your website?
+## Can AI find link rot on your website?
 As a technical documentation manager, ensuring that readers can easily navigate your content is important.  Broken links can frustrate users, degrade the overall user experience and, in some cases, even introduce security or compliance issues.  
 
 When I was a content manager at Intel® I was responsible for maintaining over 700 external links!  It took me some time to develop an automated system for checking and reporting broken links.  This blog post explores how AI may help improve this process.
