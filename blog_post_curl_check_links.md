@@ -92,7 +92,7 @@ Google adds this disclaimer to responses, *"Gemini isn’t human. It can make mi
 
 When asked, Gemini explains further, *"AI-generated responses are provided for informational and educational purposes only. AI models may occasionally produce inaccurate, incomplete, or outdated information."*
 
-How much time you spend verifying an AI Prompt response depends on what part of the response you used and your environment.  In the example, you may only use information from `1. The Status Line`.  If you are checking exposed links without extra security features, then looking for HTTP/2 200 is good enough.  However, many sites have security that prevents curl from scraping their content.  
+How much time you spend verifying an AI Prompt response depends on what part of the response you used and your environment.  In the example, you may only use information from `1. The Status Line`.  If you are checking exposed links without extra security features, then looking for HTTP/2 200 is good enough.  However, many sites have security that prevents `curl` from scraping their content.  More about that in the next blog post.   
 
 
 
