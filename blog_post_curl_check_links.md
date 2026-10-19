@@ -106,9 +106,9 @@ HTTP/2 200: This line was printed because modern curl using HTTP/2 outputs the s
 
 Because your grep filter was looking for the precise string '200 OK' (which includes the word "OK"), the line HTTP/2 200 did not match your filter and was safely allowed through to your terminal.
 
-#### Verification:
+## Verifying AI Prompt Responses
 
-AI responses must be verified.  One way to verify software output is to run the same prompt with a different model.  In this example, the model used is and open-source ollama model designed to run code:  ```ollama run qwen2.5-coder:1.5b```
+AI can hallucinate so responses must be verified.  One way to verify software output is to run the same prompt with a different model.  In this example, the model used is and open-source ollama model designed to run code:  ```ollama run qwen2.5-coder:1.5b```
 
 Prompt:
 
@@ -117,10 +117,8 @@ Prompt:
 ... 
 ... Read this output and explain what happened.
 ... 
-... $ curl -L -I http://example.com | grep -v '200 OK' | grep -v '302 Found' | gre
-... p -v '301 Moved Permanently'
+... $ curl -L -I http://example.com | grep -v '200 OK' | grep -v '302 Found' | grep -v '301 Moved Permanently'
 ...   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
-... 
 ...                                  Dload  Upload  Total   Spent   Left   Speed
 ...   0      0   0      0   0      0      0      0                              0
 ... Date: Mon, 19 Oct 2026 00:34:02 GMT
@@ -135,10 +133,8 @@ Prompt:
 ... CF-RAY: a4cbb1db5cb6eb4e-LAX
 ... alt-svc: h3=":443"; ma=86400
 ... 
-... $ curl -L -I https://example.com | grep -v '
-... 200 OK' | grep -v '302 Found' | grep -v '301 Moved Permanently'
+... $ curl -L -I https://example.com | grep -v '200 OK' | grep -v '302 Found' | grep -v '301 Moved Permanently'
 ...   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
-... 
 ...                                  Dload  Upload  Total   Spent   Left   Speed
 ...   0      0   0      0   0      0      0      0                              0
 ... HTTP/2 200 
@@ -158,26 +154,19 @@ Prompt:
 
 The output you've provided shows the HTTP headers and status code of a web request made using the `curl` command. Here's a breakdown of what each part means:
 
-1. `curl -L -I http://example.com | grep -v '200 OK' | grep -v '302 
-
-Found' | grep -v '301 Moved Permanently'`
+1. `curl -L -I http://example.com | grep -v '200 OK' | grep -v '302 Found' | grep -v '301 Moved Permanently'`
 
 - **`curl -L -I http://example.com`**: This part of the command sends an HTTP GET request to `http://example.com` and includes the `--location` (or `-L`) option to follow any redirects that might be part of the HTTP response.
-
-  - **`-I`**: This option tells `curl` to only display the HTTP headers of the response.
-
-  - **`-L`**: This option makes `curl` automatically follow any redirects.
-
-
-- **`grep -v '200 OK' | grep -v '302 Found' | grep -v '301 Moved 
-
-Permanently'`**: These commands are used to filter out specific HTTP status codes and headers:
+- **`-I`**: This option tells `curl` to only display the HTTP headers of the response.
+- **`-L`**: This option makes `curl` automatically follow any redirects.
+- **`grep -v '200 OK' | grep -v '302 Found' | grep -v '301 Moved Permanently**
+  These commands are used to filter out specific HTTP status codes and headers:
   - **`grep -v '200 OK'`**: This removes the line containing "200 OK", which indicates a successful HTTP request.
   - **`grep -v '302 Found'`**: This removes the line containing "302 Found", which indicates a temporary redirect.
   - **`grep -v '301 Moved Permanently'`**: This removes the line containing "301 Moved Permanently", which indicates a permanent redirect.
 
-- **`curl -L -I https://example.com | grep -v '200 OK' | grep -v '302 Found' 
-| grep -v '301 Moved Permanently'`**: This command performs the same operation on `https://example.com`.
+- **`curl -L -I https://example.com | grep -v '200 OK' | grep -v '302 Found' | grep -v '301 Moved Permanently'`**
+This command performs the same operation on `https://example.com`.
 
 ### 2. Output after Filtering
 
@@ -196,6 +185,7 @@ cf-cache-status: HIT
 cf-ray: a4cbb1db5cb6eb4e-LAX
 alt-svc: h3=":443"; ma=86400
 ```
+
 #### `curl -L -I https://example.com`
 
 ```plaintext
@@ -210,20 +200,19 @@ age: 7
 cf-cache-status: HIT
 cf-ray: a4cbb27499285b4c-LAX
 alt-svc: h3=":443"; ma=86400
-
 ```
 
 ### Explanation
 
 - **HTTP Headers**:
-  - **Content-Type**: The MIME type of the response, which is `text/html`.
-  - **Server**: The web server that served the response.
-  - **Last-Modified**: The date and time when the resource was last modified.
-  - **Allow**: The methods allowed for the requested resource.
-  - **Accept-Ranges**: The range of bytes that can be requested from the server.
-  - **Age**: The age of the cached response.
-  - **cf-cache-status**: Indicates that the response was served from a cache.
-  - **cf-ray**: A unique identifier for the request, used for tracking and debugging.
+- **Content-Type**: The MIME type of the response, which is `text/html`.
+- **Server**: The web server that served the response.
+- **Last-Modified**: The date and time when the resource was last modified.
+- **Allow**: The methods allowed for the requested resource.
+- **Accept-Ranges**: The range of bytes that can be requested from the server.
+- **Age**: The age of the cached response.
+- **cf-cache-status**: Indicates that the response was served from a cache.
+- **cf-ray**: A unique identifier for the request, used for tracking and debugging.
 - **Response Code**: The HTTP status code is `200 OK`, indicating that the request was successful.
 
 ### Summary
@@ -235,14 +224,15 @@ The output shows the same HTTP response for both `http://example.com` and `https
 Another way to verify an AI Prompt response is to confirm with human instructions:
 
 #### Prompt:
-
+```
 > You are an expert internet search tool.  Find a Stack Overflow post or another human post that explains curl.
-> #### Response:
+> Response:
 > Here is a stack overflow post that explains curl in detail:
 
 [https://stackoverflow.com/questions/3542079/what-is-curl-and-how-do-i-use-it](https://stackoverflow.com/questions/3542079/what-is-curl-and-how-do-i-use-it)
 
 This post provides a comprehensive overview of what curl is, how it works, and how to use it to make HTTP requests. It covers both the command-line interface and the programming interface, including how to use curl in scripts and programs.
+```
 
 #### Hallucination
 
@@ -255,4 +245,7 @@ Stackoverflow question 3542079 opens Windows API and SendMessage() and what-is-c
 ### Conclusion
 
 Checking for broken links on a website is an essential task for any web developer. Using `curl` to check for broken links is a simple and effective way to do so. By following these examples, you can automate the process of checking for broken links and ensure that your website is functioning correctly.
+
+
+
 
