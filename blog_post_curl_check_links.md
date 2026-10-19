@@ -33,7 +33,7 @@ To run curl from your MacBook Pro, open Finder, go to Apps, and open a Terminal 
 
 ### Technical Explainer AI Prompt
 
-To understand the technical output from curl, write a prompt directing Gemini to explain it.  Tell Gemini what role it is undertaking, `You are a command line expert`, then direct Gemini to perform a task, `Explain what this output means...`
+To understand the technical output from curl, write a prompt directing Gemini to explain it.  Tell Gemini what role it is undertaking, `You are a command line expert`, then direct Gemini to perform the task, `Explain what this output means...`
 
 ```
 You are a command line expert.
@@ -55,9 +55,11 @@ alt-svc: h3=":443"; ma=86400
 
 ```
 
-Gemini often anticipates future questions and provides a comprehensive response, in this case, the response was in markdown format.
+Gemini often provides a comprehensive response, as well as anticipating future questions.  You may get a long-winded reply.  In this case, Gemini anticipated that I wanted markdown format.  I did a quick copy-and-paste so you can see the entire message.
 
 ### Gemini Explanation
+
+---
 
 Here is a breakdown of what each line of your `curl` header output means:
 
@@ -66,8 +68,6 @@ Here is a breakdown of what each line of your `curl` header output means:
 * **`HTTP/2 200`**
 * **`HTTP/2`**: The version of the HTTP protocol used for the communication.
 * **`200`**: The standard HTTP status code for **OK**. This means the request was successful and the server returned the requested webpage.
-
----
 
 #### 2. Response Metadata & Server Details
 
@@ -78,8 +78,6 @@ Here is a breakdown of what each line of your `curl` header output means:
 * **`allow: GET, HEAD`**: The HTTP methods supported by this specific endpoint (retrieving content and fetching headers).
 * **`accept-ranges: bytes`**: Indicates that the server supports partial content requests (useful for downloading large files in chunks).
 
----
-
 #### 3. Cloudflare & Performance Headers
 
 * **`age: 6262`**: The number of seconds the response has been sitting in Cloudflare's cache.
@@ -87,6 +85,7 @@ Here is a breakdown of what each line of your `curl` header output means:
 * **`cf-ray: a4d094672bc153cb-LAX`**: Cloudflare's unique tracking ID for this specific request, routing through their Los Angeles (`LAX`) data center edge.
 * **`alt-svc: h3=":443"; ma=86400`**: Advertises that HTTP/3 (`h3`) is available on port 443 for future faster connections.
 
+---
 
 ### AI Prompt Response Verification
 
@@ -94,7 +93,11 @@ Google adds this disclaimer to responses, *"Gemini isn’t human. It can make mi
 
 When asked, Gemini explains further, *"AI-generated responses are provided for informational and educational purposes only. AI models may occasionally produce inaccurate, incomplete, or outdated information."*
 
-How much time you spend verifying an AI Prompt response depends on what part of the response you used and your environment.  In the example, you may only use information from `1. The Status Line`.  If you are checking exposed links without extra security features, then looking for HTTP/2 200 is good enough.  However, many sites have security that prevents `curl` from scraping their content.  More about that in the next blog post.   
+How much time you spend verifying an AI Prompt response depends on your environment and your needs.  In a regulated environment, you must perform a complete fact-check.
+
+In this example, the first part `1. The Status Line` revealed the status `HTTP/2 200`.  That is enough information when checking exposed links without extra security features.  However, many sites have security that prevents `curl` from scraping their content.  More about that in the next blog post.   
+
+*To be continued...*
 
 
 
