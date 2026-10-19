@@ -76,6 +76,8 @@ alt-svc: h3=":443"; ma=86400
 
 #### Gemini’s Response:
 
+Gemini tends to be verbose and often attempts to anticipate questions that may not be relevant, but responses generally include accurate scripting syntax and complete explanations.  
+
 ```
 Here is an explanation of what is happening in your terminal output.  Understanding the Command Components:
 
@@ -118,9 +120,8 @@ Because your grep filter was looking for the precise string '200 OK' (which incl
 
 AI can hallucinate so responses must be verified.  One way to verify software output is to run the same prompt with a different model.  In this example, the model used is and open-source ollama model designed to run code:  ```ollama run qwen2.5-coder:1.5b```
 
-Prompt:
-
 ```
+Prompt:
 >>> You are an expert bash shell script programmer.
 ... 
 ... Read this output and explain what happened.
@@ -176,11 +177,10 @@ The output you've provided shows the HTTP headers and status code of a web reque
 - **`curl -L -I https://example.com | grep -v '200 OK' | grep -v '302 Found' | grep -v '301 Moved Permanently'`**
 This command performs the same operation on `https://example.com`.
 
-### 2. Output after Filtering
+2. Output after Filtering
 
-#### `curl -L -I http://example.com`
+curl -L -I http://example.com
 
-```plaintext
 HTTP/2 200 
 date: Mon, 19 Oct 2026 00:34:26 GMT
 content-type: text/html; charset=utf-8
@@ -192,11 +192,9 @@ age: 7
 cf-cache-status: HIT
 cf-ray: a4cbb1db5cb6eb4e-LAX
 alt-svc: h3=":443"; ma=86400
-```
+ 
+curl -L -I https://example.com
 
-#### `curl -L -I https://example.com`
-
-```plaintext
 HTTP/2 200 
 date: Mon, 19 Oct 2026 00:34:26 GMT
 content-type: text/html; charset=utf-8
@@ -208,9 +206,8 @@ age: 7
 cf-cache-status: HIT
 cf-ray: a4cbb27499285b4c-LAX
 alt-svc: h3=":443"; ma=86400
-```
-
-### Explanation
+  
+Explanation
 
 - **HTTP Headers**:
 - **Content-Type**: The MIME type of the response, which is `text/html`.
