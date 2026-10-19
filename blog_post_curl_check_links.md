@@ -1,3 +1,5 @@
+![](images/link_rot.png)
+
 # Blog
 
 ## Can AI uncover link rot on your website?
