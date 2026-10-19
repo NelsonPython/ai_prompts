@@ -80,21 +80,7 @@ access-control-max-age: 86400
 access-control-allow-methods: OPTIONS,GET,POST
 access-control-expose-headers: x-amzn-waf-action
 ```
-
-
-server: awselb/2.0: The request passed through an Amazon Web Services Elastic Load Balancer.
-
-content-length: 2203: The server returned a 2203-byte body (typically an HTML page containing the CAPTCHA challenge interface or an error message).
-
-x-amzn-waf-action: captcha: The AWS firewall intercepted the request to force a human verification step.
-
-cache-control: no-store, max-age=0: Instructs browsers and intermediaries not to cache this specific security response.
-
-content-type: text/html; charset=UTF-8: The response payload is formatted as an HTML document rather than raw data or JSON.
-
-access-control-allow-origin: *: A Cross-Origin Resource Sharing (CORS) header allowing resources to be requested from any domain.
-
-access-control-allow-methods: OPTIONS,GET,POST: Explicitly defines the allowed request types. Notice that HEAD is absent, which directly corroborates the 405 Method Not Allowed status.
+This evidence is less clear but it indicates that the server returned a 2203-byte body.  This is typically an HTML page containing the CAPTCHA challenge interface or an error message.  The response payload is formatted as an HTML document rather than raw data or JSON. OPTIONS,GET, and POST have been explicitly defined as the allowed request types. Notice that HEAD is absent, which directly corroborates the 405 Method Not Allowed status.
 
 ---
 
