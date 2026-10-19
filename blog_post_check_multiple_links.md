@@ -59,7 +59,7 @@ curl "https://api.unpaywall.org/v2/10.1145/582128.582141?email=Real@email.com"
 
 ### Status 405
 
-Another NASA report is available at the Astrophysics Data System (ADS) at Harvard University.  This website is configured so that automated link checkers receive an HTTP 405 Method Not Allowed status.  
+Another NASA report is available at the Astrophysics Data System (ADS) at Harvard University.  This website is configured so that automated link checkers receive an HTTP 405 Method Not Allowed status.  [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.6) Paragraph 15.5.6 says *In plain English, a 405 Method Not Allowed error means that the server understood what you were trying to do, but it doesn't allow you to do it that way on that specific page or web address.*  Status code 405 presents strong evidence that the link is not broken.  Gemini recommended a `curl` command to fetch only the HTTP headers.
 
 ```
 #!/bin/bash
