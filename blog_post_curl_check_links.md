@@ -35,7 +35,7 @@ The output from this curl command can be explained by Google Gemini.  Below is a
 #### Prompt:
 
 ```
-You are an expert bash shell script programmer.
+>>> You are an expert bash shell script programmer.
 
 Read this output and explain what happened.
 
@@ -76,23 +76,24 @@ alt-svc: h3=":443"; ma=86400
 
 #### Gemini’s Response:
 
+```
 Here is an explanation of what is happening in your terminal output.  Understanding the Command Components:
-```
+
 curl -L -I:
-        -I (or --head) tells curl to fetch only the HTTP headers (metadata like server type and content type) instead of downloading the webpage body.
-        -L tells curl to follow redirects automatically (such as when an HTTP site redirects to HTTPS).
 
-    | grep -v ...: The grep -v command filters out lines matching specific strings (200 OK, 302 Found, 301 Moved Permanently).
-    The Progress Meter (% Total...): This text is output by curl to stderr (standard error) so it bypasses the pipe (|) and prints to your screen.
-```
+-I (or --head) tells curl to fetch only the HTTP headers (metadata like server type and content type) instead of downloading the webpage body.
+-L tells curl to follow redirects automatically (such as when an HTTP site redirects to HTTPS).
 
-Breaking Down the Two Commands
+| grep -v ...: The grep -v command filters out lines matching specific strings (200 OK, 302 Found, 301 Moved Permanently).
+The Progress Meter (% Total...): This text is output by curl to stderr (standard error) so it bypasses the pipe (|) and prints to your screen.
+
+Breaking Down the Two Commands:
 
 1. The first command checks ([http://example.com](http://example.com))
 
-```Bash
+Bash
 curl -L -I http://example.com | grep -v '200 OK' ...
-```
+
 What happened: Because you used `http://`, curl first contacted the non-secure version. The server (example.com, backed by Cloudflare) automatically redirected the request to `https://`.
 
 The Output: You see the final headers of the page after the redirect completed (such as Server: cloudflare, Content-Type, and CF-RAY).
@@ -101,9 +102,9 @@ The Missing Status Line: The actual HTTP response status line (HTTP/1.1 200 OK o
 
 2. The Second Command ([https://example.com](https://example.com))
 
-```Bash
+Bash
 curl -L -I https://example.com | grep -v '200 OK' ...
-```
+
 What happened: Because you started directly with `https://`, curl connected securely right away without needing an HTTP-to-HTTPS redirect.
 
 The Output:
@@ -111,6 +112,7 @@ The Output:
 HTTP/2 200: This line was printed because modern curl using HTTP/2 outputs the status code format as HTTP/2 200 rather than the legacy HTTP/1.1 200 OK.
 
 Because your grep filter was looking for the precise string '200 OK' (which includes the word "OK"), the line HTTP/2 200 did not match your filter and was safely allowed through to your terminal.
+```
 
 ## Verifying AI Prompt Responses
 
@@ -255,7 +257,3 @@ Stackoverflow question 3542079 opens Windows API and SendMessage() and what-is-c
 ### Conclusion
 
 Checking for broken links on a website is an essential task for any web developer. Using `curl` to check for broken links is a simple and effective way to do so. By following these examples, you can automate the process of checking for broken links and ensure that your website is functioning correctly.
-
-
-
-
