@@ -5,7 +5,7 @@ As a technical documentation manager, it is important to ensure that readers can
 
 ### AI Capabilities
 
-When asked, Google Gemini confirmed, *"I cannot directly crawl webpages or run automated link-checking tools to test whether hyperlinks are broken or active in real time. I can assist in writing scripts to automate link checking while explaining errors and output from these scripts.  Here's an example of a command line tool called `curl`"*
+When asked, Google Gemini confirmed, *"I cannot directly crawl webpages or run automated link-checking tools to test whether hyperlinks are broken or active in real time. I can assist in writing scripts to automate link checking while explaining errors and output from these scripts.  Here's one example using a command line tool called `curl`"*
 
 ### What is Curl?
 
