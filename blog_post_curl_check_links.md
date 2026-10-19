@@ -84,9 +84,25 @@ Here is a breakdown of what each line of your `curl` header output means:
 * **`cf-cache-status: HIT`**: A very helpful indicator! **`HIT`** means the page was served directly from Cloudflare's edge cache rather than hitting the origin server, which makes the site load much faster.
 * **`cf-ray: a4d094672bc153cb-LAX`**: Cloudflare's unique tracking ID for this specific request, routing through their Los Angeles (`LAX`) data center edge.
 * **`alt-svc: h3=":443"; ma=86400`**: Advertises that HTTP/3 (`h3`) is available on port 443 for future faster connections.
-### Automating `curl`
 
 
-### Verifying Correctness
+### AI Prompt Response Verification
+
+Google adds this disclaimer to responses, *"Gemini isn’t human. It can make mistakes, so double-check it."*
+
+When asked, Gemini explains further, *"AI-generated responses are provided for informational and educational purposes only. AI models may occasionally produce inaccurate, incomplete, or outdated information."*
+
+How much time you spend verifying an AI Prompt response depends on what part of the response you used and your environment.  In the example, you may only use information from `1. The Status Line`.  If you are checking exposed links without extra security features, then looking for HTTP/2 200 is good enough.  However, many sites have security that prevents curl from scraping their content.  
+
+
+
+
+
+
+
+
+
+
+
 
 
