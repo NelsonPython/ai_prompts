@@ -92,7 +92,7 @@ Breaking Down the Two Commands
 ```Bash
 curl -L -I http://example.com | grep -v '200 OK' ...
 ```
-What happened: Because you used http://, curl first contacted the non-secure version. The server (example.com, backed by Cloudflare) automatically redirected the request to https://.
+What happened: Because you used `http://`, curl first contacted the non-secure version. The server (example.com, backed by Cloudflare) automatically redirected the request to `https://`.
 
 The Output: You see the final headers of the page after the redirect completed (such as Server: cloudflare, Content-Type, and CF-RAY).
 
@@ -103,7 +103,7 @@ The Missing Status Line: The actual HTTP response status line (HTTP/1.1 200 OK o
 ```Bash
 curl -L -I https://example.com | grep -v '200 OK' ...
 ```
-What happened: Because you started directly with https://, curl connected securely right away without needing an HTTP-to-HTTPS redirect.
+What happened: Because you started directly with `https://`, curl connected securely right away without needing an HTTP-to-HTTPS redirect.
 
 The Output:
 
