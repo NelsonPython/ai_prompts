@@ -76,49 +76,28 @@ alt-svc: h3=":443"; ma=86400
 
 #### Gemini’s Response:
 
-Gemini tends to be verbose and often attempts to anticipate questions that may not be relevant, but responses generally include accurate scripting syntax and complete explanations.  
+Although generally accurate, Gemini tends to be verbose and often anticipates future questions.  The following response has been edited.
 
 ```
 Here is an explanation of what is happening in your terminal output.  Understanding the Command Components:
 
 curl -L -I:
 
--I (or --head) tells curl to fetch only the HTTP headers (metadata like server type and content type) instead of downloading the webpage body.
--L tells curl to follow redirects automatically (such as when an HTTP site redirects to HTTPS).
+-I (or --head) fetches the HTTP headers with metadata like server type and content type instead of downloading content.
+-L tells curl to follow redirects.
 
-| grep -v ...: The grep -v command filters out lines matching specific strings (200 OK, 302 Found, 301 Moved Permanently).
-The Progress Meter (% Total...): This text is output by curl to stderr (standard error) so it bypasses the pipe (|) and prints to your screen.
+The grep -v command filters out lines with specific strings, such as 200 OK, 302 Found, and 301 Moved Permanently.
 
-Breaking Down the Two Commands:
+1. The first command checks http://example.com.  Because you used http://, curl contacted
+the non-secure version of the website.
 
-1. The first command checks ([http://example.com](http://example.com))
-
-Bash
-curl -L -I http://example.com | grep -v '200 OK' ...
-
-What happened: Because you used `http://`, curl first contacted the non-secure version. The server (example.com, backed by Cloudflare) automatically redirected the request to `https://`.
-
-The Output: You see the final headers of the page after the redirect completed (such as Server: cloudflare, Content-Type, and CF-RAY).
-
-The Missing Status Line: The actual HTTP response status line (HTTP/1.1 200 OK or similar) doesn't appear because curl handles the status output differently during redirect chains (-L), or it got filtered out depending on how the headers were parsed across the redirect hop.
-
-2. The Second Command ([https://example.com](https://example.com))
-
-Bash
-curl -L -I https://example.com | grep -v '200 OK' ...
-
-What happened: Because you started directly with `https://`, curl connected securely right away without needing an HTTP-to-HTTPS redirect.
-
-The Output:
-
-HTTP/2 200: This line was printed because modern curl using HTTP/2 outputs the status code format as HTTP/2 200 rather than the legacy HTTP/1.1 200 OK.
-
-Because your grep filter was looking for the precise string '200 OK' (which includes the word "OK"), the line HTTP/2 200 did not match your filter and was safely allowed through to your terminal.
+2. The Second Command checks https://example.com.  Because you started directly with https://,
+curl connected securely right away without needing an HTTP-to-HTTPS redirect.
 ```
 
 ## Verifying AI Prompt Responses
 
-AI can hallucinate so responses must be verified.  One way to verify software output is to run the same prompt with a different model.  In this example, the model used is and open-source ollama model designed to run code:  ```ollama run qwen2.5-coder:1.5b```
+Since AI can hallucinate, responses must be verified.  One way to verify software output is to run the same prompt with a different model.  In this example, the model is an open-source ollama model optimized for running code:  ```ollama run qwen2.5-coder:1.5b```
 
 ```
 Prompt:
