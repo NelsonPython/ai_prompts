@@ -1,4 +1,4 @@
-## AI Prompts Investigator
+## The AI Prompts Investigator Blog
 
 At its core, this blog is about exploring AI Prompts for people who write technical documentation, compliance user manuals, API guides, and software documentation.
 
