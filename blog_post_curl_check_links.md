@@ -11,6 +11,10 @@ When asked, Google Gemini confirmed, *"I cannot directly crawl webpages or run a
 
 `curl` is a command-line tool capable of retrieving data from a web server.  It can send HTTP requests and retrieve web page content.
 
+To run curl from your MacBook Pro, go to Apps and open Terminal.  Type the command and hit enter.
+
+<img src="images/curl_mac.png" width=500>
+
 ### Checking for Broken Links with Curl
 
 ```bash
