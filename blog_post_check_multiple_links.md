@@ -50,11 +50,12 @@ When asked, Gemini recommended alternative methods for checking links.
 When checking the link to a NASA report I wrote, titled *Toward V&V of neural network based controllers*, the script returned a 403 status.  The original URL is part of the ACM Digital Library which has strict automated security checks causing validation scripts to return HTTP 403 Forbidden.  According to [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.4), the 403 (Forbidden) status code indicates that the server understood the request but refuses to fulfill it.  Status code 403 indicates that the link is not broken.  That may be sufficient evidence.  Gemini suggested trying an alternative, the Unpaywall API to retrieve open-access metadata.
 
 ```
-#!/bin/bash
+$ curl "https://api.unpaywall.org/v2/10.1145/582128.582141?email=Real@email.com"
 
-echo -e "Toward V&V of neural network based controllers\n"
-curl "https://api.unpaywall.org/v2/10.1145/582128.582141?email=Real@email.com"
+{"best_oa_location":null,"data_standard":2,"doi":"10.1145/582128.582141","doi_url":"https://doi.org/10.1145/582128.582141","first_oa_location":null,"genre":"proceedings-article","has_repository_copy":false,"is_oa":false,"is_paratext":false,"journal_is_in_doaj":false,"journal_is_oa":false,"journal_issn_l":null,"journal_issns":null,"journal_name":"Proceedings of the first workshop on Self-healing systems","oa_locations":[],"oa_locations_embargoed":[],"oa_status":"closed","published_date":"2002-11-18","publisher":"ACM","title":"Toward V&V of neural network based controllers","updated":"2026-08-21T15:25:14Z","year":2002,"z_authors":[{"author_position":"first","is_corresponding":false,"raw_affiliation_strings":["RIACS/NASA Ames"],"raw_author_name":"Johann Schumann"},{"author_position":"last","is_corresponding":false,"raw_affiliation_strings":["Nelson Consulting Company"],"raw_author_name":"Stacy Nelson"}]}
 ```
+
+While the output is very technical, I can see the name of the report and my name as raw_author_name.  This is evidence that the link is not broken.
 
 
 ### Status 405
@@ -62,10 +63,38 @@ curl "https://api.unpaywall.org/v2/10.1145/582128.582141?email=Real@email.com"
 Another NASA report is available at the Astrophysics Data System (ADS) at Harvard University.  This website is configured so that automated link checkers receive an HTTP 405 Method Not Allowed status.  [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.6) Paragraph 15.5.6 says *In plain English, a 405 Method Not Allowed error means that the server understood what you were trying to do, but it doesn't allow you to do it that way on that specific page or web address.*  Status code 405 presents strong evidence that the link is not broken.  Gemini recommended a `curl` command to fetch only the HTTP headers.
 
 ```
-#!/bin/bash
-
-echo -e "\nPlanning for V&V of the Mars Science Laboratory rover software\n"
+$ echo -e "\nPlanning for V&V of the Mars Science Laboratory rover software\n"
 curl -I -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" "https://ui.adsabs.harvard.edu/abs/2004aero....1...83F/abstract"
+
+Planning for V&V of the Mars Science Laboratory rover software
+
+HTTP/2 405 
+server: awselb/2.0
+date: Mon, 19 Oct 2026 23:44:46 GMT
+content-length: 2203
+x-amzn-waf-action: captcha
+cache-control: no-store, max-age=0
+content-type: text/html; charset=UTF-8
+access-control-allow-origin: *
+access-control-max-age: 86400
+access-control-allow-methods: OPTIONS,GET,POST
+access-control-expose-headers: x-amzn-waf-action
+```
+
+
+server: awselb/2.0: The request passed through an Amazon Web Services Elastic Load Balancer.
+
+content-length: 2203: The server returned a 2203-byte body (typically an HTML page containing the CAPTCHA challenge interface or an error message).
+
+x-amzn-waf-action: captcha: The AWS firewall intercepted the request to force a human verification step.
+
+cache-control: no-store, max-age=0: Instructs browsers and intermediaries not to cache this specific security response.
+
+content-type: text/html; charset=UTF-8: The response payload is formatted as an HTML document rather than raw data or JSON.
+
+access-control-allow-origin: *: A Cross-Origin Resource Sharing (CORS) header allowing resources to be requested from any domain.
+
+access-control-allow-methods: OPTIONS,GET,POST: Explicitly defines the allowed request types. Notice that HEAD is absent, which directly corroborates the 405 Method Not Allowed status.
 
 ---
 
