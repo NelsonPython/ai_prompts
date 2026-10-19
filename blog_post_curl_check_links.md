@@ -1,3 +1,9 @@
+# Blog
+
+## Can AI check broken links in your website?
+
+
+
 ### Using curl to Check for Broken Links
 
 As a technical documentation manager, maintaining a website's integrity by ensuring that all links are functioning correctly is crucial.  Broken links can lead to a poor user experience, and in some cases, can even cause security issues.  This blog post explores how to use the `curl` command to check for broken links.
