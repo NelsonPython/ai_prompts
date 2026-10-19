@@ -29,10 +29,9 @@ To run curl from your MacBook Pro, open Finder, go to Apps, and open a Terminal 
 
 `HTTP/2 200` indicates that curl found `https://www.example.com`.   
 
-#### 
+**Technical Explainer AI Prompt**
 
-**AI Prompt**
-To understand the technical output from curl, write a prompt directing Gemini to decipher it.  Tell Gemini what role it is undertaking, `You are a command line expert`.  Direct Gemini to perform a task, `Explain what this output means...`
+To understand the technical output from curl, write a prompt directing Gemini to explain it.  Tell Gemini what role it is undertaking, `You are a command line expert`, then direct Gemini to perform a task, `Explain what this output means...`
 
 ```
 You are a command line expert.
