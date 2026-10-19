@@ -1,7 +1,7 @@
 # Blog
 
 ## Can AI check broken links in your website?
-As a technical documentation manager, it is important to ensure that readers can open all the links on your webpages.  Broken links can lead to a poor user experience, and in some cases, can even cause security issues.  When I was a content manager at Intel, I was responsible for maintaining over 700 external links!  It took me awhile to develop an automated system for checking and reporting broken links.  This blog post explores how AI may help improve this process.
+As a technical documentation manager, it is important to ensure that readers can open all the links on your webpages.  Broken links can lead to a poor user experience, and in some cases, can even cause security issues.  When I was a content manager at Intel, I was responsible for maintaining over 700 external links!  It took me some time to develop an automated system for checking and reporting broken links.  This blog post explores how AI may help improve this process.
 
 ### AI Capabilities
 
