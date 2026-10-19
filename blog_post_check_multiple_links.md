@@ -1,3 +1,7 @@
+<img src="images/link_rot.png" width=1000 height=200>
+
 # BLOG:  AI Prompt Investigator
 
-## Check Multiple Links
+## Checking Multiple Links
+
+
