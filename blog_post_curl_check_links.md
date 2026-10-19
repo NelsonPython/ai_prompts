@@ -1,4 +1,4 @@
-![](images/link_rot.png)
+<img src="images/link_rot.png" width=1000 height=200>
 
 # Blog
 
