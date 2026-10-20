@@ -2,7 +2,7 @@
 
 ## AI Prompt for Graphic Design
 
-A header image depicting the theme of the blog makes the first impression.  Since I am not a graphic artist, I gave Gemini the following AI Prompt instructing it to generate the header image for a blog about net energy metering.
+A header image depicting the theme of the blog makes the first impression.  Since I am not a graphic artist, I gave Gemini the following AI Prompt instructing it to generate the header image for an article about net energy metering.
 
 ```
 You are a graphic designer
