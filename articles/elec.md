@@ -25,7 +25,7 @@ Using these parameters draw a blogpost header that incorporates the words in the
 
 Take a look at this bill from Southern California Edison.  Notice anything confusing?
 
-<img src="images/sce_bill_question_mark.png" width=700>
+<img src="images/sce_electric_bill.png" width=700>
 
 The Amount due is $34.32, but the Year-to-date charges are $212.29.  Which amount should I pay?  
 
