@@ -17,7 +17,7 @@ At its core, this blog explores AI prompts tailored for technical writers. Rathe
 [Part 2: AI Advice for Handling HTTP Status Codes 403 and 405](articles/http_403_405.md)
 
 
-## The AI Explainer
+## The AIxplainer
 
 [Net Energy Metering](articles/net_energy_metering.md)
 
