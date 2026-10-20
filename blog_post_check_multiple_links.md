@@ -30,7 +30,7 @@ def check_link_with_curl(url):
 ```
 ### Explanation of the `curl` command.
 
-In this function, the `curl` command is executed as a subprocess with these parameters:
+In this function, the `curl` command is executed as a subprocess with these flags:
 
 -s (Silent): Hides the progress meter and error messages
 
@@ -46,7 +46,7 @@ In this function, the `curl` command is executed as a subprocess with these para
 
 ## Alternative Methods
 
-When asked, Gemini recommended alternative methods for link checks resulting in status 403 and 405.
+When queried about these cases, Gemini recommended alternative verification methods for links returning 403 and 405 status codes
 
 ### Status 403
 
@@ -59,11 +59,11 @@ $ curl "https://api.unpaywall.org/v2/10.1145/582128.582141?email=Real@email.com"
 {"best_oa_location":null,"data_standard":2,"doi":"10.1145/582128.582141","doi_url":"https://doi.org/10.1145/582128.582141","first_oa_location":null,"genre":"proceedings-article","has_repository_copy":false,"is_oa":false,"is_paratext":false,"journal_is_in_doaj":false,"journal_is_oa":false,"journal_issn_l":null,"journal_issns":null,"journal_name":"Proceedings of the first workshop on Self-healing systems","oa_locations":[],"oa_locations_embargoed":[],"oa_status":"closed","published_date":"2002-11-18","publisher":"ACM","title":"Toward V&V of neural network based controllers","updated":"2026-08-21T15:25:14Z","year":2002,"z_authors":[{"author_position":"first","is_corresponding":false,"raw_affiliation_strings":["RIACS/NASA Ames"],"raw_author_name":"Johann Schumann"},{"author_position":"last","is_corresponding":false,"raw_affiliation_strings":["Nelson Consulting Company"],"raw_author_name":"Stacy Nelson"}]}
 ```
 
-While the output is technical, I can see the name of the report and my name beside raw_author_name.
+Although formatted as pure json, I can see the name of the report and my name beside raw_author_name.
 
 ### Status 405
 
-Another NASA report, *Planning for V&V of the Mars Science Laboratory rover software*, is available from the Astrophysics Data System (ADS) at Harvard University.  This website is configured so that automated link checkers receive an HTTP 405 Method Not Allowed status.  [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.6) Paragraph 15.5.6 says *In plain English, a 405 Method Not Allowed error means that the server understood what you were trying to do, but it doesn't allow you to do it that way on that specific page or web address.*  While status code 405 presents strong evidence that the link is not broken, Gemini recommended a `curl` command to fetch only the HTTP headers.
+Another NASA report, *Planning for V&V of the Mars Science Laboratory rover software*, is hosted on the Harvard Astrophysics Data System (ADS).  Automated checks against this endpoint return an HTTP 405 Method Not Allowed.  [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.6) Paragraph 15.5.6 says *In plain English, a 405 Method Not Allowed error means that the server understood what you were trying to do, but it doesn't allow you to do it that way on that specific page or web address.*  While status code 405 presents strong evidence that the link is not broken, Gemini recommended a `curl` command to fetch only the HTTP headers.
 
 ```
 $ echo -e "\nPlanning for V&V of the Mars Science Laboratory rover software\n"
@@ -83,7 +83,7 @@ access-control-max-age: 86400
 access-control-allow-methods: OPTIONS,GET,POST
 access-control-expose-headers: x-amzn-waf-action
 ```
-This evidence is less clear but it indicates that the server returned a 2203-byte body.  This is typically an HTML page containing the CAPTCHA challenge interface or an error message.  The response payload is formatted as an HTML document rather than raw data or JSON. OPTIONS,GET, and POST have been explicitly defined as the allowed request types. Notice that HEAD is absent, which directly corroborates the 405 Method Not Allowed status.
+The access-control-allow-methods, OPTIONS, GET, POST, explicitly defines the allowed request types. Because HEAD is absent from this list, the server explicitly rejects it with a 405.  The x-amzn-waf-action of captcha indicates that the 2203 content-length payload represents the HTML body for the CAPTCHA page.  Together, these details confirm that the endpoint is live and protected.
 
 ## Conclusion
 
@@ -91,7 +91,15 @@ Crawling websites to check whether links are broken can be accomplished with a s
 
 ---
 
- **References**
 
-IANA Internet Assigned Numbers Authority [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.rfc-editor.org/info/rfc9110/#section-15.5.6)
+## References
 
+* **IANA Internet Assigned Numbers Authority** [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.rfc-editor.org/info/rfc9110/#section-15.5.6)
+* 
+* **IANA:** [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
+
+* **IETF:** [RFC 9110 — HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html)
+
+* **Unpaywall API:** [Unpaywall REST API Documentation](https://unpaywall.org/products/api)
+
+  
