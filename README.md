@@ -6,7 +6,7 @@ At its core, this blog is about exploring AI Prompts for people who write techni
 
 [Can AI uncover broken links in your website?](articles/curl_check_links.md)
 
-[AI Recommendations for Verifying Links Returning HTTP Status codes 403 and 405](articles/http_403_405.md)
+[AI Advice for Handling HTTP Status Codes 403 and 405](articles/http_403_405.md)
 
 
 
