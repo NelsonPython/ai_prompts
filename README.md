@@ -2,7 +2,7 @@
 
 # BLOG: The AI Prompt Investigator
 
-At its core, this blog is about exploring AI Prompts for people who write technical documentation.  Instead of typing random requests into an AI and hoping for the best, the blog teaches technical writers exact "AI prompts" (instructions) they can use to save time, organize complex information, and verify AI responses.
+At its core, this blog is about exploring AI Prompts for people who write technical documentation.  Instead of typing random requests into an AI and hoping for the best, the blog explores best practices for using generative AI and AI Prompts that save time, organize complex information, and verify the accuracy of AI responses.
 
 [Part 1:  Can AI uncover broken links in your website?](articles/curl_check_links.md)
 
