@@ -11,10 +11,9 @@
 ```
 You are a graphic designer
 
-Style:  IOTA style of soft, flowing, space-age graphics
+Style:  Soft, flowing, space-age graphics
 
-Palette:  colors in a Southern California Edison invoice such as
-#2f4f4f, #00664f, #c8e4e4, #6dc9c9, with bright gold highlights, and light metallic gray
+Palette:  #2f4f4f, #00664f, #c8e4e4, #6dc9c9, with bright gold highlights, and light metallic gray
 
 Theme:  Net Energy Metering for residential solar panels sending electricity to grid
 
