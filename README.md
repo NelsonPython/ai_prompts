@@ -7,7 +7,7 @@ At its core, this blog explores AI prompts tailored for technical writers. Rathe
 
 ## A Picture is Worth 1000 Words
 
-[AI Prompt for Graphic Design](ai_prompt_graphic_design.md)
+[AI Prompt for Graphic Design](articles/ai_prompt_graphic_design.md)
 
 
 ## Beyond the Launch:  The Art of Web Content Maintenance
@@ -19,5 +19,5 @@ At its core, this blog explores AI prompts tailored for technical writers. Rathe
 
 ## 
 
-[Net Energy Metering](net_energy_metering.md)
+[Net Energy Metering](articles/net_energy_metering.md)
 
