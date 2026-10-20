@@ -5,7 +5,7 @@
 At its core, this blog explores AI prompts tailored for technical writers. Rather than relying on trial-and-error requests that can lead to hallucinations, it shares best practices for leveraging generative AI Prompts to organize complex information efficiently. Additionally, for professionals managing regulatory compliance, the blog addresses methods to validate the accuracy of AI responses.
 
 
-## A Picture is Worth 1000 Words and 58 Words Draws a Picture
+## A Picture is Worth 1000 Words
 
 [AI Prompt for Graphic Design](articles/ai_prompt_graphic_design.md)
 
