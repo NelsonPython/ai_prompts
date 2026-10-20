@@ -5,7 +5,7 @@
 At its core, this blog explores AI prompts tailored for technical writers. Rather than relying on trial-and-error requests that can lead to hallucinations, it shares best practices for leveraging generative AI Prompts to organize complex information efficiently. Additionally, for professionals managing regulatory compliance, the blog addresses methods to validate the accuracy of AI responses.
 
 
-## Content Maintenance
+## Beyond the Launch:  The Art of Web Content Maintenance
 
 [Part 1:  Can AI uncover broken links in your website?](articles/curl_check_links.md)
 
