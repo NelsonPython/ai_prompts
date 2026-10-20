@@ -7,7 +7,7 @@ At its core, this blog explores AI prompts tailored for technical writers. Rathe
 
 ## A Picture is Worth 1000 Words
 
-[Can AI Prompts Design Graphics?](ai_prompt_graphic_design.md)
+[AI Prompt for Graphic Design](ai_prompt_graphic_design.md)
 
 
 ## Beyond the Launch:  The Art of Web Content Maintenance
