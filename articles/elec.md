@@ -21,5 +21,10 @@ Size:  blogpost header for GitHub 1000 x 300 pixels
 
 Using these parameters draw a blogpost header that incorporates the words in the theme
 ```
+## Why write about Net Energy Metering (NEM)?
+
+Take a look at this bill from Southern California Edison.  Notice anything confusing?
 
 <img src="images/sce_bill_question_mark.png" width=700>
+
+
