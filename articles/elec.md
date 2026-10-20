@@ -6,7 +6,7 @@
 
 Since I am not a graphic artist, I use Gemini to generate images.  For example, the header of this article was the result of an AI Prompt that I use frequently:
 
-## AI Prompt
+### AI Prompt for Graphic Design
 
 ```
 You are a graphic designer
