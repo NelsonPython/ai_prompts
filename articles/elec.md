@@ -1,4 +1,4 @@
-<img src="images/elec_banner.jpg" width=1000 height=300>
+<img src="images/net_energy_metering.png" width=1000 height=300>
 
 # BLOG: AI Prompt Investigator
 
