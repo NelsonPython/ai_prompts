@@ -87,7 +87,7 @@ This evidence is less clear but it indicates that the server returned a 2203-byt
 
 ## Conclusion
 
-Crawling websites to check whether links are broken or not can be a simple `curl` request or require more complex analysis.  While AI Prompts may be helpful, having a dialogue with Gemini results in new ideas, clarification, and links to authoritative websites such as the Hypertext Transfer Protocol (HTTP) Status Code Registry.
+Crawling websites to check whether links are broken can be accomplished with a simple `curl` request or may require more complex analysis.  While AI prompts provide a helpful starting point, engaging in a dialogue with an AI assistant can spark new ideas, clarify technical errors, and direct you to authoritative resources such as the Hypertext Transfer Protocol (HTTP) Status Code Registry.
 
 ---
 
