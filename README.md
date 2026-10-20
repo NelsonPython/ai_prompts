@@ -1,4 +1,4 @@
-<img src="images/white_teal.jpg" width=1000, height=200>
+<img src="articles/images/white_teal.jpg" width=1000, height=200>
 
 # BLOG: The AI Prompt Investigator
 
