@@ -10,7 +10,7 @@ At its core, this blog explores AI prompts tailored for technical writers. Rathe
 [AI Prompt for Graphic Design](articles/ai_prompt_graphic_design.md)
 
 
-## Beyond the Launch:  The Art of Web Content Maintenance
+## Beyond the Launch:  AI Prompts for Web Content Maintenance
 
 [Part 1:  Can AI uncover broken links in your website?](articles/curl_check_links.md)
 
