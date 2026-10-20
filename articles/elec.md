@@ -1,6 +1,6 @@
 <img src="images/elec_banner.png" width=100 height=200>
 
-# BLOG:
+# BLOG: AI Prompt Investigator
 
 ## Can AI reduce my electric bill?
 
