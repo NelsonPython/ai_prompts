@@ -2,7 +2,7 @@
 
 # BLOG: AI Prompt Investigator
 
-## How can AI Prompts Help Write a Blog Post about Net Energy Metering
+## Can AI Prompts Help Write a Blog Post about Net Energy Metering?
 
 <img src="images/sce_bill_question_mark.png" width=700>
 
