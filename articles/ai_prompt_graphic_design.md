@@ -1,6 +1,6 @@
 # BLOG: AI Prompt Investigator
 
-## Can AI Prompts Co-create a Blog Post?
+## Can AI Prompts Design Graphics?
 
 [The Producers](https://en.wikipedia.org/wiki/The_Producers_(musical)) is one of my favorite plays.  I watched the original cast from the front row of mezzanine at the St. James Theater in New York.  It is a play about producing a play.  That inspired me to write the blog post about writing a blog post.
 
