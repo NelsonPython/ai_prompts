@@ -46,11 +46,11 @@ In this function, the `curl` command is executed as a subprocess with these flag
 
 ## Alternative Methods
 
-When queried about these cases, Gemini recommended alternative verification methods for links returning 403 and 405 status codes
+When queried about these cases, Gemini recommended alternative verification methods for links returning 403 and 405 status codes.
 
 ### Status 403
 
-When checking the link to my NASA report, titled *Toward V&V of neural network based controllers*, the script returned a 403 status.  The original URL is part of the ACM Digital Library which has strict automated security checks forbidding web crawlers. According to [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.4), the 403 (Forbidden) status code indicates that the server understood the request but refused to fulfill it.  Receiving a status code 403 indicates that the link is not broken.  While that may be sufficient evidence, Gemini suggested trying an alternative, the Unpaywall API to retrieve open-access metadata.  Unpaywall is a non-profit, open-source service and database that helps researchers, developers, and the public find free, legal, open-access versions of academic research papers.
+When checking the link to our NASA report, titled *Toward V&V of neural network based controllers*, the script returned a 403 status.  The original URL is part of the ACM Digital Library which has strict automated security checks forbidding web crawlers. According to [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.4), the 403 (Forbidden) status code indicates that the server understood the request but refused to fulfill it.  Receiving a status code 403 indicates that the link is not broken.  While that may be sufficient evidence, Gemini suggested trying an alternative, retrieving open-access metadata from the Unpaywall API.  Unpaywall is a non-profit, open-source service and database that helps researchers, developers, and the public find free, legal, open-access versions of academic research papers.
 
 
 ```
@@ -63,7 +63,7 @@ Although formatted as pure json, I can see the name of the report and my name be
 
 ### Status 405
 
-Another NASA report, *Planning for V&V of the Mars Science Laboratory rover software*, is hosted on the Harvard Astrophysics Data System (ADS).  Automated checks against this endpoint return an HTTP 405 Method Not Allowed.  [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.6) Paragraph 15.5.6 says *In plain English, a 405 Method Not Allowed error means that the server understood what you were trying to do, but it doesn't allow you to do it that way on that specific page or web address.*  While status code 405 presents strong evidence that the link is not broken, Gemini recommended a `curl` command to fetch only the HTTP headers.
+Another NASA report, *Planning for V&V of the Mars Science Laboratory rover software*, is hosted on the Harvard Astrophysics Data System (ADS).  Automated checks against this endpoint return an HTTP 405 Method Not Allowed.  [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.6) Paragraph 15.5.6 says *In plain English, a 405 Method Not Allowed error means that the server understood what you were trying to do, but it doesn't allow you to do it that way on that specific page or web address.*  While status code 405 presents strong evidence that the link is not broken, Gemini recommended a `curl` command to fetch the HTTP headers.
 
 ```
 $ echo -e "\nPlanning for V&V of the Mars Science Laboratory rover software\n"
@@ -83,11 +83,11 @@ access-control-max-age: 86400
 access-control-allow-methods: OPTIONS,GET,POST
 access-control-expose-headers: x-amzn-waf-action
 ```
-The access-control-allow-methods, OPTIONS, GET, POST, explicitly defines the allowed request types. Because HEAD is absent from this list, the server explicitly rejects it with a 405.  The x-amzn-waf-action of captcha indicates that the 2203 content-length payload represents the HTML body for the CAPTCHA page.  Together, these details confirm that the endpoint is live and protected.
+The `access-control-allow-methods`, `OPTIONS, GET, POST`, explicitly defines the allowed request types. Because `HEAD` is absent from this list, the server explicitly rejects it with a 405.  The `x-amzn-waf-action` `captcha`indicates that the `2203 content-length` payload represents the HTML body for the `CAPTCHA` page.  Together, these details confirm that the endpoint is live and protected.
 
 ## Conclusion
 
-Crawling websites to check whether links are broken can be accomplished with a simple `curl` request or may require more complex analysis.  While AI prompts provide a helpful starting point, engaging in a dialogue with an AI assistant can spark new ideas, clarify technical errors, and direct you to authoritative resources such as the Hypertext Transfer Protocol (HTTP) Status Code Registry.
+Crawling websites to check whether links are broken can be accomplished with a simple `curl` request or may require more analysis.  While AI prompts provide a helpful starting point, engaging in a dialogue with an AI assistant can spark new ideas, clarify technical errors, and direct you to authoritative resources such as the Hypertext Transfer Protocol (HTTP) Status Code Registry.
 
 ---
 
