@@ -4,7 +4,7 @@
 
 ## Can AI Prompts Co-create a Blog Post about Net Energy Metering?
 
-Since I am not a graphic artist, I use Gemini to generate images.  For example, the header of this article was the result of an AI Prompt that I use frequently:
+First, a header image depicting the theme of the blog is worth 1000 words.  Since I am not a graphic artist, I gave Gemini the following AI Prompt asking it to generate the header image:
 
 ### AI Prompt for Graphic Design
 
