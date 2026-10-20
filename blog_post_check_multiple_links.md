@@ -94,8 +94,6 @@ Crawling websites to check whether links are broken can be accomplished with a s
 
 ## References
 
-* **IANA Internet Assigned Numbers Authority** [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.rfc-editor.org/info/rfc9110/#section-15.5.6)
-* 
 * **IANA:** [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
 
 * **IETF:** [RFC 9110 — HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html)
