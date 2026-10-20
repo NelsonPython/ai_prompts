@@ -4,6 +4,6 @@
 
 ## Can AI reduce my electric bill?
 
-<img src="images/sce_bill_question_mark.png" width=500>
+<img src="images/sce_bill_question_mark.png" width=700>
 
 
