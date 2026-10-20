@@ -4,7 +4,7 @@
 
 ## Can AI Prompts Help Write a Blog Post about Net Energy Metering?
 
-<img src="images/sce_bill_question_mark.png" width=700>
+Since I am not a graphic artist, I use Gemini to generate images.  For example, the header of this article was the result of an AI Prompt that I use frequently:
 
 ## AI Prompt
 
@@ -22,3 +22,4 @@ Size:  blogpost header for GitHub 1000 x 300 pixels
 Using these parameters draw a blogpost header that incorporates the words in the theme
 ```
 
+<img src="images/sce_bill_question_mark.png" width=700>
