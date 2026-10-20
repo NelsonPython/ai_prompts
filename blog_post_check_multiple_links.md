@@ -49,7 +49,8 @@ When asked, Gemini recommended alternative methods for link checks with status 4
 
 ### Status 403
 
-When checking the link to a NASA report I wrote, titled *Toward V&V of neural network based controllers*, the script returned a 403 status.  The original URL is part of the ACM Digital Library which has strict automated security checks causing validation scripts to return HTTP 403 Forbidden.  According to [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.4), the 403 (Forbidden) status code indicates that the server understood the request but refuses to fulfill it.  Status code 403 indicates that the link is not broken.  That may be sufficient evidence.  Gemini suggested trying an alternative, the Unpaywall API to retrieve open-access metadata.
+When checking the link to my NASA report, titled *Toward V&V of neural network based controllers*, the script returned a 403 status.  The original URL is part of the ACM Digital Library which has strict automated security checks forbidding web crawlers. According to [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.4), the 403 (Forbidden) status code indicates that the server understood the request but refused to fulfill it.  Receiving a status code 403 indicates that the link is not broken.  While that may be sufficient evidence, Gemini suggested trying an alternative, the Unpaywall API to retrieve open-access metadata.
+
 
 ```
 $ curl "https://api.unpaywall.org/v2/10.1145/582128.582141?email=Real@email.com"
