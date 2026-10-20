@@ -2,7 +2,7 @@
 
 # BLOG: AI Prompt Investigator
 
-## Can AI Prompts Help Write a Blog Post about Net Energy Metering?
+## Can AI Prompts Co-create a Blog Post about Net Energy Metering?
 
 Since I am not a graphic artist, I use Gemini to generate images.  For example, the header of this article was the result of an AI Prompt that I use frequently:
 
