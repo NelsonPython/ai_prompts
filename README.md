@@ -2,7 +2,10 @@
 
 # BLOG: The AI Prompt Investigator
 
-At its core, this blog is about exploring AI Prompts for people who write technical documentation.  Instead of typing random requests into an AI and coping with hallucinations, the blog explores best practices for using generative AI along with AI Prompts that save time organizing complex information.  For those tasked with regulatory compliance, this blog addresses ways to validate the accuracy of AI responses.
+At its core, this blog explores AI prompts tailored for technical writers. Rather than relying on trial-and-error requests that can lead to hallucinations, it shares best practices for leveraging generative AI Prompts to organize complex information efficiently. Additionally, for professionals managing regulatory compliance, the blog addresses methods to validate the accuracy of AI responses.
+
+
+## Content Maintenance
 
 [Part 1:  Can AI uncover broken links in your website?](articles/curl_check_links.md)
 
