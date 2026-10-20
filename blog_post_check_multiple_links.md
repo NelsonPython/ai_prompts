@@ -49,7 +49,7 @@ When asked, Gemini recommended alternative methods for link checks with status 4
 
 ### Status 403
 
-When checking the link to my NASA report, titled *Toward V&V of neural network based controllers*, the script returned a 403 status.  The original URL is part of the ACM Digital Library which has strict automated security checks forbidding web crawlers. According to [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.4), the 403 (Forbidden) status code indicates that the server understood the request but refused to fulfill it.  Receiving a status code 403 indicates that the link is not broken.  While that may be sufficient evidence, Gemini suggested trying an alternative, the Unpaywall API to retrieve open-access metadata.
+When checking the link to my NASA report, titled *Toward V&V of neural network based controllers*, the script returned a 403 status.  The original URL is part of the ACM Digital Library which has strict automated security checks forbidding web crawlers. According to [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.4), the 403 (Forbidden) status code indicates that the server understood the request but refused to fulfill it.  Receiving a status code 403 indicates that the link is not broken.  While that may be sufficient evidence, Gemini suggested trying an alternative, the Unpaywall API to retrieve open-access metadata.  Unpaywall is a non-profit, open-source service and database that helps researchers, developers, and the public find free, legal, open-access versions of academic research papers.
 
 
 ```
@@ -58,12 +58,11 @@ $ curl "https://api.unpaywall.org/v2/10.1145/582128.582141?email=Real@email.com"
 {"best_oa_location":null,"data_standard":2,"doi":"10.1145/582128.582141","doi_url":"https://doi.org/10.1145/582128.582141","first_oa_location":null,"genre":"proceedings-article","has_repository_copy":false,"is_oa":false,"is_paratext":false,"journal_is_in_doaj":false,"journal_is_oa":false,"journal_issn_l":null,"journal_issns":null,"journal_name":"Proceedings of the first workshop on Self-healing systems","oa_locations":[],"oa_locations_embargoed":[],"oa_status":"closed","published_date":"2002-11-18","publisher":"ACM","title":"Toward V&V of neural network based controllers","updated":"2026-08-21T15:25:14Z","year":2002,"z_authors":[{"author_position":"first","is_corresponding":false,"raw_affiliation_strings":["RIACS/NASA Ames"],"raw_author_name":"Johann Schumann"},{"author_position":"last","is_corresponding":false,"raw_affiliation_strings":["Nelson Consulting Company"],"raw_author_name":"Stacy Nelson"}]}
 ```
 
-While the output is very technical, I can see the name of the report and my name as raw_author_name.  This is evidence that the link is not broken.
-
+While the output is technical, I can see the name of the report and my name beside raw_author_name.
 
 ### Status 405
 
-Another NASA report is available at the Astrophysics Data System (ADS) at Harvard University.  This website is configured so that automated link checkers receive an HTTP 405 Method Not Allowed status.  [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.6) Paragraph 15.5.6 says *In plain English, a 405 Method Not Allowed error means that the server understood what you were trying to do, but it doesn't allow you to do it that way on that specific page or web address.*  Status code 405 presents strong evidence that the link is not broken.  Gemini recommended a `curl` command to fetch only the HTTP headers.
+Another NASA report, *Planning for V&V of the Mars Science Laboratory rover software*, is available from the Astrophysics Data System (ADS) at Harvard University.  This website is configured so that automated link checkers receive an HTTP 405 Method Not Allowed status.  [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.6) Paragraph 15.5.6 says *In plain English, a 405 Method Not Allowed error means that the server understood what you were trying to do, but it doesn't allow you to do it that way on that specific page or web address.*  While status code 405 presents strong evidence that the link is not broken, Gemini recommended a `curl` command to fetch only the HTTP headers.
 
 ```
 $ echo -e "\nPlanning for V&V of the Mars Science Laboratory rover software\n"
@@ -85,15 +84,13 @@ access-control-expose-headers: x-amzn-waf-action
 ```
 This evidence is less clear but it indicates that the server returned a 2203-byte body.  This is typically an HTML page containing the CAPTCHA challenge interface or an error message.  The response payload is formatted as an HTML document rather than raw data or JSON. OPTIONS,GET, and POST have been explicitly defined as the allowed request types. Notice that HEAD is absent, which directly corroborates the 405 Method Not Allowed status.
 
+## Conclusion
+
+Crawling websites to check whether links are broken or not can be a simple `curl` request or require more complex analysis.  While AI Prompts may be helpful, having a dialogue with Gemini results in new ideas, clarification, and links to authoritative websites such as the Hypertext Transfer Protocol (HTTP) Status Code Registry.
+
 ---
 
  **References**
 
 IANA Internet Assigned Numbers Authority [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.rfc-editor.org/info/rfc9110/#section-15.5.6)
-
-
-
-
-
-
 
