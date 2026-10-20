@@ -1,5 +1,3 @@
-<img src="images/net_energy_metering.jpg" width=1000 height=300>
-
 # BLOG: AI Prompt Investigator
 
 ## Can AI Prompts Co-create a Blog Post about Net Energy Metering?
@@ -23,6 +21,9 @@ Size:  blogpost header for GitHub 1000 x 300 pixels
 
 Using these parameters draw a blogpost header that incorporates the words in the theme
 ```
+
+<img src="images/net_energy_metering.jpg" width=1000 height=300>
+
 ## Why write about Net Energy Metering (NEM)?
 
 Take a look at this bill from Southern California Edison.  Notice anything confusing?
