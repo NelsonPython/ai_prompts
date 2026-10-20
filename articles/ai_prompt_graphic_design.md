@@ -4,7 +4,9 @@
 
 ## Can AI Prompts Co-create a Blog Post about Net Energy Metering?
 
-First, a header image depicting the theme of the blog is worth 1000 words.  Since I am not a graphic artist, I gave Gemini the following AI Prompt instructing it to generate the header image:
+[The Producers](https://en.wikipedia.org/wiki/The_Producers_(musical)) is one of my favorite plays.  I watched the original cast from the front row of mezzanine of the St. James Theater in New York.  It is a play about producing a play.  That inspired me to write the blog post about writing a blog post.
+
+A header image depicting the theme of the blog makes the first impression.  Since I am not a graphic artist, I gave Gemini the following AI Prompt instructing it to generate the header image for a blog about net energy metering:
 
 ### AI Prompt for Graphic Design
 
