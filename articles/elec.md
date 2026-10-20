@@ -1,4 +1,4 @@
-<img src="images/elec_banner.png" width=100 height=200>
+<img src="images/elec_banner.jpg" width=100 height=200>
 
 # BLOG: AI Prompt Investigator
 
