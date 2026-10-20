@@ -2,7 +2,7 @@
 
 # BLOG:  AI Prompt Investigator
 
-## How to Check Multiple Links
+## AI Recommendations for Verifying Links Returning HTTP Status codes 403 and 405
 
 Part 1, [Can AI uncover broken links in your website?](blog_post_curl_check_links.md) introduced using AI Prompts to help automate checking for broken links.  This article follows up with AI guidance on understanding HTTP status codes and alternative checks.
 
