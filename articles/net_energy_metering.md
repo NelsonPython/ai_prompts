@@ -31,6 +31,7 @@ The amount due each month is for SCE maintenance and operation.  At the end of t
 
 SCE participates in the [Green Button initiative]([)](https://www.energy.gov/data/green-button), that provides utility customers with easy and secure access to their energy usage information.  
 
+Click on the  `Green button download data` to download usage information in csv format.
 
 
 
