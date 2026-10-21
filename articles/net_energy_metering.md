@@ -65,7 +65,7 @@ Installing a Raspberry Pi computer with a SenseHat temperature and humidity sens
 
 ---
 
-Keeping track of yearly energy consumption over the years validates our energy saving behaviors and helps with budgeting.
+Keeping track of average daily usage over the years validates our energy saving behaviors and helps with budgeting.
 
 ---
 
