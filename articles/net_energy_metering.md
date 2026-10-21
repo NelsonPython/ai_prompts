@@ -27,6 +27,13 @@ The year-to-date total for energy generation is $98.72 and the year-to-date tota
 
 The amount due each month is for SCE maintenance and operation.  At the end of the fiscal year in May, the total of both generation and delivery will be offset by the total electricity produced by your home solar panels and sold back to SCE.  In order to budget for this yearly bill, keep track of the year-to-date totals.
 
-<img src="images/nem_net_green_button.jpg" width=700>
+<img src="articles/images/nem_net_green_button.jpg" width=700>
+
+SCE participates in the [Green Button initiative]([)](https://www.energy.gov/data/green-button), that provides utility customers with easy and secure access to their energy usage information.  
+
+
+
+
+
 
 
