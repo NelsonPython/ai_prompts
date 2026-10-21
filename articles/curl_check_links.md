@@ -1,4 +1,4 @@
-<img src="images/link_rot.jpg" width=1000 height=200>
+<img src="images/curl_link_rot.jpg" width=1000 height=200>
 
 # BLOG:  AI Prompt Investigator
 
@@ -92,7 +92,7 @@ How much time you spend verifying an AI Prompt response depends on your environm
 
 In this example, the first part of the response `1. The Status Line` revealed the status `HTTP/2 200` meaning "OK, I found the webpage associated with the link".  It is easy to verify that the `curl` command provided by Gemini functioned properly.  Enter the link into a browser, in this case "www.example.com" show below:
 
-<img src="images/example_com.png" width=500>
+<img src="images/curl_example_com.png" width=500>
 
 ## Automate Checking Multiple Links
 
@@ -108,7 +108,7 @@ done
 
 Notice that `curl` returned a status code of 301 when attempting to access `www.google.com`.  Re-use the AI prompt to find out what 301 means.
 
-<img src="images/gemini_response.png" width=500>
+<img src="images/curl_gemini_response.png" width=500>
 
 
 ## Recap and Next Steps

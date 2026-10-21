@@ -19,13 +19,13 @@ Using these parameters draw a blogpost header that incorporates the words in the
 ```
 Gemini produced this graphic:
 
-<img src="images/net_energy_metering.jpg" width=1000 height=300>
+<img src="images/nem_net_energy_metering.jpg" width=1000 height=300>
 
 ## Why write about Net Energy Metering (NEM)?
 
 Take a look at this bill from Southern California Edison.  Notice anything confusing?
 
-<img src="images/sce_electric_bill.jpg" width=700>
+<img src="images/nem_sce_electric_bill.jpg" width=700>
 
 If you are curious, click on [Net Energy Metering](net_energy_metering.md) for the explanation.
 
