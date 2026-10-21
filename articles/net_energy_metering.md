@@ -76,7 +76,7 @@ Using the app's Daily Comparison feature, we discovered that in 2026 we purchase
 
 ---
 
-**Adding IoT Context:** Installing a Raspberry Pi equipped with a SenseHat sensor provides hourly temperature and humidity logs. Overlaying environmental sensor data onto energy consumption clearly illustrates how summer heatwaves drive increased air conditioner usage.
+**Adding IoT Context:** Installing a [Raspberry Pi equipped with a SenseHat](https://github.com/NelsonPython/AstroPiQuake) sensor provides hourly temperature and humidity logs. Overlaying environmental sensor data onto energy consumption clearly illustrates how summer heatwaves drive increased air conditioner usage.
 
 ---
 
