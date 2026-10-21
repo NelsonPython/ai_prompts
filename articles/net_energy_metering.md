@@ -49,7 +49,7 @@ Clicking on the  `Green button download data` lets you download usage informatio
 
 ---
 
-Yearly comparison of energy usage reveals trends in energy conservation.
+Select Daily Comparison Yearly to compare two date ranges.  We purchased less electricity in 2026.
 
 ---
 
