@@ -32,7 +32,7 @@ Page 5 details delivery charges, a total of $155.80 for the current month and $5
 
 The next page shows supply generation by Desert Community Energy.  *Additional Information* on the right states that the NEM balance owed is $98.72, but on the left, the **Your New Charges** are zero.
 
-<img src="images/nem_windmills.jpg" width=1000 height=300>
+<img src="images/nem_windmills.jpg" width=1000>
 
 In simple terms, [Desert Community Energy](https://desertcommunityenergy.org) generates wind and solar energy and Southern California Edison charges a fee to deliver it.  The year-to-date total for energy generation is $98.72 and the year-to-date total to delivery is $212.29.  The amount due each month is for SCE maintenance and operation.  At the end of the fiscal year, the total of both generation and delivery will be offset by the total electricity produced by your solar panels and sold back to SCE.  In order to budget for this yearly bill, keep track of the year-to-date totals.  SCE participates in the [Green Button initiative](https://www.energy.gov/data/green-button) and provides utility customers with easy and secure access to their energy usage information.  Notice the `Green button download data` at the bottom of the SCE usage page.   
 
