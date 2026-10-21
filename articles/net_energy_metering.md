@@ -58,7 +58,7 @@ Select Daily Comparison Yearly to compare two date ranges.  We purchased less el
 
 ---
 
-Installing a Raspberry Pi computer with a SenseHat temperature and humidity sensor to report hourly readings enriches the energy usage.  The data clearly shows we begin using more energy as summer heats up and we use the air conditioner more frequently.
+Installing a Raspberry Pi computer with a SenseHat temperature and humidity sensor to report hourly readings enriches the energy usage data.  The data clearly shows we begin using more energy as summer heats up and we use the air conditioner more frequently.
 
 ---
 
