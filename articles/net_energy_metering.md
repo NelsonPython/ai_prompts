@@ -25,8 +25,9 @@ The next page details supply generation by Desert Community Energy.  The *Additi
 In simple terms, Desert Community Energy generates wind and solar energy and Southern California Edison charges a fee to deliver it.
 The year-to-date total for energy generation is $98.72 and the year-to-date total to delivery the energy to your home is $212.29.
 
-The amount due each month is for SCE maintenance and operation.  At the end of the fiscal year in May, the total of both generation and delivery will be offset by the total electricity produced by your home solar panels and sold back to SCE.
-In order to plan for the yearly bill, you must keep track of the year-to-date totals and put money aside so you can pay it.
+The amount due each month is for SCE maintenance and operation.  At the end of the fiscal year in May, the total of both generation and delivery will be offset by the total electricity produced by your home solar panels and sold back to SCE.  In order to budget for this yearly bill, keep track of the year-to-date totals.
+
+
 
 
 
