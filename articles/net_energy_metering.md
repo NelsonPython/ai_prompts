@@ -10,9 +10,7 @@ Take a look at this bill from Southern California Edison.  Notice anything confu
 
 The amount due is $34.32, but the year-to-date charges are $212.29.  Which amount should you pay?  
 
-On the invoice, it says *Understand Net Energy Metering (NEM) billing*.  Then, it explains that you are billed at the end of the year for the net difference between the amount of electricity purchased and the amount your solar panels generated and sold back.  
-
-There is more to the story.  Notice that the bill is 8 pages long.   Scrolling down you will find another section on page 5.
+On the invoice, it says *Understand Net Energy Metering (NEM) billing*.  Then, it explains that you are billed at the end of the year for the net difference between the amount of electricity purchased and the amount your solar panels generated and sold back.  There is more to the story.  Notice that the bill is 8 pages long.   Scrolling down you will find another section on page 5.
 
 <img src="images/nem_sce_page_5.jpg" width=700>
 
