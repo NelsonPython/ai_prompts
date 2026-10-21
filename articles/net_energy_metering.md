@@ -80,7 +80,7 @@ Using the app's Daily Comparison feature, we discovered that in 2026 we purchase
 
 ---
 
-<img src="images/nem_energy_weather.jpg" width=700>
+<img src="images/nem_electricity_weather.jpg" width=700>
 
 ---
 
