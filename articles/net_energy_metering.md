@@ -12,11 +12,15 @@ The amount due is $34.32, but the year-to-date charges are $212.29.  Which amoun
 
 On the invoice, it says *Understand Net Energy Metering (NEM) billing*.  Then, it explains that you are billed at the end of the year for the net difference between the amount of electricity purchased and the amount your solar panels generated and sold back.  There is more to the story.  Notice that the bill is 8 pages long.   Scrolling down you will find another section on page 5.
 
+
 <img src="images/nem_sce_page_5.jpg" width=700>
+
 
 Page 5 details delivery charges.  The energy charge total is $155.80 for the current month and $56.49 for the previous month resulting a total year-to-date energy charge of $212.29.
 
+
 <img src="images/nem_sce_page_6.jpg" width=700>
+
 
 The next page details supply generation by Desert Community Energy.  The *Additional Information* section on the right states that the NEM balance owed is $98.72, but on the left, the Your New Charges are zero.
 
@@ -25,21 +29,30 @@ The year-to-date total for energy generation is $98.72 and the year-to-date tota
 
 The amount due each month is for SCE maintenance and operation.  At the end of the fiscal year in May, the total of both generation and delivery will be offset by the total electricity produced by your home solar panels and sold back to SCE.  In order to budget for this yearly bill, keep track of the year-to-date totals.
 
+
 <img src="images/nem_green_button.jpg" width=700>
+
 
 SCE participates in the [Green Button initiative](https://www.energy.gov/data/green-button) that provides utility customers with easy and secure access to their energy usage information.  Clicking on the  `Green button download data` lets you download usage information in csv format.  Using AI Prompts for Python programming, MySql database design, and PHP website coding, Gemini generated code for a web app to analyze energy usage and sales.
 
+
 <img src="images/nem_webpage.jpg" width=700>
+
 
 Yearly comparison of energy usage reveals trends in energy conservation.
 
+
 <img src="images/nem_yearly_comparison.jpg" width=700>
+
 
 Adding a Raspberry Pi SenseHat temperature and humidity sensor adds more information about energy usage.  We use more energy in the summer when the air conditioner is running.
 
+
 <img src="images/nem_energy_weather.jpg" width=700>
 
+
 Keeping track of yearly energy consumption over the years helps budget.
+
 
 <img src="images/nem_years.jpg" width=700>
 
