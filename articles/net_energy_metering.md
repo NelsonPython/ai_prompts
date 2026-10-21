@@ -49,7 +49,7 @@ Clicking on the  `Green button download data` lets you download usage informatio
 
 ---
 
-Select Daily Comparison Yearly to compare two date ranges.  We purchased less electricity in 2026.
+Select Daily Comparison Yearly to compare two date ranges.  We purchased less electricity in 2026 and we also sold back less energy.  Since we don't have battery storage, it is important for us to use energy when our solar panels generate it.  In 2026, we began cycling the pool pump and running appliances like the washer-dryer and the dishwasher when the sun is shining.  We also strictly maintain the air conditioner making sure the freon is fully charged and filters are changed monthly.
 
 ---
 
@@ -57,7 +57,7 @@ Select Daily Comparison Yearly to compare two date ranges.  We purchased less el
 
 ---
 
-Installing a Raspberry Pi computer with a SenseHat temperature and humidity sensor to report hourly readings enriches the energy usage.  For example, the data clearly shows we begin using more energy as summer heats up and we use the air conditioner.
+Installing a Raspberry Pi computer with a SenseHat temperature and humidity sensor to report hourly readings enriches the energy usage.  The data clearly shows we begin using more energy as summer heats up and we use the air conditioner more frequently.
 
 ---
 
@@ -65,7 +65,7 @@ Installing a Raspberry Pi computer with a SenseHat temperature and humidity sens
 
 ---
 
-Keeping track of yearly energy consumption over the years helps budget.
+Keeping track of yearly energy consumption over the years validates our energy saving behaviors and helps with budgeting.
 
 ---
 
