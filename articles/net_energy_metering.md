@@ -29,13 +29,19 @@ The amount due each month is for SCE maintenance and operation.  At the end of t
 
 <img src="images/nem_green_button.jpg" width=700>
 
-SCE participates in the [Green Button initiative](https://www.energy.gov/data/green-button) that provides utility customers with easy and secure access to their energy usage information.  Click on the  `Green button download data` to download usage information in csv format.
+SCE participates in the [Green Button initiative](https://www.energy.gov/data/green-button) that provides utility customers with easy and secure access to their energy usage information.  Clicking on the  `Green button download data` lets you download usage information in csv format.  Using AI Prompts for Python programming, MySql database design, and PHP website coding, Gemini generated code for a web app to analyze energy usage and sales.
 
 <img src="images/nem_webpage.jpg" width=700>
 
+Yearly comparison of energy usage reveals trends in energy conservation.
+
 <img src="images/nem_yearly_comparison.jpg" width=700>
 
+Adding a Raspberry Pi SenseHat temperature and humidity sensor adds more information about energy usage.  We use more energy in the summer when the air conditioner is running.
+
 <img src="images/nem_energy_weather.jpg" width=700>
+
+Keeping track of yearly energy consumption over the years helps budget.
 
 <img src="images/nem_years.jpg" width=700>
 
