@@ -41,7 +41,7 @@ The year-to-date total for energy generation is $98.72 and the year-to-date tota
 
 ---
 
-Clicking on the  `Green button download data` lets you download usage information in csv format.  Using AI Prompts for Python programming, MySql database design, and PHP website coding, Gemini generated code for a web app to analyze energy usage and sales.
+Clicking on the  `Green button download data` lets you download usage information in csv format.  Using AI Prompts for Python programming, MySql database design, and PHP website coding, Gemini generated code for a web app to report energy usage.
 
 ---
 
