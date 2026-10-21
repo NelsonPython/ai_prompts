@@ -20,7 +20,7 @@ Page 5 details delivery charges.  The energy charge total is $155.80 for the cur
 
 <img src="images/nem_sce_page_6.jpg" width=700>
 
-The next page details supply generation by Desert Community Energy.  The Additional Information section on the right states that the NEM balance owed is $98.72, but on the left, the Your New Charges are zero.
+The next page details supply generation by Desert Community Energy.  The *Additional Information* section on the right states that the NEM balance owed is $98.72, but on the left, the Your New Charges are zero.
 
 In simple terms, Desert Community Energy generates wind and solar energy and Southern California Edison charges a fee to deliver it.
 The year-to-date total for energy generation is $98.72 and the year-to-date total to delivery the energy to your home is $212.29.
