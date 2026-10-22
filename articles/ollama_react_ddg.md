@@ -1,6 +1,6 @@
 <img src="images/agentic_cartoon.jpg" width=1000 height=250>
 
-# BLOG:  The AI Investigator
+# BLOG:  The Agentic AI Investigator
 
 ## Agentic Experiments with Ollama, ReAct, and DuckDuckGo
 
