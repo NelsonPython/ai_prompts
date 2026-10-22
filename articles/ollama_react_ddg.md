@@ -2,7 +2,7 @@
 
 # BLOG:  The Agentic AI Investigator
 
-## Agentic Experiments with Ollama, ReAct, and DuckDuckGo
+## Experimenting with Ollama, ReAct, and DuckDuckGo
 
 *In-progress - use with caution - expect updates*
 
