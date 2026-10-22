@@ -1,5 +1,11 @@
 <img src="images/agentic_cartoon.jpg" width=1000 height=250>
 
+# BLOG:  The AI Investigator
+
+## Agentic Experiments with Ollama, ReAct, and DuckDuckGo
+
+*In-progress - use with caution - expect updates*
+
 Example using LangChain prompt handling with a custom Ollama model and ReAct agent architecture to search DuckDuckGo.
 
 ### 1. Imports and Setup
