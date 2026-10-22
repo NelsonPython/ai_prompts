@@ -6,7 +6,7 @@
 
 *In-progress - use with caution - expect updates*
 
-Example using LangChain prompt handling with a custom Ollama model and ReAct agent architecture to search DuckDuckGo.
+Example using [LangChain](https://www.langchain.com/langchain) prompt handling with a custom Ollama model and ReAct agent architecture to search DuckDuckGo.
 
 ### 1. Imports and Setup
 
