@@ -38,7 +38,7 @@ llm = ChatOllama(
 
 ```
 
-* **Model:** Connects to your local Ollama instance running the `factual-llama3.2:latest` model. Setting `temperature=0` ensures deterministic, factual, and consistent responses.
+* **Model:** Connects to your local Ollama instance running the `factual-llama3.2:latest` model. Setting `temperature=0` ensures deterministic, factual, and consistent responses.  `factual-llama3.2` was customized per instructions in the **Appendix:  Customize an Ollama Model** below.
 
 ---
 
@@ -91,3 +91,49 @@ if __name__ == "__main__":
 
 * **CLI Loop:** Runs a continuous `while True` loop in your terminal. It accepts user input, passes it along with the running string-based `chat_history` to the agent executor, prints the output, and updates the history for the next turn.
 
+
+### Appendix:  Customize an Ollama model
+
+You can customize an Ollama model to be factual by using a Modelfile to lower the generation temperature, set strict behavioral constraints, and define factual guardrails in the system prompt.
+
+#### Step 1: Create a Modelfile
+
+Create a plain text file named Modelfile (without any file extension) in your working directory.  Write your configuration using FROM, PARAMETER, and SYSTEM directives:
+
+```
+# Choose a reliable base model
+FROM llama3.1:8b
+
+# Lower temperature to reduce hallucination and creativity (range 0.0 to 1.0)
+PARAMETER temperature 0.1
+
+# Restrict top_p sampling for more deterministic outputs
+PARAMETER top_p 0.8
+
+# Define strict factual system instructions
+SYSTEM """
+You are a strictly factual, objective assistant. 
+- Rely only on verified facts.
+- If you do not know an answer or are unsure, explicitly state "I do not know" rather than guessing or making up information.
+- Do not speculate, fabricate citations, or embellish details.
+"""
+Use code with caution.
+```
+
+#### Step 2: Build the Custom Model
+
+Open your terminal in the directory containing your Modelfile and run the ollama create command to build the model:
+
+```
+ollama create factual-llama -f ./Modelfile
+Use code with caution.
+```
+
+#### Step 3: Test and Verify
+
+Run your newly created custom model from the terminal:
+
+```
+ollama run factual-llama
+Use code with caution.
+```
