@@ -6,7 +6,7 @@
 
 This article describes Experiment 1 using [LangChain](https://www.langchain.com/langchain) prompt handling with a custom [Ollama](https://ollama.com) model and [ReAct](https://www.ibm.com/think/topics/react-agent) agent architecture to search [DuckDuckGo](https://duckduckgo.com) for job listings.  Initial results are disappointing.  Rather than job postings, DuckDuckGo responded with articles.
 
-### 1. Imports and Setup
+### 1. Imports
 
 ```python
 from langchain_core.prompts import PromptTemplate
@@ -16,7 +16,7 @@ from langchain_community.tools import DuckDuckGoSearchResults
 
 ```
 
-* **Imports:** These modules pull in LangChain's prompt handling, Ollama integration, classic ReAct agent architecture, and the DuckDuckGo search tool.
+These modules pull in LangChain's prompt handling, Ollama integration, classic ReAct agent architecture, and the DuckDuckGo search tool.
 
 ---
 
@@ -27,8 +27,7 @@ search_tool = DuckDuckGoSearchResults(max_results=5)
 tools = [search_tool]
 
 ```
-
-* **Tools:** A single tool (`search_tool`) is configured to fetch up to 5 results from DuckDuckGo when the agent requires real-time or external web data.
+AI is given a single tool (`search_tool`) configured to fetch up to 5 results from DuckDuckGo when the agent requires real-time or external web data.
 
 ---
 
@@ -42,7 +41,7 @@ llm = ChatOllama(
 
 ```
 
-* **Model:** Connects to your local Ollama instance running the `factual-llama3.2:latest` model. Setting `temperature=0` ensures deterministic, factual, and consistent responses.  `factual-llama3.2` was customized per instructions in the **Appendix:  Customize an Ollama Model** below.
+Initial experiments using ChatOllama yielded results ranging from poetic to pedantic.  Ollama models can be focused.  **Appendix: Customize an Ollama Model** explains how `factual-llama3.2` was generated and run locally.  Setting `temperature=0` targets deterministic responses.  Setting the temperature higher may allow more creative responses.  Additionally, ChatOllama may not be optimum for this project.  Stay tuned...
 
 ---
 
@@ -98,11 +97,11 @@ if __name__ == "__main__":
 
 ### Appendix:  Customize an Ollama model
 
-You can customize an Ollama model to be factual by using a Modelfile to lower the generation temperature, set strict behavioral constraints, and define factual guardrails in the system prompt.
+Use a Modelfile to customize an Ollama model.  Get more factual responses by lowering the generation temperature, setting strict behavioral constraints, and defining factual guardrails in the system prompt.
 
 #### Step 1: Create a Modelfile
 
-Create a plain text file named Modelfile (without any file extension) in your working directory.  Write your configuration using FROM, PARAMETER, and SYSTEM directives:
+In your working folder, create a plain text file named Modelfile (without any file extension).  Write your configuration using FROM, PARAMETER, and SYSTEM directives:
 
 ```
 # Choose a reliable base model
@@ -126,11 +125,10 @@ Use code with caution.
 
 #### Step 2: Build the Custom Model
 
-Open your terminal in the directory containing your Modelfile and run the ollama create command to build the model:
+In a terminal window, open the folder containing the Modelfile.  Run the ollama create command to build the model.
 
 ```
 ollama create factual-llama -f ./Modelfile
-Use code with caution.
 ```
 
 #### Step 3: Test and Verify
@@ -139,7 +137,6 @@ Run your newly created custom model from the terminal:
 
 ```
 ollama run factual-llama
-Use code with caution.
 ```
 
 ### Appendix B:  Best Result - Experiment 1
