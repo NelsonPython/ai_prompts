@@ -22,5 +22,7 @@ At its core, this blog explores AI prompts tailored for technical communicators.
 
 ## The AI Explainer
 
+These articles were co-authored with the AI via an iterative workflow.  A human describes the task by writing an AI Prompt.  AI designs graphics, writes code, edits the tone of content for the target audience, and provides references.  A human checks the facts.
+
 [Net Energy Metering](articles/net_energy_metering.md)
 
