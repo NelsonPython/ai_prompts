@@ -6,7 +6,7 @@ At its core, this blog explores AI prompts tailored for technical communicators.
 
 ## Agentic AI
 
-[Ollama, ReAct, and DuckDuckGo](articles/ollama_react_ddg.md)
+[Experiment 1:  LangChain, Ollama, ReAct, and DuckDuckGo](articles/ollama_react_ddg.md)
 
 ## A Picture is Worth 1000 Words (only 58 required for AI to draw it!)
 
