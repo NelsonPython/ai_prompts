@@ -4,9 +4,7 @@
 
 ## Experimenting with Ollama, ReAct, and DuckDuckGo
 
-*This article is currently living documentation of ongoing Agentic AI experiments seeking a repeatable way to find job postings*
-
-Example using [LangChain](https://www.langchain.com/langchain) prompt handling with a custom Ollama model and ReAct agent architecture to search DuckDuckGo.
+This experiment uses [LangChain](https://www.langchain.com/langchain) prompt handling with a custom Ollama model and ReAct agent architecture to search DuckDuckGo for job listings.  Initial results were disappointing.  Rather than job postings, DuckDuckGo responded with articles.
 
 ### 1. Imports and Setup
 
