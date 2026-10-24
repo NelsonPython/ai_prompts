@@ -4,7 +4,7 @@
 
 ## LangChain, Ollama, ReAct, and DuckDuckGo
 
-In my quest to understand Agentic AI, Gemini has become a sherpa through a world of weird terms and mind-expanding concepts.  This article resulted from asking Gemini for an agent to find technical writing jobs.  Gemini suggested an experiment using [LangChain](https://www.langchain.com/langchain) prompt handling with a custom [Ollama](https://ollama.com) model and [ReAct](https://www.ibm.com/think/topics/react-agent) agent architecture to search [DuckDuckGo](https://duckduckgo.com) for job listings.  Initial results were unexpected.  Rather than job postings, DuckDuckGo responded with articles about job markets.  Perhaps ChatOllama and DuckDuckGo are not the best tools for this task.  My journey continues...
+In my quest to understand Agentic AI, Gemini has become a sherpa through a world of weird terms and mind-expanding concepts.  This article resulted from asking Gemini for an agent to find technical writing job postings.  Gemini suggested an experiment coded in Python using [LangChain](https://www.langchain.com/langchain) prompt handling with a custom [Ollama](https://ollama.com) model and [ReAct](https://www.ibm.com/think/topics/react-agent) agent architecture to search [DuckDuckGo](https://duckduckgo.com) for job listings.  Initial results were unexpected.  Rather than job postings, DuckDuckGo responded with links to job boards and articles about job markets along with a few job postings.  Perhaps the prompt was confusing or perhaps ChatOllama and DuckDuckGo are not the best tools for this task.  The skeleton code runs and produces results so the journey continues...
 
 ## Experiment 1
 
