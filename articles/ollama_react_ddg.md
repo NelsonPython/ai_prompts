@@ -96,52 +96,7 @@ if __name__ == "__main__":
 
 * **CLI Loop:** Runs a continuous `while True` loop in your terminal. It accepts user input, passes it along with the running string-based `chat_history` to the agent executor, prints the output, and updates the history for the next turn.
 
-
-### Appendix:  Customize an Ollama model
-
-Use a Modelfile to customize an Ollama model.  Get more factual responses by lowering the generation temperature, setting strict behavioral constraints, and defining factual guardrails in the system prompt.
-
-#### Step 1: Create a Modelfile
-
-In your working folder, create a plain text file named Modelfile (without any file extension).  Write your configuration using FROM, PARAMETER, and SYSTEM directives:
-
-```
-# Choose a reliable base model
-FROM llama3.1:8b
-
-# Lower temperature to reduce hallucination and creativity (range 0.0 to 1.0)
-PARAMETER temperature 0.1
-
-# Restrict top_p sampling for more deterministic outputs
-PARAMETER top_p 0.8
-
-# Define strict factual system instructions
-SYSTEM """
-You are a strictly factual, objective assistant. 
-- Rely only on verified facts.
-- If you do not know an answer or are unsure, explicitly state "I do not know" rather than guessing or making up information.
-- Do not speculate, fabricate citations, or embellish details.
-"""
-Use code with caution.
-```
-
-#### Step 2: Build the Custom Model
-
-In a terminal window, open the folder containing the Modelfile.  Run the ollama create command to build the model.
-
-```
-ollama create factual-llama -f ./Modelfile
-```
-
-#### Step 3: Test and Verify
-
-Run your newly created custom model from the terminal:
-
-```
-ollama run factual-llama
-```
-
-### Appendix B:  Best Result - Experiment 1
+### Best Result
 
 ```
 > Finished chain.
@@ -185,3 +140,50 @@ AI: 1. AI Prompt Engineer Jobs: $150K+ Roles in 2026 - https://designcopy.net/en
 
 You: quit
 ```
+
+
+
+## Appendix:  Customize an Ollama model
+
+Use a Modelfile to customize an Ollama model.  Get more factual responses by lowering the generation temperature, setting strict behavioral constraints, and defining factual guardrails in the system prompt.
+
+### Step 1: Create a Modelfile
+
+In your working folder, create a plain text file named Modelfile (without any file extension).  Write your configuration using FROM, PARAMETER, and SYSTEM directives:
+
+```
+# Choose a reliable base model
+FROM llama3.1:8b
+
+# Lower temperature to reduce hallucination and creativity (range 0.0 to 1.0)
+PARAMETER temperature 0.1
+
+# Restrict top_p sampling for more deterministic outputs
+PARAMETER top_p 0.8
+
+# Define strict factual system instructions
+SYSTEM """
+You are a strictly factual, objective assistant. 
+- Rely only on verified facts.
+- If you do not know an answer or are unsure, explicitly state "I do not know" rather than guessing or making up information.
+- Do not speculate, fabricate citations, or embellish details.
+"""
+Use code with caution.
+```
+
+### Step 2: Build the Custom Model
+
+In a terminal window, open the folder containing the Modelfile.  Run the ollama create command to build the model.
+
+```
+ollama create factual-llama -f ./Modelfile
+```
+
+### Step 3: Test and Verify
+
+Run your newly created custom model from the terminal:
+
+```
+ollama run factual-llama
+```
+
