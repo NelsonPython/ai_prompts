@@ -26,3 +26,14 @@ These articles were co-authored with the AI via an iterative workflow.  A human 
 
 [Net Energy Metering](articles/net_energy_metering.md)
 
+
+---
+
+**References**
+
+[DeepLearning.ai ChatGPT Prompt Engineering](https://www.deeplearning.ai/courses/chatgpt-prompt-eng)
+
+[DeepLearning.ai Agentic AI ](https://www.deeplearning.ai/courses/agentic-ai)
+
+[The 2026 Guide to AI Agents](https://www.ibm.com/think/ai-agents#605511093)
+
