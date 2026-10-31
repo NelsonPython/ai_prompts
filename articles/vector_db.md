@@ -1,16 +1,9 @@
 # Validating Prompt Output
 
 
----
-
-**References**
-
-[What is a vector database?](https://www.ibm.com/think/topics/vector-database)
-
-
 # AI Prompt
 
-The original job description was downloaded using the freehire.me API, content was summarized by AI and data specific to the hiring company was removed.  To reduce output the resume section of this prompt contains one section, core competencies.
+The original job description was downloaded using the freehire.me API, content was summarized by AI and data specific to the hiring company was removed.  To reduce output the resume section of this prompt contains one section, CORE COMPETENCIES.
 
 <pre>
 You are an algorithm that matches Job Requirements and Resume.
@@ -540,5 +533,13 @@ Reading the prompt from 'prompts/cc_core_competencies.prompt'...
     }
   ]
 }
+
+---
+      
+**References**
+
+[What is a vector database?](https://www.ibm.com/think/topics/vector-database)
+
+
 </pre>
 
