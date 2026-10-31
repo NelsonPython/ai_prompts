@@ -1,3 +1,5 @@
+<src img="images/teal_waves.jpg" width=1000 height=200>
+
 # Validating Prompt Output
 
 Validating AI prompt results includes assessing whether the inferences made are logical and consistent.  In this example, a job description was downloaded using the freehire.me API.  The original content was summarized by AI, then a human anonymized it by removing references to the hiring company.  The prompt aims to match job requirements with one section of the resume, core competencies.  AI is tasked with reading the job description, evaluating the resume, and ranking matches as exact, partial, or no match. 
