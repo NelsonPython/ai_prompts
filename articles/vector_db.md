@@ -103,5 +103,294 @@ AI Prompt Engineering, API Reference Guides, API User Guides, Cybersecurity Guid
 Agile, Confluence, Git, Github, Google Docs, HTML, Jira, LibreOffice, Markdown, MS Office, PDF, SharePoint, Word
 </pre>
 
+# Appenxi - Ollama Response
+
+Timeout
+
+
+
+# Appendix - Gemini Response 
+
+<pre>
+{
+  "job_requirements": [
+    {
+      "requirement": "Technical Writing",
+      "evidence": "Regulatory compliance documentation, Software documentation (API Reference Guides, API User Guides, Quick-start Guides, User Guides, etc.)",
+      "ranking": "Exact Match"
+    },
+    {
+      "requirement": "Instructional Design",
+      "evidence": "Software Training Curriculum",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Developer Education",
+      "evidence": "Software Training Curriculum, API Reference Guides, API User Guides, Quick-start Guides",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Technical Curriculum Development",
+      "evidence": "Software Training Curriculum",
+      "ranking": "Exact Match"
+    },
+    {
+      "requirement": "LLMs",
+      "evidence": "AI prompt automation, AI Prompt Engineering",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Generative AI",
+      "evidence": "Agentic AI, AI prompt automation, AI Prompt Engineering",
+      "ranking": "Exact Match"
+    },
+    {
+      "requirement": "Prompting",
+      "evidence": "AI prompt automation, AI Prompt Engineering",
+      "ranking": "Exact Match"
+    },
+    {
+      "requirement": "APIs",
+      "evidence": "API Reference Guides, API User Guides",
+      "ranking": "Exact Match"
+    },
+    {
+      "requirement": "Vector Database Systems",
+      "evidence": "None",
+      "ranking": "No Match"
+    },
+    {
+      "requirement": "Hands-on Technical Workshops",
+      "evidence": "None",
+      "ranking": "No Match"
+    },
+    {
+      "requirement": "Developer Training Materials",
+      "evidence": "Software Training Curriculum, API Reference Guides, Quick-start Guides",
+      "ranking": "Exact Match"
+    },
+    {
+      "requirement": "Technical Documentation",
+      "evidence": "Software documentation, Regulatory compliance documentation",
+      "ranking": "Exact Match"
+    },
+    {
+      "requirement": "Interactive Exercises",
+      "evidence": "None",
+      "ranking": "No Match"
+    },
+    {
+      "requirement": "Code Walkthroughs",
+      "evidence": "None",
+      "ranking": "No Match"
+    },
+    {
+      "requirement": "Lab Guides",
+      "evidence": "None",
+      "ranking": "No Match"
+    },
+    {
+      "requirement": "Instructor Resources",
+      "evidence": "None",
+      "ranking": "No Match"
+    },
+    {
+      "requirement": "API and SDK Documentation",
+      "evidence": "API Reference Guides, API User Guides",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Technical Accuracy",
+      "evidence": "Regulatory compliance documentation (Software Installation/Operational/Performance Qualification, Validation Plans, SOPs)",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Accessibility",
+      "evidence": "None",
+      "ranking": "No Match"
+    },
+    {
+      "requirement": "Real-World Developer Workflows",
+      "evidence": "Git, Github, Markdown, HTML, Agile",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Python",
+      "evidence": "Python listed under Ai and automation",
+      "ranking": "Exact Match"
+    },
+    {
+      "requirement": "TypeScript",
+      "evidence": "None",
+      "ranking": "No Match"
+    },
+    {
+      "requirement": "Git/GitHub",
+      "evidence": "Git, Github listed under Tools",
+      "ranking": "Exact Match"
+    },
+    {
+      "requirement": "Markdown/MDX",
+      "evidence": "Markdown listed under Tools",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Version Control",
+      "evidence": "Git, Github listed under Tools",
+      "ranking": "Exact Match"
+    },
+    {
+      "requirement": "Testing",
+      "evidence": "Software Installation Qualification, Software Operational Qualification, Software Performance Qualification, Software Validation Plans",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Engineering Partners",
+      "evidence": "Agile",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Technical Validation",
+      "evidence": "Software Validation Plans, Software Installation Qualification, Software Operational Qualification, Software Performance Qualification",
+      "ranking": "Exact Match"
+    },
+    {
+      "requirement": "Troubleshooting",
+      "evidence": "Cybersecurity Guidance, Quick-start Guides, FAQs, Tuning Guides",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Developer Learning Experience",
+      "evidence": "Software Training Curriculum, Quick-start Guides, API Reference Guides",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Agentic AI",
+      "evidence": "Agentic AI listed under Ai and automation",
+      "ranking": "Exact Match"
+    },
+    {
+      "requirement": "Model Evaluations",
+      "evidence": "None",
+      "ranking": "No Match"
+    },
+    {
+      "requirement": "LLM Testing",
+      "evidence": "None",
+      "ranking": "No Match"
+    },
+    {
+      "requirement": "Responsible AI Development",
+      "evidence": "None",
+      "ranking": "No Match"
+    },
+    {
+      "requirement": "Vector Databases",
+      "evidence": "None",
+      "ranking": "No Match"
+    },
+    {
+      "requirement": "Retrieval-Augmented Generation (RAG)",
+      "evidence": "None",
+      "ranking": "No Match"
+    },
+    {
+      "requirement": "Embeddings",
+      "evidence": "None",
+      "ranking": "No Match"
+    },
+    {
+      "requirement": "Agenic AI Workflows",
+      "evidence": "Agentic AI, AI prompt automation",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Documentation Platforms",
+      "evidence": "Confluence, SharePoint listed under Tools",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Static Site Generators",
+      "evidence": "None",
+      "ranking": "No Match"
+    },
+    {
+      "requirement": "Documentation-as-Code Workflows",
+      "evidence": "Git, Github, Markdown, HTML listed under Tools",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "3+ years of experience in technical writing, instructional design, developer education, technical curriculum development, or a related field",
+      "evidence": "Lists competencies in Regulatory compliance documentation, Software documentation, Software Training Curriculum",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Demonstrated experience creating hands-on technical workshops, developer training materials, and comprehensive technical documentation",
+      "evidence": "Software Training Curriculum, Software documentation (API Reference Guides, API User Guides, Quick-start Guides, User Guides)",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Strong understanding of LLMs, generative AI, prompting, APIs, and vector database systems",
+      "evidence": "Agentic AI, AI prompt automation, AI Prompt Engineering, API Reference Guides, API User Guides (No vector database systems mentioned)",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Experience developing technical content for software engineers, application developers, platform engineers, or similarly technical audiences",
+      "evidence": "API Reference Guides, API User Guides, Software Training Curriculum, Tuning Guides",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Exceptional technical writing and editing skills, with the ability to communicate complex concepts clearly without sacrificing technical accuracy",
+      "evidence": "International Regulatory Compliance Guides, Journal Articles, Regulatory Crosswalks, Software Validation Plans, White-papers",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Ability to read, understand, and explain code examples in Python, TypeScript, or similar programming languages",
+      "evidence": "Python, SQL, HTML listed in core competencies and tools",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Familiarity with software development workflows, including Git/GitHub, Markdown/MDX, version control, and testing",
+      "evidence": "Git, Github, Markdown, Software Validation Plans",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Experience collaborating with engineers to validate technical documentation, troubleshoot exercises, and improve developer learning experiences",
+      "evidence": "Software Validation Plans, Agile, Software Training Curriculum",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Strong organizational skills and the ability to independently manage multiple content deliverables in a fast-moving environment",
+      "evidence": "Agile, Jira, Confluence listed under Tools",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Experience developing educational content or documentation for AI/ML platforms, developer tools, or emerging AI technologies",
+      "evidence": "Agentic AI, AI prompt automation, AI Prompt Engineering, Software Training Curriculum, API Reference Guides",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Familiarity with AI safety, model evaluations, LLM testing, or responsible AI development",
+      "evidence": "Cybersecurity Guidance, ISO 27001, NIST SP 800-207 RMF (No explicit AI safety, model evaluation, or LLM testing mentioned)",
+      "ranking": "No Match"
+    },
+    {
+      "requirement": "Experience with vector databases, retrieval-Augmented Generation (RAG), embeddings, or agentic AI workflows",
+      "evidence": "Agentic AI, AI prompt automation",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Experience with documentation platforms, static site generators, or documentation-as-Code workflows",
+      "evidence": "Confluence, SharePoint, Git, Github, Markdown, HTML",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Previous experience working with AI research teams, developer platforms, or early-stage technology companies",
+      "evidence": "Industries: Aerospace, Casino, Critical Infrastructure, Hospital, Pharmaceutical",
+      "ranking": "No Match"
+    }
+  ]
+}
+</pre>
 
 # Appendix - Hallucination
