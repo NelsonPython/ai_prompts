@@ -8,7 +8,7 @@
 [What is a vector database?](https://www.ibm.com/think/topics/vector-database)
 
 
-# Appendix - Prompt
+# AI Prompt
 
 The original job description was downloaded using the freehire.me API, content was summarized by AI and data specific to the hiring company was removed.  To reduce output the resume section of this prompt contains one section, core competencies.
 
@@ -107,13 +107,13 @@ AI Prompt Engineering, API Reference Guides, API User Guides, Cybersecurity Guid
 Agile, Confluence, Git, Github, Google Docs, HTML, Jira, LibreOffice, Markdown, MS Office, PDF, SharePoint, Word
 </pre>
 
-# Appendix - Ollama Response
+# Ollama Responses
 
 ### Timeout
 Prompt with keywords consistently produces `Timeout`.
 
-### Hallucinations
-Removing keywords from the Prompt allows the prompt to run results in hallucinations: 
+### Hallucinations from qwen2.5-coder:1.5b
+Removing keywords from the Prompt allows the prompt to run, but the `qwen2.5-coder:1.5b` model hallucinated.
 
 <pre>
 $ python3 prompt_run.py -f prompts/cc_core_competencies.prompt
@@ -196,7 +196,7 @@ $ python3 prompt_run.py -f prompts/cc_core_competencies.prompt
 }
 </pre>
 
-# Appendix - Ollama Model 
+# Responses from llama3.2:latest
 
 <pre>
 $ /home/jugar/job_search_agentic/v_agentic/bin/python3 prompt_run.py -f prompts/cc_core_competencies.prompt
@@ -217,12 +217,12 @@ Reading the prompt from 'prompts/cc_core_competencies.prompt'...
     {
       "requirement": "Technical Editing Skills",
       "evidence": "Agentic AI, AI prompt automation, Python, SQL, Exceptional technical writing and editing skills",
-      "ranking": "Partial Match"
+      "ranking": "Partial Match" <- partial hallucination
     },
     {
       "requirement": "Familiarity with AI/ML Platforms",
       "evidence": "Experience developing educational content or documentation for AI/ML platforms, developer tools, or emerging AI technologies",
-      "ranking": "Exact Match"
+      "ranking": "Exact Match"  <- partial hallucination
     },
     {
       "requirement": "Vector Database Experience",
@@ -232,7 +232,7 @@ Reading the prompt from 'prompts/cc_core_competencies.prompt'...
     {
       "requirement": "Documentation Experience",
       "evidence": "Experience developing educational content or documentation for AI/ML platforms, developer tools, or emerging AI technologies",
-      "ranking": "Exact Match"
+      "ranking": "Exact Match" 
     },
     {
       "requirement": "Collaboration Experience",
@@ -247,17 +247,17 @@ Reading the prompt from 'prompts/cc_core_competencies.prompt'...
     {
       "requirement": "Regulatory Compliance Experience",
       "evidence": "Regulatory Crosswalks, Risk Assessments, Software Installation Qualification, Software Operational Qualification, Software Performance Qualification, Software Validation Plans",
-      "ranking": "No Match"
+      "ranking": "No Match"  <- hallucination
     },
     {
       "requirement": "Software Documentation Experience",
       "evidence": "AI Prompt Engineering, API Reference Guides, API User Guides, Cybersecurity Guidance, FAQs, Knowledge Articles, Quick-start Guides, Release notes, Software Training Curriculum",
-      "ranking": "Exact Match"
+      "ranking": "Exact Match" 
     },
     {
       "requirement": "Tools Experience",
       "evidence": "Agile, Confluence, Git, Github, Google Docs, HTML, Jira, LibreOffice, Markdown, MS Office, PDF, SharePoint, Word",
-      "ranking": "No Match"
+      "ranking": "No Match"  <- hallucination
     }
   ]
 } 
@@ -276,12 +276,12 @@ Reading the prompt from 'prompts/cc_core_competencies.prompt'...
     {
       "requirement": "Instructional Design",
       "evidence": "Software Training Curriculum",
-      "ranking": "Partial Match"
+      "ranking": "Partial Match"  <- partial hallucination
     },
     {
       "requirement": "Developer Education",
       "evidence": "Software Training Curriculum, API Reference Guides, API User Guides, Quick-start Guides",
-      "ranking": "Partial Match"
+      "ranking": "Partial Match"  <- partial hallucination
     },
     {
       "requirement": "Technical Curriculum Development",
@@ -370,7 +370,7 @@ Reading the prompt from 'prompts/cc_core_competencies.prompt'...
     },
     {
       "requirement": "Python",
-      "evidence": "Python listed under Ai and automation",
+      "evidence": "Python listed under AI and Automation",
       "ranking": "Exact Match"
     },
     {
