@@ -8,6 +8,8 @@ At its core, this blog explores AI prompts tailored for technical communicators.
 
 [Graphic Design AI Prompt](articles/ai_prompt_graphic_design.md)
 
+[Validating Prompt Output](validating_prompt_output.md)
+
 
 ## Beyond the Launch:  AI Prompts for Web Content Maintenance
 
