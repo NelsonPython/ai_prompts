@@ -1,4 +1,4 @@
-# Experiment - Testing Prompt Output
+# Testing Prompt Output
 
 
 ---
