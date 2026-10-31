@@ -100,6 +100,8 @@ Agile, Confluence, Git, Github, Google Docs, HTML, Jira, LibreOffice, Markdown, 
 
 # Ollama Responses
 
+The script was run three times.  First, the keywords were included.  Second, a model optimized for coding was used.  Third, a model optimized for chatting was used.
+
 ### 1. Timeout
 Prompt with keywords consistently timed out.
 
@@ -128,7 +130,7 @@ Removing keywords from the Prompt allows the prompt to run, but the `qwen2.5-cod
 
 #### 3. Hallucinations from llama3.2:latest
 
-This model mixed up the requirements and resume.  It shows two requirements that match rather than showing a match between the requirements and resume.
+This model performed better but sometimes it compared requirements to other requirements.
 
 <pre>
 [RAW CONTENT] {
@@ -136,7 +138,7 @@ This model mixed up the requirements and resume.  It shows two requirements that
     {
       "requirement": "Technical Writing Experience",
       "evidence": "Experience creating hands-on technical workshops, developer training materials, and comprehensive technical documentation",
-      "ranking": "Exact Match"
+      "ranking": "Exact Match" < While this is an exact match, both the requirement and evidence are listed in Requirements.  A valid section of the resume was not cited.
     },
     {
       "requirement": "Strong Understanding of AI/ML",
@@ -146,11 +148,13 @@ This model mixed up the requirements and resume.  It shows two requirements that
     {
       "requirement": "Technical Editing Skills",
       "evidence": "Agentic AI, AI prompt automation, Python, SQL, Exceptional technical writing and editing skills",
-      "ranking": "Partial Match"
+      "ranking": "Partial Match" < This is a good assessment because a requirement is matched to a section of the resume.
     }...
 </pre>
 
 # Gemini Response 
+
+Gemini often correctly infers that a requirement is met by a section of the resume.
 
 <pre>
 {
@@ -173,7 +177,7 @@ This model mixed up the requirements and resume.  It shows two requirements that
 
 # Comparing Results
 
-While the small Ollama models hallucinated, Gemini made correct inferences.  What can be done to improve the output from the Ollama models?
+While the small Ollama models frequently hallucinated, Gemini made more correct inferences.  What can be done to improve the output from the Ollama models?
 
                                    
 ---
