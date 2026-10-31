@@ -66,6 +66,7 @@ Agenic AI Workflows
 Documentation Platforms
 Static Site Generators
 Documentation-as-Code Workflows
+
 3+ years of experience in technical writing, instructional design, developer education, technical curriculum development, or a related field
 Demonstrated experience creating hands-on technical workshops, developer training materials, and comprehensive technical documentation
 Strong understanding of LLMs, generative AI, prompting, APIs, and vector database systems
@@ -109,7 +110,7 @@ Agile, Confluence, Git, Github, Google Docs, HTML, Jira, LibreOffice, Markdown, 
 Prompt with keywords consistently produces `Timeout`.
 
 ### Hallucinations
-Prompt with keywords removed:
+Removing keywords from the Prompt allows the prompt to run results in hallucinations: 
 
 <pre>
 $ python3 prompt_run.py -f prompts/cc_core_competencies.prompt
@@ -191,8 +192,6 @@ $ python3 prompt_run.py -f prompts/cc_core_competencies.prompt
   ]
 }
 </pre>
-
-
 
 # Appendix - Gemini Response 
 
@@ -473,4 +472,3 @@ $ python3 prompt_run.py -f prompts/cc_core_competencies.prompt
 }
 </pre>
 
-# Appendix - Hallucination
