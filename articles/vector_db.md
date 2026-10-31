@@ -104,7 +104,7 @@ The script was run three times.  First, the keywords were included.  Second, a m
 ### 1. Timeout
 Prompt with keywords consistently timed out.
 
-#### 2.  Hallucinations from qwen2.5-coder:1.5b
+### 2.  Hallucinations from qwen2.5-coder:1.5b
 Removing keywords from the Prompt allows the prompt to run, but the `qwen2.5-coder:1.5b` model hallucinated as shown in the annotated sample output below.
 
 <pre>
@@ -127,7 +127,7 @@ Removing keywords from the Prompt allows the prompt to run, but the `qwen2.5-cod
     }...
 </pre>
 
-#### 3. Hallucinations from llama3.2:latest
+### 3. Hallucinations from llama3.2:latest
 
 This model performed better but sometimes it compared requirements to other requirements.
 
