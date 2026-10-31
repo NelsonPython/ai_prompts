@@ -109,10 +109,10 @@ Agile, Confluence, Git, Github, Google Docs, HTML, Jira, LibreOffice, Markdown, 
 
 # Ollama Responses
 
-### Timeout
+### 1. Timeout
 Prompt with keywords consistently produces `Timeout`.
 
-### Hallucinations from qwen2.5-coder:1.5b
+#### 2.  Hallucinations from qwen2.5-coder:1.5b
 Removing keywords from the Prompt allows the prompt to run, but the `qwen2.5-coder:1.5b` model hallucinated.
 
 <pre>
@@ -196,7 +196,7 @@ $ python3 prompt_run.py -f prompts/cc_core_competencies.prompt
 }
 </pre>
 
-# Responses from llama3.2:latest
+#### 3. Responses from llama3.2:latest
 
 <pre>
 $ /home/jugar/job_search_agentic/v_agentic/bin/python3 prompt_run.py -f prompts/cc_core_competencies.prompt
