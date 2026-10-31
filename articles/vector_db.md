@@ -24,8 +24,8 @@ You are an algorithm that matches Job Requirements and Resume.
   ]
 }
 
-
 Requirements
+
 Technical Writing
 Instructional Design
 Developer Education
@@ -103,9 +103,94 @@ AI Prompt Engineering, API Reference Guides, API User Guides, Cybersecurity Guid
 Agile, Confluence, Git, Github, Google Docs, HTML, Jira, LibreOffice, Markdown, MS Office, PDF, SharePoint, Word
 </pre>
 
-# Appenxi - Ollama Response
+# Appendix - Ollama Response
 
-Timeout
+### Timeout
+Prompt with keywords consistently produces `Timeout`.
+
+### Hallucinations
+Prompt with keywords removed:
+
+<pre>
+$ python3 prompt_run.py -f prompts/cc_core_competencies.prompt
+--------------------------------------------------
+
+  Reading the prompt from 'prompts/cc_core_competencies.prompt'...
+[RAW CONTENT] {
+  "job_requirements": [
+    {
+      "requirement": "3+ years of experience in technical writing, instructional design, developer education, technical curriculum development, or a related field",
+      "evidence": "Aerospace, Casino, Critical Infrastructure, Hospital, Pharmaceutical",
+      "ranking": "Exact Match"    <- Hallucination
+    },
+    {
+      "requirement": "Demonstrated experience creating hands-on technical workshops, developer training materials, and comprehensive technical documentation",
+      "evidence": "Aerospace, Casino, Critical Infrastructure, Hospital, Pharmaceutical",
+      "ranking": "Exact Match"   <- Hallucination
+    },
+    {
+      "requirement": "Strong understanding of LLMs, generative AI, prompting, APIs, and vector database systems",
+      "evidence": "Aerospace, Casino, Critical Infrastructure, Hospital, Pharmaceutical",
+      "ranking": "Exact Match"   <- Hallucination
+    },
+    {
+      "requirement": "Experience developing technical content for software engineers, application developers, platform engineers, or similarly technical audiences",
+      "evidence": "Aerospace, Casino, Critical Infrastructure, Hospital, Pharmaceutical",
+      "ranking": "Exact Match"   <- Hallucination
+    },
+    {
+      "requirement": "Exceptional technical writing and editing skills, with the ability to communicate complex concepts clearly without sacrificing technical accuracy",
+      "evidence": "Aerospace, Casino, Critical Infrastructure, Hospital, Pharmaceutical",
+      "ranking": "Exact Match"   <- Hallucination
+    },
+    {
+      "requirement": "Ability to read, understand, and explain code examples in Python or similar programming languages",
+      "evidence": "Aerospace, Casino, Critical Infrastructure, Hospital, Pharmaceutical",
+      "ranking": "Exact Match"   <- Hallucination
+    },
+    {
+      "requirement": "Familiarity with software development workflows",
+      "evidence": "Aerospace, Casino, Critical Infrastructure, Hospital, Pharmaceutical",
+      "ranking": "Exact Match"   <- Hallucination
+    },
+    {
+      "requirement": "Experience collaborating with engineers to validate technical documentation, troubleshoot exercises, and improve developer learning experiences",
+      "evidence": "Aerospace, Casino, Critical Infrastructure, Hospital, Pharmaceutical",
+      "ranking": "Exact Match"   <- Hallucination
+    },
+    {
+      "requirement": "Strong organizational skills and the ability to independently manage multiple content deliverables in a fast-moving environment",
+      "evidence": "Aerospace, Casino, Critical Infrastructure, Hospital, Pharmaceutical",
+      "ranking": "Exact Match"   <- Hallucination
+    },
+    {
+      "requirement": "Experience developing educational content or documentation for AI/ML platforms, developer tools, or emerging AI technologies",
+      "evidence": "Aerospace, Casino, Critical Infrastructure, Hospital, Pharmaceutical",
+      "ranking": "Exact Match"   <- Hallucination
+    },
+    {
+      "requirement": "Familiarity with AI safety, model evaluations, LLM testing, or responsible AI development",
+      "evidence": "Aerospace, Casino, Critical Infrastructure, Hospital, Pharmaceutical",
+      "ranking": "Exact Match"   <- Hallucination
+    },
+    {
+      "requirement": "Experience with vector databases, retrieval-Augmented Generation (RAG), embeddings, or agentic AI workflows",
+      "evidence": "Aerospace, Casino, Critical Infrastructure, Hospital, Pharmaceutical",
+      "ranking": "Exact Match"   <- Hallucination
+    },
+    {
+      "requirement": "Experience with documentation platforms, static site generators, or documentation-as-Code workflows",
+      "evidence": "Aerospace, Casino, Critical Infrastructure, Hospital, Pharmaceutical",
+      "ranking": "Exact Match"   <- Hallucination
+    },
+    {
+      "requirement": "Previous experience working with AI research teams, developer platforms, or early-stage technology companies",
+      "evidence": "Aerospace, Casino, Critical Infrastructure, Hospital, Pharmaceutical",
+      "ranking": "Exact Match"   <- Hallucination
+    }
+  ]
+}
+</pre>
 
 
 
@@ -162,12 +247,12 @@ Timeout
     {
       "requirement": "Hands-on Technical Workshops",
       "evidence": "None",
-      "ranking": "No Match"
+      "ranking": "No Match"    <- Partial Hallucination
     },
     {
       "requirement": "Developer Training Materials",
       "evidence": "Software Training Curriculum, API Reference Guides, Quick-start Guides",
-      "ranking": "Exact Match"
+      "ranking": "Exact Match" 
     },
     {
       "requirement": "Technical Documentation",
@@ -177,22 +262,22 @@ Timeout
     {
       "requirement": "Interactive Exercises",
       "evidence": "None",
-      "ranking": "No Match"
+      "ranking": "No Match"    <- Hallucination
     },
     {
       "requirement": "Code Walkthroughs",
       "evidence": "None",
-      "ranking": "No Match"
+      "ranking": "No Match"   <- Hallucination
     },
     {
       "requirement": "Lab Guides",
       "evidence": "None",
-      "ranking": "No Match"
+      "ranking": "No Match"   <- Hallucination
     },
     {
       "requirement": "Instructor Resources",
       "evidence": "None",
-      "ranking": "No Match"
+      "ranking": "No Match"   <- Hallucination
     },
     {
       "requirement": "API and SDK Documentation",
@@ -207,7 +292,7 @@ Timeout
     {
       "requirement": "Accessibility",
       "evidence": "None",
-      "ranking": "No Match"
+      "ranking": "No Match"   <- Hallucination
     },
     {
       "requirement": "Real-World Developer Workflows",
@@ -220,19 +305,14 @@ Timeout
       "ranking": "Exact Match"
     },
     {
-      "requirement": "TypeScript",
-      "evidence": "None",
-      "ranking": "No Match"
-    },
-    {
       "requirement": "Git/GitHub",
       "evidence": "Git, Github listed under Tools",
       "ranking": "Exact Match"
     },
     {
-      "requirement": "Markdown/MDX",
+      "requirement": "Markdown",
       "evidence": "Markdown listed under Tools",
-      "ranking": "Partial Match"
+      "ranking": "Partial Match"   <- Hallucination
     },
     {
       "requirement": "Version Control",
@@ -272,7 +352,7 @@ Timeout
     {
       "requirement": "Model Evaluations",
       "evidence": "None",
-      "ranking": "No Match"
+      "ranking": "No Match"   <- Hallucination
     },
     {
       "requirement": "LLM Testing",
@@ -282,7 +362,7 @@ Timeout
     {
       "requirement": "Responsible AI Development",
       "evidence": "None",
-      "ranking": "No Match"
+      "ranking": "No Match"   <- Hallucination
     },
     {
       "requirement": "Vector Databases",
@@ -387,7 +467,7 @@ Timeout
     {
       "requirement": "Previous experience working with AI research teams, developer platforms, or early-stage technology companies",
       "evidence": "Industries: Aerospace, Casino, Critical Infrastructure, Hospital, Pharmaceutical",
-      "ranking": "No Match"
+      "ranking": "No Match"   <- Partial Hallucination
     }
   ]
 }
