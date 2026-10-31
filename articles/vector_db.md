@@ -1,9 +1,8 @@
 # Validating Prompt Output
 
+Validating AI prompt results includes assessing whether the inferences made are logical and consistent.  In this example, a job description was downloaded using the freehire.me API.  The original content was summarized by AI, then a human anonymized it by removing references to the hiring company.  The prompt aims to match job requirements with one section of the resume, core competencies.  AI is tasked with reading the job description, evaluating the resume, and ranking matches as exact, partial, or no match. 
 
-# AI Prompt
-
-The original job description was downloaded using the freehire.me API and the original content was summarized by AI. A human anonymized data by removing content specific to the hiring company.  Matching CORE COMPETENCIES from the resume to job requirements was used as an example.
+### AI Prompt
 
 <pre>
 You are an algorithm that matches Job Requirements and Resume.
