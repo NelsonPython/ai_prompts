@@ -1,4 +1,4 @@
-# Testing Prompt Output
+# Validating Prompt Output
 
 
 ---
@@ -9,6 +9,9 @@
 
 
 # Appendix - Prompt
+
+The original job description was downloaded using the freehire.me API, content was summarized by AI and data specific to the hiring company was removed.  To reduce output the resume section of this prompt contains one section, core competencies.
+
 <pre>
 You are an algorithm that matches Job Requirements and Resume.
 
