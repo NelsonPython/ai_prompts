@@ -193,6 +193,73 @@ $ python3 prompt_run.py -f prompts/cc_core_competencies.prompt
 }
 </pre>
 
+# Appendix - Ollama Model 
+
+<pre>
+$ /home/jugar/job_search_agentic/v_agentic/bin/python3 prompt_run.py -f prompts/cc_core_competencies.prompt
+--------------------------------------------------
+Reading the prompt from 'prompts/cc_core_competencies.prompt'...
+[RAW CONTENT] {
+  "job_requirements": [
+    {
+      "requirement": "Technical Writing Experience",
+      "evidence": "Experience creating hands-on technical workshops, developer training materials, and comprehensive technical documentation",
+      "ranking": "Exact Match"
+    },
+    {
+      "requirement": "Strong Understanding of AI/ML",
+      "evidence": "Agentic AI, AI prompt automation, Python, SQL",
+      "ranking": "Exact Match"
+    },
+    {
+      "requirement": "Technical Editing Skills",
+      "evidence": "Agentic AI, AI prompt automation, Python, SQL, Exceptional technical writing and editing skills",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Familiarity with AI/ML Platforms",
+      "evidence": "Experience developing educational content or documentation for AI/ML platforms, developer tools, or emerging AI technologies",
+      "ranking": "Exact Match"
+    },
+    {
+      "requirement": "Vector Database Experience",
+      "evidence": "Experience with vector databases, retrieval-Augmented Generation (RAG), embeddings, or agentic AI workflows",
+      "ranking": "No Match"
+    },
+    {
+      "requirement": "Documentation Experience",
+      "evidence": "Experience developing educational content or documentation for AI/ML platforms, developer tools, or emerging AI technologies",
+      "ranking": "Exact Match"
+    },
+    {
+      "requirement": "Collaboration Experience",
+      "evidence": "Previous experience working with AI research teams, developer platforms, or early-stage technology companies",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Industry Experience",
+      "evidence": "Experience working with AI research teams, developer platforms, or early-stage technology companies in Aerospace, Casino, Critical Infrastructure, Hospital, Pharmaceutical",
+      "ranking": "Partial Match"
+    },
+    {
+      "requirement": "Regulatory Compliance Experience",
+      "evidence": "Regulatory Crosswalks, Risk Assessments, Software Installation Qualification, Software Operational Qualification, Software Performance Qualification, Software Validation Plans",
+      "ranking": "No Match"
+    },
+    {
+      "requirement": "Software Documentation Experience",
+      "evidence": "AI Prompt Engineering, API Reference Guides, API User Guides, Cybersecurity Guidance, FAQs, Knowledge Articles, Quick-start Guides, Release notes, Software Training Curriculum",
+      "ranking": "Exact Match"
+    },
+    {
+      "requirement": "Tools Experience",
+      "evidence": "Agile, Confluence, Git, Github, Google Docs, HTML, Jira, LibreOffice, Markdown, MS Office, PDF, SharePoint, Word",
+      "ranking": "No Match"
+    }
+  ]
+} 
+</pre>
+
 # Appendix - Gemini Response 
 
 <pre>
