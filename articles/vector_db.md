@@ -7,7 +7,7 @@
 
 
 # Appendix - Prompt
-
+<pre>
 You are an algorithm that matches Job Requirements and Resume.
 
 1. Do not fabricate data.
@@ -99,7 +99,7 @@ AI Prompt Engineering, API Reference Guides, API User Guides, Cybersecurity Guid
 
 ### Tools:
 Agile, Confluence, Git, Github, Google Docs, HTML, Jira, LibreOffice, Markdown, MS Office, PDF, SharePoint, Word
-
+</pre>
 
 
 # Appendix - Hallucination
