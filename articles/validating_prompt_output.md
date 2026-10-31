@@ -1,4 +1,4 @@
-<img src="images/teal_waves.jpg" width=1000 height=200>
+<img src="images/valid_prompt.jpg" width=1000 height=250>
 
 # Validating Prompt Output
 
