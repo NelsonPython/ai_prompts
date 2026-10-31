@@ -3,11 +3,10 @@
 
 # AI Prompt
 
-The original job description was downloaded using the freehire.me API, content was summarized by AI and data specific to the hiring company was removed.  To reduce output the resume section of this prompt contains one section, CORE COMPETENCIES.
+The original job description was downloaded using the freehire.me API and the original content was summarized by AI. A human anonymized data by removing content specific to the hiring company.  Matching CORE COMPETENCIES from the resume to job requirements was used as an example.
 
 <pre>
 You are an algorithm that matches Job Requirements and Resume.
-
 1. Do not fabricate data.
 2. Evaluate and rank evidence from the Resume and only record the actual requirement, the evidence, and your ranking.  Strictly put your output in this json schema:
 {
@@ -62,7 +61,6 @@ Agenic AI Workflows
 Documentation Platforms
 Static Site Generators
 Documentation-as-Code Workflows
-
 3+ years of experience in technical writing, instructional design, developer education, technical curriculum development, or a related field
 Demonstrated experience creating hands-on technical workshops, developer training materials, and comprehensive technical documentation
 Strong understanding of LLMs, generative AI, prompting, APIs, and vector database systems
@@ -173,10 +171,14 @@ This model mixed up the requirements and resume.  It shows two requirements that
       "ranking": "Partial Match" < Gemini correctly infers that the evidence is part of developer education
     }...
 
+# Comparing Results
+
+While the small Ollama models hallucinated, Gemini made correct inferences.  What can be done to improve the output from the Ollama models?
+
+                                   
 ---
       
 **References**
-
 [What is a vector database?](https://www.ibm.com/think/topics/vector-database)
 
 
