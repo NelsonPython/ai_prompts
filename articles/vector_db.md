@@ -182,12 +182,3 @@ Gemini often correctly infers that a requirement is met by a section of the resu
 While the small Ollama models frequently hallucinated, Gemini made more correct inferences.
 
                                    
----
-      
-**References**
-                                   
-[What is a vector database?](https://www.ibm.com/think/topics/vector-database)
-
-
-
-
