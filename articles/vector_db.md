@@ -173,7 +173,8 @@ Gemini often correctly infers that a requirement is met by a section of the resu
       "evidence": "Software Training Curriculum, API Reference Guides, API User Guides, Quick-start Guides",
       "ranking": "Partial Match" < Gemini correctly infers that the evidence is part of developer education
     }...
-
+</pre>
+                                   
 # Comparing Results
 
 While the small Ollama models frequently hallucinated, Gemini made more correct inferences.  What can be done to improve the output from the Ollama models?
@@ -182,8 +183,7 @@ While the small Ollama models frequently hallucinated, Gemini made more correct 
 ---
       
 **References**
+                                   
 [What is a vector database?](https://www.ibm.com/think/topics/vector-database)
 
-
-</pre>
 
