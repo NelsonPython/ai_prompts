@@ -163,28 +163,29 @@ Gemini often correctly infers that a requirement is met by a section of the resu
     {
       "requirement": "Technical Writing",
       "evidence": "Regulatory compliance documentation, Software documentation (API Reference Guides, API User Guides, Quick-start Guides, User Guides, etc.)",
-      "ranking": "Exact Match" < Gemini correctly infers that Technical writing includes documentation listed in evidence.
+      "ranking": "Exact Match" <- Gemini correctly infers that Technical writing includes documentation listed in evidence.
     },
     {
       "requirement": "Instructional Design",
       "evidence": "Software Training Curriculum",
-      "ranking": "Partial Match" < Gemini correctly infers that Software Training Curriculum includes Instructional Design
+      "ranking": "Partial Match" <- Gemini correctly infers that Software Training Curriculum includes Instructional Design
     },
     {
       "requirement": "Developer Education",
       "evidence": "Software Training Curriculum, API Reference Guides, API User Guides, Quick-start Guides",
-      "ranking": "Partial Match" < Gemini correctly infers that the evidence is part of developer education
+      "ranking": "Partial Match" <- Gemini correctly infers that the evidence is part of developer education
     }...
 </pre>
                                    
 # Comparing Results
 
-While the small Ollama models frequently hallucinated, Gemini made more correct inferences.
+In this experiment, Gemini is being used to test whether the AI Prompt can work.  Gemini generally makes correct inferences.  
 
-Ideas for improvement:
+Running experiments on small Ollama models provides an opportunity to learn.  These models frequently hallucinated.  They found the instructions ambiguous.  The AI prompt attempted to associate Job Requirements with Requirements and Resume with Resume through capitalization and consistent terms.  It did not include examples of expected output.  The models only had one chance to complete the task with no loop providing clarification of ambiguities.  Runtime settings were not optimized and the Ollama chat API endpoint was used without streaming.  *To be continued...*
 
-1.  The AI prompt attempts to associate Job Requirements with Requirements and Resume with Resume through capitalization and consistent wording.  The model found this ambiguous.  The next example shows how to clearly identify text.
+---
 
-2.  The model only had one chance to complete the task with no feedback on its performance.  A tool called Langchain offers a framework or harness that includes a validation loop.  
+**References:**
 
-                                   
+[Ollama API Documentation - Endpoints](https://ollama.readthedocs.io/en/api/)
+
