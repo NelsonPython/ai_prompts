@@ -2,7 +2,7 @@
 
 # Validating Prompt Output
 
-Validating AI prompt results includes assessing whether the inferences made are logical and consistent.  In this example, a job description was downloaded using the freehire.me API.  The original content was summarized by AI, then a human anonymized it by removing references to the hiring company.  The prompt aims to match job requirements with one section of the resume, core competencies.  AI is tasked with reading the job description, evaluating the resume, and ranking matches as exact, partial, or no match. 
+Validating AI prompt results includes assessing whether the inferences made are clear and consistent.  In this example, a job description was downloaded using the freehire.me API.  The original content was summarized by AI, then for this example, a human anonymized it by removing references to the hiring company.  Rather than tackle the entire resume, this prompt aims to match job requirements with one section, a complete list of core competencies.  Because the resume contains over 15 years of experience in different roles, all core competencies may not be applicable.  AI is tasked with reading the job description, evaluating the resume, and ranking matches as exact, partial, or no match. 
 
 ### AI Prompt
 
@@ -104,7 +104,7 @@ Agile, Confluence, Git, Github, Google Docs, HTML, Jira, LibreOffice, Markdown, 
 The script was run three times.  First, the keywords were included.  Second, a model optimized for coding was used.  Third, a model optimized for chatting was used.
 
 ### 1. Timeout
-Prompt with keywords consistently timed out.
+The prompt with keywords consistently timed out.
 
 ### 2.  Hallucinations from qwen2.5-coder:1.5b
 Removing keywords from the Prompt allows the prompt to run, but the `qwen2.5-coder:1.5b` model hallucinated as shown in the annotated sample output below.
@@ -139,17 +139,17 @@ This model performed better but sometimes it compared requirements to other requ
     {
       "requirement": "Technical Writing Experience",
       "evidence": "Experience creating hands-on technical workshops, developer training materials, and comprehensive technical documentation",
-      "ranking": "Exact Match" < While this is an exact match, both the requirement and evidence are listed in Requirements.  A valid section of the resume was not cited.
+      "ranking": "Exact Match" <- While this is an exact match, both the requirement and evidence are part of the Requirements.  A valid section of the resume was not cited.
     },
     {
       "requirement": "Strong Understanding of AI/ML",
       "evidence": "Agentic AI, AI prompt automation, Python, SQL",
-      "ranking": "Exact Match" <- Partial Match / Partial Hallucination.  There is no indication of a strong understanding.
+      "ranking": "Exact Match" <- Partial Match because there is no evidence of "strong understanding"
     },
     {
       "requirement": "Technical Editing Skills",
       "evidence": "Agentic AI, AI prompt automation, Python, SQL, Exceptional technical writing and editing skills",
-      "ranking": "Partial Match" < This is a good assessment because a requirement is matched to a section of the resume.
+      "ranking": "Partial Match" <- This is a good assessment because a requirement is matched to a section of the resume.
     }...
 </pre>
 
@@ -180,5 +180,11 @@ Gemini often correctly infers that a requirement is met by a section of the resu
 # Comparing Results
 
 While the small Ollama models frequently hallucinated, Gemini made more correct inferences.
+
+Ideas for improvement:
+
+1.  The AI prompt attempts to associate Job Requirements with Requirements and Resume with Resume through capitalization and consistent wording.  The model found this ambiguous.  The next example shows how to clearly identify text.
+
+2.  The model only had one chance to complete the task with no feedback on its performance.  A tool called Langchain offers a framework or harness that includes a validation loop.  
 
                                    
