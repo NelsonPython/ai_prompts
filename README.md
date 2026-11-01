@@ -4,9 +4,9 @@
 
 At its core, this blog explores AI prompts tailored for technical communicators. Rather than relying on trial-and-error requests that can lead to hallucinations, it shares best practices for leveraging generative AI Prompts to organize complex information efficiently. Additionally, for professionals managing regulatory compliance, the blog addresses methods to validate the accuracy of AI responses.
 
-## Prompts
+## AI Prompts
 
-[Graphic Design AI Prompt](articles/ai_prompt_graphic_design.md)
+[Graphic Design Prompt](articles/ai_prompt_graphic_design.md)
 
 [Part 1:  Validating Prompt Output](articles/validating_prompt_output.md)
 
