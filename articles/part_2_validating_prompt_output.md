@@ -60,7 +60,7 @@ if __name__ == "__main__":
 
 ### Using the Vector Database to Match Skills and Job Requirements
 
-In order to match skills in the embedded resume, the job requirements must also be embedded.  Import essential libraries and modules for building an AI-powered data processing and retrieval pipeline, commonly referred to as RAG (Retrieval-Augmented Generation).  According to IBM, the most common approach to RAG is to create dense vector representations of a knowledge base, in this case the full resume.  Then, query the database calculating the semantic similarity of each job requirement.  
+In order to match skills in the embedded resume, the job requirements must also be embedded.  Import essential libraries and modules for building an AI-powered data processing and retrieval pipeline, commonly referred to as [RAG (Retrieval-Augmented Generation)](https://www.ibm.com/think/topics/retrieval-augmented-generation).  According to IBM, the most common approach to RAG is to create dense vector representations of a knowledge base, in this case the full resume.  Then, query the database calculating the semantic similarity of each job requirement.  
 
 
 ```
@@ -89,15 +89,13 @@ from langchain_core.output_parsers import JsonOutputParser
 
 ### Initializing Core Components for RAG
 
-Initialize the core components needed for the pipeline.  
-
-The `run_pipeline` function expects four parameters:
+Initialize the core components needed for the pipeline.  The `run_pipeline` function expects four parameters:
 - `raw_jd_text`: The raw text of the job description.
-- `distance`: A distance threshold value used to filter out irrelevant search results.  When using `cosine`, the distance of the most accurate responses is generally between 0.35 an 0.45.  When using 'L2', it ranges from 0.8 to 1.1.
+- `distance`: A distance threshold value used to filter out irrelevant search results.  When using `cosine`, the distance of the most accurate responses is generally between 0.35 an 0.45.  When using `L2`, it ranges from 0.8 to 1.1.
 - `limit`: The maximum number of search results to fetch.
 - `distance_calc`: The metric used for distance calculation.  The default is `cosine`, but `L2` can also be chosen.
 
-Print a status message displaying the chosen limit, distance calculation method, and threshold.  Connect to an instance of **Ollama** running locally and use the `llama3.2` model with a `temperature=0.0`.  This temperature aims to report deterministic and factual results. Setup Ollama's `nomic-embed-text` model to convert job description text into numerical vectors for comparison with resume embeddings stored in the database in a local folder named `./lancedb_data`.  Open a table called `"resume_chunks"`.  This table is located inside the database and contains the pre-chunked and vectorized data from the resume.
+Double check run parameters by printing a status message displaying the chosen limit, distance calculation method, and threshold.  Connect to an instance of **Ollama** running locally and use the `llama3.2` model with a `temperature=0.0`.  This temperature aims to report deterministic and factual results. Setup Ollama's `nomic-embed-text` model to convert job description text into numerical vectors for comparison with resume embeddings stored in the database in a local folder named `./lancedb_data`.  Open a table called `"resume_chunks"`.  This table is located inside the database and contains the pre-chunked and vectorized data from the resume.
 
 ```
 def run_pipeline(raw_jd_text: str, distance: float, limit: int, distance_calc: str):
@@ -110,7 +108,7 @@ def run_pipeline(raw_jd_text: str, distance: float, limit: int, distance_calc: s
 
 ## Executing the LLM-powered Prompt Chain
 
-Set up and execute an LLM-powered prompt chain.  It ingests job description text and converts it to JSON format.  `ChatPromptTemplate.from_messages` creates a prompt template.  The `System Message (`"system"`)` gives the LLM a persona of "technical requirement parser" as well as strict instructions on what to extract from the text. It dictates that the output must follow a specific JSON schema with four key fields:
+Set up and execute an LLM-powered prompt chain to ingest job description text and convert it to JSON format.  `ChatPromptTemplate.from_messages` creates a prompt template.  The `System Message (`"system"`)` gives the LLM a persona of "technical requirement parser" as well as strict instructions on what to extract from the text. It dictates that the output must follow a specific JSON schema with four key fields:
 * `raw_phrase`: Original text from the job description.
 * `canonical_skill`: A standardized version of a technical skill.
 * `execution_tier`: Categorized domains, *Software Validation*, *Training*, *Technical Writing*, or *Regulatory Compliance*.
