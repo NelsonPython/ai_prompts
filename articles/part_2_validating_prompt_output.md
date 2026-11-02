@@ -11,17 +11,17 @@ Running an AI Prompt seems easy for a human, just type instructions and wait for
 
 Vector embeddings can be stored in a vector database.  [LanceDB](https://www.lancedb.com/) is an open-source vector database designed for AI applications.  Embeddings are stored in folders so running a server is not necessary.  While LanceDB can scale to handle billions of vector embeddings on low-cost object storage like Amazon S3, it can also be used for small projects.
 
-## Why Use the LanceDB Vector Database?
+### Why Use the LanceDB Vector Database?
 
 - Lightening fast similarity searches
 - Low cost storage
 - Hybrid searches and filtering
 
-## Example - Matching Skills to Job Requirements
+## Matching Skills to Job Requirements
 
-First, the full resume was ingested into a LanceDB database.  Then, the prompt was revised to use embeddings.
+First, ingest resume data into a LanceDB database.
 
-### Ingesting Data
+### Ingesting Resume Data
 
 Gemini wrote this Python script to read the Professional Experience section of the `full_resume.json`, then compute and save embeddings in a LanceDB database.
 
@@ -68,37 +68,62 @@ if __name__ == "__main__":
     ingest_resume_to_lancedb("full_resume.json")
 ```
 
-
 ### Matching Skills to Job Requirements
 
+Second, run the script that uses the vector database to match skills and job requirements.  The first code snippet imports essential libraries and modules used to build an AI-powered data processing and retrieval pipeline often used in Retrieval-Augmented Generation (RAG) systems. 
 
+#### Importing Libraries and Modules
 ```
-'''
-    Analyze a raw text job description and output a structured job requirements
-    Ingest:
-        - text job description
-        - distance calculation type, cosine or L2
-        - distance threshold
-        - limit of search results
-    Output:
-        - selected resume sections that match job requirements
-'''
-
 import argparse
 import json
 import lancedb
 from langchain_ollama import ChatOllama, OllamaEmbeddings
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
+```
 
+`argparse` - a built-in Python module for parsing command-line information so that users can run the Python script with different parameters.
+
+`json` - Python's built-in module for retrieving data formatted as JSON (JavaScript Object Notation), an industry standard for LLM responses.
+
+`lancedb` - Python client library for **LanceDB**, an open-source vector database that allows the script to connect to a local or remote vector database, store, and efficiently query high-dimensional vector embeddings.
+
+`ChatOllama` from `langchain_ollama`- LangChain's integration wrapper for chat models running locally via **Ollama** that enables the script to send structured prompts and receive responses from locally hosted Large Language Models, such as Llama 3.2.
+
+`OllamaEmbeddings` from `langchain_ollama` - LangChain's wrapper for generating embeddings locally via **Ollama** that converts text in search queries or document chunks into numerical vector representations using models such as `nomic-embed-text`.
+
+`ChatPromptTemplate` from `langchain_core.prompts` - A LangChain utility designed to format prompts for chat models by combining system messages, human messages, and placeholder variables.  Using this format makes it easier to dynamically build instructions for the LLM.
+
+`JsonOutputParser` from `langchain_core.output_parsers` - LangChain parser that instructs the LLM to output valid JSON and parses that text response directly into a Python dictionary or list.  This ensures more reliable, structured data extraction from the LLM's text output so downstream code can safely process it.
+
+#### Computing Embeddings
+
+```
 def run_pipeline(raw_jd_text: str, distance: float, limit: int, distance_calc: str):
     print(f"\nInitializing Ollama models and LanceDB limited to {limit} search results using {distance_calc} distance threshold of {distance}.")
     llm = ChatOllama(model="llama3.2", temperature=0.0)
     embeddings = OllamaEmbeddings(model="nomic-embed-text")
-    
     db = lancedb.connect("./lancedb_data")
     table = db.open_table("resume_chunks")
+```
 
+This function initializes the core components needed for the RAG (Retrieval-Augmented Generation) pipeline.  It expects four parameters:
+
+- `raw_jd_text`: The raw text of the job description.
+- `distance`: The threshold value used to filter out irrelevant search results.
+- `limit`: The maximum number of search results to fetch.
+- `distance_calc`: The metric used for distance calculation, either `cosine` or `L2`.
+
+First, a status message displays the chosen limit, distance calculation method, and threshold.  Then, the script connects to an instance of **Ollama** running locally and using the `llama3.2` model with a `temperature=0.0`.  This temperature aims to report deterministic and factual results.  Next, Ollama's `nomic-embed-text` model is setup to converts job description text into numerical vectors so they can be compared mathematically in the database.  Finally, the script connects to a local **LanceDB** vector database stored in a local folder named `./lancedb_data`.
+
+
+6. **Table Opening (`table = db.open_table(...)`)**:
+* Opens a specific table called `"resume_chunks"` inside the database, which contains the pre-chunked and vectorized data from your resume ready for searching.
+
+  
+
+
+```
     print("Normalizing job description into structured criteria...")
     normalizer_prompt = ChatPromptTemplate.from_messages([
         ("system", 
@@ -123,10 +148,14 @@ def run_pipeline(raw_jd_text: str, distance: float, limit: int, distance_calc: s
         ),
         ("human", "Raw Job Description Text:\n{raw_jd}")
     ])
-    
+```
+
+``` 
     normalizer_chain = normalizer_prompt | llm | JsonOutputParser()
     normalized_data = normalizer_chain.invoke({"raw_jd": raw_jd_text})
+```
 
+```
     print("Querying LanceDB using normalized search queries with distance filtering...")
     DISTANCE_THRESHOLD = distance
     retrieved_results = []
@@ -161,7 +190,9 @@ def run_pipeline(raw_jd_text: str, distance: float, limit: int, distance_calc: s
         })
 
     return retrieved_results
+```
 
+```
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description="Get raw job descriptions from job_desc/filename.txt and output structured retrieval results")
     ap.add_argument(
@@ -193,6 +224,11 @@ if __name__ == "__main__":
         job_text = f.read()
     
     results = run_pipeline(job_text, args["distance"], args["limit"], args["distance_calc"])
+```
+
+Print results in a format easy for humans to read.
+
+```
     print("\n--- Job Description Analysis ---")
     print(json.dumps(results, indent=2))
 
