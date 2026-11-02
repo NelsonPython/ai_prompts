@@ -69,8 +69,147 @@ if __name__ == "__main__":
 ```
 
 
-### Searching
+### Matching Skills to Job Requirements
 
+
+```
+'''
+    Analyze a raw text job description and output a structured job requirements
+    Ingest:
+        - text job description
+        - distance calculation type, cosine or L2
+        - distance threshold
+        - limit of search results
+    Output:
+        - selected resume sections that match job requirements
+'''
+
+import argparse
+import json
+import lancedb
+from langchain_ollama import ChatOllama, OllamaEmbeddings
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import JsonOutputParser
+
+def run_pipeline(raw_jd_text: str, distance: float, limit: int, distance_calc: str):
+    print(f"\nInitializing Ollama models and LanceDB limited to {limit} search results using {distance_calc} distance threshold of {distance}.")
+    llm = ChatOllama(model="llama3.2", temperature=0.0)
+    embeddings = OllamaEmbeddings(model="nomic-embed-text")
+    
+    db = lancedb.connect("./lancedb_data")
+    table = db.open_table("resume_chunks")
+
+    print("Normalizing job description into structured criteria...")
+    normalizer_prompt = ChatPromptTemplate.from_messages([
+        ("system", 
+         "You are a technical requirement parser. Take unstructured, noisy job descriptions and extract explicit technical requirements.\n\n"
+         "For each requirement, output:\n"
+         "1. 'raw_phrase': The exact or approximate text from the input.\n"
+         "2. 'canonical_skill': Standardized technical term.\n"
+         "3. 'execution_tier': Infer depth from context: 'Software Validation' | 'Training' | 'Technical Writing' | 'Regulatory Compliance'.\n"
+         "4. 'search_queries': 2-3 specific semantic phrases to search in a vector database.\n\n"
+         "Return ONLY a JSON object formatted as:\n"
+         "{{\n"
+         '  "requirements": [\n'
+         "    {{\n"
+         '      "raw_phrase": "String",\n'
+         '      "canonical_skill": "String",\n'
+         '      "execution_tier": "Software Validation" | "Training" | "Technical Writing" | "Regulatory Compliance",\n'
+         '      "search_queries": ["String"]\n'
+         "    }}\n"
+         "  ],\n"
+         '  "rationale": "String"\n'
+         "}}"
+        ),
+        ("human", "Raw Job Description Text:\n{raw_jd}")
+    ])
+    
+    normalizer_chain = normalizer_prompt | llm | JsonOutputParser()
+    normalized_data = normalizer_chain.invoke({"raw_jd": raw_jd_text})
+
+    print("Querying LanceDB using normalized search queries with distance filtering...")
+    DISTANCE_THRESHOLD = distance
+    retrieved_results = []
+    for req in normalized_data.get("requirements", []):
+        skill_name = req["canonical_skill"]
+        execution_tier = req["execution_tier"]
+        
+        retrieved_chunks_for_skill = []
+        
+        for query_text in req["search_queries"]:
+            query_vector = embeddings.embed_query(query_text)
+
+            # Fetch top <limit> closest matching chunks from LanceDB
+            if distance_calc =="L2":
+                search_results = table.search(query_vector).limit(limit).to_list()
+            elif distance_calc == "cosine":
+                search_results = table.search(query_vector).metric("cosine").limit(limit).to_list()
+            
+            for result in search_results:
+                distance = result.get("_distance", 0.0)
+                if distance < DISTANCE_THRESHOLD:
+                    retrieved_chunks_for_skill.append(result["text"])
+                
+        # Deduplicate and format unique chunks with ' | ' separator (or "None" if empty)
+        unique_chunks = list(set(retrieved_chunks_for_skill))
+        formatted_context = " | ".join(unique_chunks) if unique_chunks else "None"
+        
+        retrieved_results.append({
+            "canonical_skill": skill_name,
+            "target_execution_tier": execution_tier,
+            "retrieved_resume_context": formatted_context
+        })
+
+    return retrieved_results
+
+if __name__ == "__main__":
+    ap = argparse.ArgumentParser(description="Get raw job descriptions from job_desc/filename.txt and output structured retrieval results")
+    ap.add_argument(
+        "-j", "--job_path",
+        required=True,
+        help="Select a job description, normally stored in job_desc/filename.txt"
+    )
+    ap.add_argument(
+        "-d", "--distance",
+        type=float,
+        default=0.35,
+        help="Recommended percent between 0.80 and 1.3 for L2 (Euclidean) absolute distance or 0.35 to 0.45 for cosine angle measurement."
+    )
+    ap.add_argument(
+        "-c", "--distance_calc",
+        type=str,
+        default="cosine",
+        help="Choose L2 (Euclidean) absolute distance or cosine angle measurement."
+    )
+    ap.add_argument(
+        "-n", "--limit",
+        type=int,
+        default=2,
+        help="Limit for selecting the top matches"
+    )    
+    args = vars(ap.parse_args())
+
+    with open(args["job_path"], "r") as f:
+        job_text = f.read()
+    
+    results = run_pipeline(job_text, args["distance"], args["limit"], args["distance_calc"])
+    print("\n--- Job Description Analysis ---")
+    print(json.dumps(results, indent=2))
+
+    unique_chunks = set()
+    for item in results:
+        ctx = item.get("retrieved_resume_context")
+        if ctx and ctx != "None":
+            for chunk in ctx.split(" | "):
+                unique_chunks.add(chunk.strip())
+
+    for index, chunk in enumerate(sorted(unique_chunks), 1):
+        print(f"\n[{index}] {chunk}")
+``` 
+
+### Results
+
+Part 1 identified two problems, timeouts and hallucinations.  This script ran quickly and did not time out.  It more accurately matched experience to job requirements.
 
 ```
 {
