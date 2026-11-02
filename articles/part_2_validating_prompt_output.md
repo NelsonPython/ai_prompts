@@ -17,7 +17,7 @@ Vector embeddings can be stored in a vector database.  [LanceDB](https://www.lan
 - Low cost storage
 - Hybrid searches and filtering
 
-# Matching Skills to Job Requirements
+# Example:  Matching Skills to Job Requirements
 
 First, ingest resume data into a LanceDB database.
 
@@ -82,7 +82,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 ```
 
-`argparse` - a built-in Python module for parsing command-line information so that users can run the Python script with different parameters.
+`argparse` - Python module for parsing command-line parameters that allows users to run the script with different parameters.
 
 `json` - Python's built-in module for retrieving data formatted as JSON (JavaScript Object Notation), an industry standard for LLM responses.
 
@@ -96,7 +96,8 @@ from langchain_core.output_parsers import JsonOutputParser
 
 `JsonOutputParser` from `langchain_core.output_parsers` - LangChain parser that instructs the LLM to output valid JSON and parses that text response directly into a Python dictionary or list.  This ensures more reliable, structured data extraction from the LLM's text output so downstream code can safely process it.
 
-### Computing Embeddings
+
+### Initializing Core Components for RAG
 
 ```
 def run_pipeline(raw_jd_text: str, distance: float, limit: int, distance_calc: str):
@@ -114,14 +115,10 @@ This function initializes the core components needed for the RAG (Retrieval-Augm
 - `limit`: The maximum number of search results to fetch.
 - `distance_calc`: The metric used for distance calculation, either `cosine` or `L2`.
 
-First, a status message displays the chosen limit, distance calculation method, and threshold.  Then, the script connects to an instance of **Ollama** running locally and using the `llama3.2` model with a `temperature=0.0`.  This temperature aims to report deterministic and factual results.  Next, Ollama's `nomic-embed-text` model is setup to converts job description text into numerical vectors so they can be compared mathematically in the database.  Finally, the script connects to a local **LanceDB** vector database stored in a local folder named `./lancedb_data`.
+First, a status message displays the chosen limit, distance calculation method, and threshold.  Then, the script connects to an instance of **Ollama** running locally and using the `llama3.2` model with a `temperature=0.0`.  This temperature aims to report deterministic and factual results.  Next, Ollama's `nomic-embed-text` model is setup to converts job description text into numerical vectors so they can be compared mathematically in the database.  Finally, the script connects to a local **LanceDB** vector database stored in a local folder named `./lancedb_data` and opens a specific table called `"resume_chunks"`.  This table is located inside the database and contains the pre-chunked and vectorized data from the resume.
 
 
-6. **Table Opening (`table = db.open_table(...)`)**:
-* Opens a specific table called `"resume_chunks"` inside the database, which contains the pre-chunked and vectorized data from your resume ready for searching.
-
-  
-
+### Executing the LLM-powered Prompt Chain
 
 ```
     print("Normalizing job description into structured criteria...")
@@ -148,12 +145,27 @@ First, a status message displays the chosen limit, distance calculation method, 
         ),
         ("human", "Raw Job Description Text:\n{raw_jd}")
     ])
-```
 
-``` 
     normalizer_chain = normalizer_prompt | llm | JsonOutputParser()
     normalized_data = normalizer_chain.invoke({"raw_jd": raw_jd_text})
 ```
+This code snippet sets up and executes an LLM-powered prompt chain that takes an unstructured, messy job description and converts it into JSON format.
+
+Creates a prompt template, `ChatPromptTemplate.from_messages`).  The `System Message (`"system"`)` gives the LLM a persona of "technical requirement parser" as well as strict instructions on what to extract from the text. It dictates that the output must follow a specific JSON schema with four key fields:
+* `raw_phrase`: The original text snippet from the job description.
+* `canonical_skill`: A standardized version of the technical skill.
+* `execution_tier`: The categorized domain of *Software Validation*, *Training*, *Technical Writing*, or *Regulatory Compliance*.
+* `search_queries`: 2–3 semantic phrases designed for vector database searches.
+
+The `Human Message (`"human"`)` passes the actual raw text of the job description `{raw_jd}` into the prompt.
+
+`normalizer_chain = normalizer_prompt | llm | JsonOutputParser()` uses LangChain's pipe operator (`|`) to link three components together into a single workflow:
+1. **`normalizer_prompt`**: Formats the input variables into the prompt.
+2. **`llm`**: Sends the formatted prompt to the local language model `llama3.2`.
+3. **`JsonOutputParser()`**: Forces the LLM's text output into a valid JSON object.
+
+`normalized_data = normalizer_chain.invoke(...)` runs the pipeline by passing it the raw job description text and storing the result in a structured Python dictionary, `normalized_data`.
+
 
 ```
     print("Querying LanceDB using normalized search queries with distance filtering...")
