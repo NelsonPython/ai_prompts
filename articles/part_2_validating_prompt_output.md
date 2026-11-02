@@ -17,13 +17,9 @@ Vector embeddings can be stored in a vector database.  [LanceDB](https://www.lan
 - Low cost storage
 - Hybrid searches and filtering
 
-# Example:  Matching Skills to Job Requirements
+## Example:  Matching Skills to Job Requirements
 
-First, ingest resume data into a LanceDB database.
-
-## Ingesting Resume Data
-
-Gemini wrote this Python script to read the Professional Experience section of the `full_resume.json`, then compute and save embeddings in a LanceDB database.
+First, ingest resume data into a LanceDB database by reading the Professional Experience section of the 'full_resume.json', then computing and storing embeddings in a LanceDB database.  Gemini wrote the following script.
 
 ```
 import json
@@ -68,9 +64,7 @@ if __name__ == "__main__":
     ingest_resume_to_lancedb("full_resume.json")
 ```
 
-## Matching Skills to Job Requirements
-
-Second, run the script that uses the vector database to match skills and job requirements.  The first code snippet imports essential libraries and modules used to build an AI-powered data processing and retrieval pipeline often used in Retrieval-Augmented Generation (RAG) systems. 
+Next, run a script that uses the vector database to match skills and job requirements.  The following code snippet imports essential libraries and modules used to build an AI-powered data processing and retrieval pipeline often used in Retrieval-Augmented Generation (RAG) systems. 
 
 ### Importing Libraries and Modules
 ```
