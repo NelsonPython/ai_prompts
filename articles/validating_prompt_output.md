@@ -1,6 +1,6 @@
 <img src="images/valid_prompt.jpg" width=1000 height=250>
 
-# Part 1:  Validating Prompt Output
+# Part 1:  Validating AI Prompt Responses
 
 Validating AI prompt results includes assessing whether the inferences made are clear and consistent.  In this example, a job description was downloaded using the freehire.me API.  The original content was summarized by AI, then for this example, a human anonymized it by removing references to the hiring company.  Rather than tackle the entire resume, this prompt aims to match job requirements with one section, a complete list of core competencies.  Because the resume contains over 15 years of experience in different roles, all core competencies may not be applicable.  AI is tasked with reading the job description, evaluating the resume, and ranking matches as exact, partial, or no match. 
 
@@ -189,7 +189,7 @@ In this experiment, Gemini generally made correct inferences, but the smaller Ol
 
 How can performance be improved?
 
-Part 2:  Validating AI Prompt Response
+[Part 2:  Validating AI Prompt Responses](part_2_validating_prompt_output.md)
    
 ---
 
