@@ -1,6 +1,7 @@
 
+<img src="images/valid_prompt.jpg" width=1000 height=250>
 
-# Part 2:  Validating Prompt Response
+# Part 2:  Validating AI Prompt Responses
 
 ```
 {
