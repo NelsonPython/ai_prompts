@@ -3,11 +3,11 @@
 
 # Part 2:  Validating AI Prompt Responses (draft in-progress)
 
-Running an AI Prompt seems easy for a human, just type instructions and wait for a response, then chat until you get an answer that you can fact check.  Programming an AI agent to perform a task autonomously, requires AI to work hard behind the scenes trying to understand instructions and validate responses.  Vector embeddings can help AI speed up performance and improve accuracy.  
+In Part 1, the small Ollama models struggled with ambiguity, hallucinated, and failed to complete tasks before timing out.  While humans can easily compare text, AI is better at math.  By converting text into lists of floating-point numbers called `embeddings`, AI can perform more computations with fewer timeouts and produce more accurate inferences.  
 
 ### What are Vector Embeddings?
 
-**Embeddings** are lists of floating-point numbers that represent unstructured data like text, images, audio, video, or code.  Models translate the unstructured data into this mathematical format so that items with similar meanings (features) are placed close to each other.  For example, the embedding for the word *"kitten"* will be mathematically closer to *"puppy"* than to *"skyscraper."*  This allows computers to better understand the context of data so it can respond more accurately.  
+**Embeddings** are lists of floating-point numbers that represent unstructured data like text, images, audio, video, or code.  Models translate the unstructured data into this mathematical format so that items with similar meanings are placed close to each other.  For example, the embedding for the word *"kitten"* will be mathematically closer to *"puppy"* than to *"skyscraper."*  This allows computers to better understand the context of the data so it can calculate the semantic similarity of two words, *kitten* and *puppy* both commonly considers *pets*.  
 
 Vector embeddings can be stored in a vector database.  [LanceDB](https://www.lancedb.com/) is an open-source vector database designed for AI applications.  Embeddings are stored in folders so running a server is not necessary.  While LanceDB can scale to handle billions of vector embeddings on low-cost object storage like Amazon S3, it can also be used for small projects.
 
@@ -19,7 +19,7 @@ Vector embeddings can be stored in a vector database.  [LanceDB](https://www.lan
 
 ## Example:  Matching Skills to Job Requirements
 
-First, ingest resume data into a LanceDB database by reading the Professional Experience section of the 'full_resume.json', then computing and storing embeddings in a LanceDB database.  Gemini wrote the following script.
+Gemini wrote the following script to load the LanceDB database.  First, it ingests resume data into a LanceDB database.  Then it opens the full resume and reads the Professional Experience section.  Next, it computes embeddings and stores them in a LanceDB database.  Only run this script once.  The database is stored in a folder on the filesystem.  
 
 ```
 import json
@@ -66,7 +66,7 @@ if __name__ == "__main__":
 
 ### Using the Vector Database to Match Skills and Job Requirements
 
-Import essential libraries and modules for building an AI-powered data processing and retrieval pipeline.
+In order to match skills in the embedded resume, the job requirements must also be embedded.  Import essential libraries and modules for building an AI-powered data processing and retrieval pipeline.
 
 ```
 import argparse
@@ -94,13 +94,15 @@ from langchain_core.output_parsers import JsonOutputParser
 
 ### Initializing Core Components for RAG
 
-Initialize the core components needed for this RAG (Retrieval-Augmented Generation) pipeline.  The `run_pipeline` function expects four parameters:
-- `raw_jd_text`: The raw text of the job description.
-- `distance`: The threshold value used to filter out irrelevant search results.
-- `limit`: The maximum number of search results to fetch.
-- `distance_calc`: The metric used for distance calculation, either `cosine` or `L2`.
+Initialize the core components needed for this RAG (Retrieval-Augmented Generation) pipeline.  According to IBM, the most common approach to RAG is to create dense vector representations of a knowledge base, in this case the full resume.  Then, query the database calculating the semantic similarity of each job requirement.  
 
-Print a status message displaying the chosen limit, distance calculation method, and threshold.  Connect to an instance of **Ollama** running locally and using the `llama3.2` model with a `temperature=0.0`.  This temperature aims to report deterministic and factual results.  Setup Ollama's `nomic-embed-text` model to convert job description text into numerical vectors for comparison with resume embeddings stored in the resume database.  Connect to the resume database stored in a local folder named `./lancedb_data` and open a table called `"resume_chunks"`.  This table is located inside the database and contains the pre-chunked and vectorized data from the resume.
+The `run_pipeline` function expects four parameters:
+- `raw_jd_text`: The raw text of the job description.
+- `distance`: A distance threshold value used to filter out irrelevant search results.  When using `cosine`, the distance of the most accurate responses is generally between 0.35 an 0.45.  When using 'L2', it ranges from 0.8 to 1.1.
+- `limit`: The maximum number of search results to fetch.
+- `distance_calc`: The metric used for distance calculation.  The default is `cosine`, but `L2` can also be chosen.
+
+Print a status message displaying the chosen limit, distance calculation method, and threshold.  Connect to an instance of **Ollama** running locally and use the `llama3.2` model with a `temperature=0.0`.  This temperature aims to report deterministic and factual results. Setup Ollama's `nomic-embed-text` model to convert job description text into numerical vectors for comparison with resume embeddings stored in the database in a local folder named `./lancedb_data`.  Open a table called `"resume_chunks"`.  This table is located inside the database and contains the pre-chunked and vectorized data from the resume.
 
 ```
 def run_pipeline(raw_jd_text: str, distance: float, limit: int, distance_calc: str):
@@ -113,13 +115,13 @@ def run_pipeline(raw_jd_text: str, distance: float, limit: int, distance_calc: s
 
 ## Executing the LLM-powered Prompt Chain
 
-Set up and execute an LLM-powered prompt chain that takes an unstructured, messy job description and converts it into JSON format.  Create a prompt template, `ChatPromptTemplate.from_messages`).  The `System Message (`"system"`)` gives the LLM a persona of "technical requirement parser" as well as strict instructions on what to extract from the text. It dictates that the output must follow a specific JSON schema with four key fields:
-* `raw_phrase`: The original text snippet from the job description.
-* `canonical_skill`: A standardized version of the technical skill.
-* `execution_tier`: The categorized domain of *Software Validation*, *Training*, *Technical Writing*, or *Regulatory Compliance*.
+Set up and execute an LLM-powered prompt chain.  It ingests job description text and converts it to JSON format.  `ChatPromptTemplate.from_messages` creates a prompt template.  The `System Message (`"system"`)` gives the LLM a persona of "technical requirement parser" as well as strict instructions on what to extract from the text. It dictates that the output must follow a specific JSON schema with four key fields:
+* `raw_phrase`: Original text from the job description.
+* `canonical_skill`: A standardized version of a technical skill.
+* `execution_tier`: Categorized domains, *Software Validation*, *Training*, *Technical Writing*, or *Regulatory Compliance*.
 * `search_queries`: 2–3 semantic phrases designed for vector database searches.
 
-The `Human Message (`"human"`)` passes the actual raw text of the job description `{raw_jd}` into the prompt.
+The `Human Message (`"human"`)` passes the actual raw text of the job description `{raw_jd}` into the prompt.  This separation of duties and structured format helps AI avoid the hallucination of finding a match by comparing job requirements to other job requirements. 
 
 `normalizer_chain = normalizer_prompt | llm | JsonOutputParser()` uses LangChain's pipe operator (`|`) to link three components together into a single workflow:
 1. **`normalizer_prompt`**: Formats the input variables into the prompt.
@@ -158,6 +160,8 @@ The `Human Message (`"human"`)` passes the actual raw text of the job descriptio
     normalized_data = normalizer_chain.invoke({"raw_jd": raw_jd_text})
 ```
 
+Loop through the requirements stored in normalized_data.  For each requirement, extract the skill name and execution tier, either Software Validation, Training, Technical Writing, or Regulatory Compliance.
+
 ```
     print("Querying LanceDB using normalized search queries with distance filtering...")
     DISTANCE_THRESHOLD = distance
@@ -165,9 +169,11 @@ The `Human Message (`"human"`)` passes the actual raw text of the job descriptio
     for req in normalized_data.get("requirements", []):
         skill_name = req["canonical_skill"]
         execution_tier = req["execution_tier"]
-        
+```
+For every search query associated with a requirement, convert the text string to a `query_vector`.  Use the distance calculation and distance threshold to find the closest matching vectors in the LanceDB.  Limit the number of responses to the input limit.
+
+```
         retrieved_chunks_for_skill = []
-        
         for query_text in req["search_queries"]:
             query_vector = embeddings.embed_query(query_text)
 
@@ -181,7 +187,9 @@ The `Human Message (`"human"`)` passes the actual raw text of the job descriptio
                 distance = result.get("_distance", 0.0)
                 if distance < DISTANCE_THRESHOLD:
                     retrieved_chunks_for_skill.append(result["text"])
-                
+```
+Multiple queries may return overlapping text chunks.  Use set() to remove duplicates.  Append a structured dictionary containing the skill name, execution tier, and the formatted context string to the `retrieved_results` list.
+```
         # Deduplicate and format unique chunks with ' | ' separator (or "None" if empty)
         unique_chunks = list(set(retrieved_chunks_for_skill))
         formatted_context = " | ".join(unique_chunks) if unique_chunks else "None"
@@ -194,6 +202,7 @@ The `Human Message (`"human"`)` passes the actual raw text of the job descriptio
 
     return retrieved_results
 ```
+Setup argparse to gather the input parameters including the file path of the job description, the distance threshold, limit for the number of responses, and the distance calculation.
 
 ```
 if __name__ == "__main__":
@@ -223,13 +232,17 @@ if __name__ == "__main__":
     )    
     args = vars(ap.parse_args())
 
+```
+Read the job description and run the pipeline.
+
+```
     with open(args["job_path"], "r") as f:
         job_text = f.read()
     
     results = run_pipeline(job_text, args["distance"], args["limit"], args["distance_calc"])
 ```
 
-Print results in a format easy for humans to read.
+Print results in a format that is easy for humans to read.
 
 ```
     print("\n--- Job Description Analysis ---")
