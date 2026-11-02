@@ -66,7 +66,7 @@ if __name__ == "__main__":
 
 ### Using the Vector Database to Match Skills and Job Requirements
 
-Next, run another script that uses the vector database to match skills and job requirements.  The following code snippet imports essential libraries and modules used to build an AI-powered data processing and retrieval pipeline often used in Retrieval-Augmented Generation (RAG) systems. 
+Import essential libraries and modules for building an AI-powered data processing and retrieval pipeline.
 
 ```
 import argparse
@@ -94,6 +94,14 @@ from langchain_core.output_parsers import JsonOutputParser
 
 ### Initializing Core Components for RAG
 
+Initialize the core components needed for this RAG (Retrieval-Augmented Generation) pipeline.  The `run_pipeline` function expects four parameters:
+- `raw_jd_text`: The raw text of the job description.
+- `distance`: The threshold value used to filter out irrelevant search results.
+- `limit`: The maximum number of search results to fetch.
+- `distance_calc`: The metric used for distance calculation, either `cosine` or `L2`.
+
+Print a status message displaying the chosen limit, distance calculation method, and threshold.  Connect to an instance of **Ollama** running locally and using the `llama3.2` model with a `temperature=0.0`.  This temperature aims to report deterministic and factual results.  Setup Ollama's `nomic-embed-text` model to convert job description text into numerical vectors for comparison with resume embeddings stored in the resume database.  Connect to the resume database stored in a local folder named `./lancedb_data` and open a table called `"resume_chunks"`.  This table is located inside the database and contains the pre-chunked and vectorized data from the resume.
+
 ```
 def run_pipeline(raw_jd_text: str, distance: float, limit: int, distance_calc: str):
     print(f"\nInitializing Ollama models and LanceDB limited to {limit} search results using {distance_calc} distance threshold of {distance}.")
@@ -103,17 +111,22 @@ def run_pipeline(raw_jd_text: str, distance: float, limit: int, distance_calc: s
     table = db.open_table("resume_chunks")
 ```
 
-This function initializes the core components needed for the RAG (Retrieval-Augmented Generation) pipeline.  It expects four parameters:
+## Executing the LLM-powered Prompt Chain
 
-- `raw_jd_text`: The raw text of the job description.
-- `distance`: The threshold value used to filter out irrelevant search results.
-- `limit`: The maximum number of search results to fetch.
-- `distance_calc`: The metric used for distance calculation, either `cosine` or `L2`.
+Set up and execute an LLM-powered prompt chain that takes an unstructured, messy job description and converts it into JSON format.  Create a prompt template, `ChatPromptTemplate.from_messages`).  The `System Message (`"system"`)` gives the LLM a persona of "technical requirement parser" as well as strict instructions on what to extract from the text. It dictates that the output must follow a specific JSON schema with four key fields:
+* `raw_phrase`: The original text snippet from the job description.
+* `canonical_skill`: A standardized version of the technical skill.
+* `execution_tier`: The categorized domain of *Software Validation*, *Training*, *Technical Writing*, or *Regulatory Compliance*.
+* `search_queries`: 2–3 semantic phrases designed for vector database searches.
 
-First, a status message displays the chosen limit, distance calculation method, and threshold.  Then, the script connects to an instance of **Ollama** running locally and using the `llama3.2` model with a `temperature=0.0`.  This temperature aims to report deterministic and factual results.  Next, Ollama's `nomic-embed-text` model is setup to converts job description text into numerical vectors so they can be compared mathematically in the database.  Finally, the script connects to a local **LanceDB** vector database stored in a local folder named `./lancedb_data` and opens a specific table called `"resume_chunks"`.  This table is located inside the database and contains the pre-chunked and vectorized data from the resume.
+The `Human Message (`"human"`)` passes the actual raw text of the job description `{raw_jd}` into the prompt.
 
+`normalizer_chain = normalizer_prompt | llm | JsonOutputParser()` uses LangChain's pipe operator (`|`) to link three components together into a single workflow:
+1. **`normalizer_prompt`**: Formats the input variables into the prompt.
+2. **`llm`**: Sends the formatted prompt to the local language model `llama3.2`.
+3. **`JsonOutputParser()`**: Forces the LLM's text output into a valid JSON object.
 
-### Executing the LLM-powered Prompt Chain
+`normalized_data = normalizer_chain.invoke(...)` runs the pipeline by passing it the raw job description text and storing the result in a structured Python dictionary, `normalized_data`.
 
 ```
     print("Normalizing job description into structured criteria...")
@@ -144,23 +157,6 @@ First, a status message displays the chosen limit, distance calculation method, 
     normalizer_chain = normalizer_prompt | llm | JsonOutputParser()
     normalized_data = normalizer_chain.invoke({"raw_jd": raw_jd_text})
 ```
-This code snippet sets up and executes an LLM-powered prompt chain that takes an unstructured, messy job description and converts it into JSON format.
-
-Creates a prompt template, `ChatPromptTemplate.from_messages`).  The `System Message (`"system"`)` gives the LLM a persona of "technical requirement parser" as well as strict instructions on what to extract from the text. It dictates that the output must follow a specific JSON schema with four key fields:
-* `raw_phrase`: The original text snippet from the job description.
-* `canonical_skill`: A standardized version of the technical skill.
-* `execution_tier`: The categorized domain of *Software Validation*, *Training*, *Technical Writing*, or *Regulatory Compliance*.
-* `search_queries`: 2–3 semantic phrases designed for vector database searches.
-
-The `Human Message (`"human"`)` passes the actual raw text of the job description `{raw_jd}` into the prompt.
-
-`normalizer_chain = normalizer_prompt | llm | JsonOutputParser()` uses LangChain's pipe operator (`|`) to link three components together into a single workflow:
-1. **`normalizer_prompt`**: Formats the input variables into the prompt.
-2. **`llm`**: Sends the formatted prompt to the local language model `llama3.2`.
-3. **`JsonOutputParser()`**: Forces the LLM's text output into a valid JSON object.
-
-`normalized_data = normalizer_chain.invoke(...)` runs the pipeline by passing it the raw job description text and storing the result in a structured Python dictionary, `normalized_data`.
-
 
 ```
     print("Querying LanceDB using normalized search queries with distance filtering...")
