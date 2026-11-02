@@ -23,6 +23,52 @@ First, the full resume was ingested into a LanceDB database.  Then, the prompt w
 
 ### Ingesting Data
 
+Gemini wrote this Python script to read the Professional Experience section of the `full_resume.json`, then compute and save embeddings in a LanceDB database.
+
+```
+import json
+import lancedb
+from langchain_ollama import OllamaEmbeddings
+
+def ingest_resume_to_lancedb(json_path: str):
+    print("Initializing Ollama embeddings and LanceDB...")
+    embeddings = OllamaEmbeddings(model="nomic-embed-text")
+    db = lancedb.connect("./lancedb_data")
+
+    # Load resume JSON
+    with open(json_path, "r", encoding="utf-8") as f:
+        resume = json.load(f)
+
+    chunk_records = []
+    idx = 0
+
+    # Chunk Professional Experience (Title, Company, and Bullets)
+    for exp in resume.get("professional_experience", []):
+        title = exp.get("title", "Role")
+        company = exp.get("company", "Company")
+        dates = exp.get("dates", "")
+        tags = ", ".join(exp.get("domain_tags", []))
+        bullets = " ".join(exp.get("bullets", []))
+        
+        text = f"Role: {title} at {company} ({dates}). Domains: {tags}. Experience: {bullets}"
+        
+        chunk_records.append({
+            "id": idx,
+            "vector": embeddings.embed_query(text),
+            "text": text,
+            "source": "professional_experience"
+        })
+        idx += 1
+
+    # Create or overwrite LanceDB table
+    table = db.create_table("resume_chunks", data=chunk_records, mode="overwrite")
+    print(f"Ingested {len(chunk_records)} structured resume chunks into LanceDB")
+
+if __name__ == "__main__":
+    ingest_resume_to_lancedb("full_resume.json")
+```
+
+
 ### Searching
 
 
