@@ -64,9 +64,10 @@ if __name__ == "__main__":
     ingest_resume_to_lancedb("full_resume.json")
 ```
 
-Next, run a script that uses the vector database to match skills and job requirements.  The following code snippet imports essential libraries and modules used to build an AI-powered data processing and retrieval pipeline often used in Retrieval-Augmented Generation (RAG) systems. 
+### Using the Vector Database to Match Skills and Job Requirements
 
-### Importing Libraries and Modules
+Next, run another script that uses the vector database to match skills and job requirements.  The following code snippet imports essential libraries and modules used to build an AI-powered data processing and retrieval pipeline often used in Retrieval-Augmented Generation (RAG) systems. 
+
 ```
 import argparse
 import json
