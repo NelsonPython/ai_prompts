@@ -13,7 +13,7 @@ Vector embeddings can be stored in a vector database.  [LanceDB](https://www.lan
 
 ## Example:  Matching Skills to Job Requirements
 
-Gemini wrote the following script to load the LanceDB database.  First, it ingests resume data into a LanceDB database.  Then it opens the full resume and reads the Professional Experience section.  Next, it computes embeddings and stores them in a LanceDB database.  Only run this script once.  The database is stored in a folder on the filesystem.  
+Gemini wrote the following script to load the LanceDB database.  First, it ingests resume data into a LanceDB database.  Then, it opens the full resume and reads the Professional Experience section.  Next, it computes embeddings and stores them in a LanceDB database.  Run this script once to store resume embeddings for future queries. 
 
 ```
 import json
@@ -60,7 +60,8 @@ if __name__ == "__main__":
 
 ### Using the Vector Database to Match Skills and Job Requirements
 
-In order to match skills in the embedded resume, the job requirements must also be embedded.  Import essential libraries and modules for building an AI-powered data processing and retrieval pipeline.
+In order to match skills in the embedded resume, the job requirements must also be embedded.  Import essential libraries and modules for building an AI-powered data processing and retrieval pipeline, commonly referred to as RAG (Retrieval-Augmented Generation).  According to IBM, the most common approach to RAG is to create dense vector representations of a knowledge base, in this case the full resume.  Then, query the database calculating the semantic similarity of each job requirement.  
+
 
 ```
 import argparse
@@ -88,7 +89,7 @@ from langchain_core.output_parsers import JsonOutputParser
 
 ### Initializing Core Components for RAG
 
-Initialize the core components needed for this RAG (Retrieval-Augmented Generation) pipeline.  According to IBM, the most common approach to RAG is to create dense vector representations of a knowledge base, in this case the full resume.  Then, query the database calculating the semantic similarity of each job requirement.  
+Initialize the core components needed for the pipeline.  
 
 The `run_pipeline` function expects four parameters:
 - `raw_jd_text`: The raw text of the job description.
