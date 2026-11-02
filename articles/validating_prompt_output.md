@@ -179,10 +179,18 @@ Gemini often correctly infers that a requirement is met by a section of the resu
                                    
 # Comparing Results
 
-In this experiment, Gemini is being used to test whether the AI Prompt can work.  Gemini generally makes correct inferences.  
+In this experiment, Gemini generally made correct inferences, but the smaller Ollama models do not perform very well.  What happened?  
+- Frequent hallucinations.
+- Ambiguous instructions.  Even though the prompt associated Job Requirements with Requirements and Resume with Resume, the model matched Job Requirements with Requirements and hallucinated a skill match.
+- The AI prompt did not include examples of expected output.
+- The models only had one chance to complete the task with no loop for clarifying ambiguities.
+- Runtime settings were not optimized causing timeouts.
+- The Ollama chat API endpoint was used without streaming even though the expectation was a final match between requirements and skills rather than an ongoing chat.
 
-Running experiments on small Ollama models provides an opportunity to learn.  These models frequently hallucinated.  They found the instructions ambiguous.  The AI prompt attempted to associate Job Requirements with Requirements and Resume with Resume through capitalization and consistent terms.  It did not include examples of expected output.  The models only had one chance to complete the task with no loop providing clarification of ambiguities.  Runtime settings were not optimized and the Ollama chat API endpoint was used without streaming.  *To be continued...*
+How can performance be improved?
 
+Part 2:  Validating AI Prompt Response
+   
 ---
 
 **References:**
