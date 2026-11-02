@@ -3,7 +3,7 @@
 
 # Part 2:  Validating AI Prompt Responses (draft in-progress)
 
-In Part 1, the small Ollama models struggled with ambiguity, hallucinated, and failed to complete tasks before timing out.  While humans can easily compare text, AI is better at math.  By converting text into lists of floating-point numbers called `embeddings`, AI can perform more computations with fewer timeouts and produce more accurate inferences.  
+In Part 1, the small Ollama models struggled with ambiguity, hallucinated, and failed to complete tasks before timing out.  While humans can easily read and compare text, AI is better at math.  By converting text into lists of floating-point numbers called `embeddings`, AI can perform more computations with fewer timeouts and compute more accurate inferences.  
 
 ### What are Vector Embeddings?
 
