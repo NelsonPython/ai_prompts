@@ -3,6 +3,22 @@
 
 # Part 2:  Validating AI Prompt Responses
 
+Running an AI Prompt seems easy for a human, just type instructions and wait for a response, then chat until you get an answer that you can fact check.  Programming an AI agent to perform a task autonomously, requires AI to work hard behind the scenes trying to understand instructions and validate responses.  Vector embeddings can help AI speed up performance and improve accuracy.  
+
+## What are Vector Embeddings?
+
+**Embeddings** are lists of floating-point numbers that represent unstructured data like text, images, audio, video, or code.  Models translate the unstructured data into this mathematical format so that items with similar meanings (features) are placed close to each other.  For example, the embedding for the word *"kitten"* will be mathematically closer to *"puppy"* than to *"skyscraper."*  This allows computers to better understand the context of data so it can respond more accurately.  
+
+Vector embeddings can be stored in a vector database.  **LanceDB** is an open-source vector database designed for AI applications.  Embeddings are stored in folders so running a server is not necessary.  While LanceDB can scale to handle billions of vector embeddings on low-cost object storage like Amazon S3, it can also be used for small projects.
+
+## Why Use a Vector Database Like LanceDB?
+
+- Lightening fast similarity searches
+- Low cost storage
+- Hybrid searches and filtering
+
+## Example
+
 ```
 {
     "professional_experience": [
