@@ -11,13 +11,20 @@ Running an AI Prompt seems easy for a human, just type instructions and wait for
 
 Vector embeddings can be stored in a vector database.  [LanceDB](https://www.lancedb.com/) is an open-source vector database designed for AI applications.  Embeddings are stored in folders so running a server is not necessary.  While LanceDB can scale to handle billions of vector embeddings on low-cost object storage like Amazon S3, it can also be used for small projects.
 
-## Why Use a Vector Database Like LanceDB?
+## Why Use the LanceDB Vector Database?
 
 - Lightening fast similarity searches
 - Low cost storage
 - Hybrid searches and filtering
 
-## Example
+## Example - Matching Skills to Job Requirements
+
+First, the full resume was ingested into a LanceDB database.  Then, the prompt was revised to use embeddings.
+
+### Ingesting Data
+
+### Searching
+
 
 ```
 {
