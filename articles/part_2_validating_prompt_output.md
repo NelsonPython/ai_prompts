@@ -5,7 +5,7 @@
 
 Running an AI Prompt seems easy for a human, just type instructions and wait for a response, then chat until you get an answer that you can fact check.  Programming an AI agent to perform a task autonomously, requires AI to work hard behind the scenes trying to understand instructions and validate responses.  Vector embeddings can help AI speed up performance and improve accuracy.  
 
-## What are Vector Embeddings?
+### What are Vector Embeddings?
 
 **Embeddings** are lists of floating-point numbers that represent unstructured data like text, images, audio, video, or code.  Models translate the unstructured data into this mathematical format so that items with similar meanings (features) are placed close to each other.  For example, the embedding for the word *"kitten"* will be mathematically closer to *"puppy"* than to *"skyscraper."*  This allows computers to better understand the context of data so it can respond more accurately.  
 
@@ -17,11 +17,11 @@ Vector embeddings can be stored in a vector database.  [LanceDB](https://www.lan
 - Low cost storage
 - Hybrid searches and filtering
 
-## Matching Skills to Job Requirements
+# Matching Skills to Job Requirements
 
 First, ingest resume data into a LanceDB database.
 
-### Ingesting Resume Data
+## Ingesting Resume Data
 
 Gemini wrote this Python script to read the Professional Experience section of the `full_resume.json`, then compute and save embeddings in a LanceDB database.
 
@@ -68,11 +68,11 @@ if __name__ == "__main__":
     ingest_resume_to_lancedb("full_resume.json")
 ```
 
-### Matching Skills to Job Requirements
+## Matching Skills to Job Requirements
 
 Second, run the script that uses the vector database to match skills and job requirements.  The first code snippet imports essential libraries and modules used to build an AI-powered data processing and retrieval pipeline often used in Retrieval-Augmented Generation (RAG) systems. 
 
-#### Importing Libraries and Modules
+### Importing Libraries and Modules
 ```
 import argparse
 import json
@@ -96,7 +96,7 @@ from langchain_core.output_parsers import JsonOutputParser
 
 `JsonOutputParser` from `langchain_core.output_parsers` - LangChain parser that instructs the LLM to output valid JSON and parses that text response directly into a Python dictionary or list.  This ensures more reliable, structured data extraction from the LLM's text output so downstream code can safely process it.
 
-#### Computing Embeddings
+### Computing Embeddings
 
 ```
 def run_pipeline(raw_jd_text: str, distance: float, limit: int, distance_calc: str):
@@ -243,7 +243,7 @@ Print results in a format easy for humans to read.
         print(f"\n[{index}] {chunk}")
 ``` 
 
-### Results
+## Results
 
 Part 1 identified two problems, timeouts and hallucinations.  This script ran quickly and did not time out.  It more accurately matched experience to job requirements.
 
