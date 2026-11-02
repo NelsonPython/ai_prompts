@@ -7,7 +7,7 @@ In Part 1, the small Ollama models struggled with ambiguity, hallucinated, and f
 
 ### What are Vector Embeddings?
 
-**Embeddings** are lists of floating-point numbers that represent unstructured data like text, images, audio, video, or code.  Models translate the unstructured data into this mathematical format so that items with similar meanings are placed close to each other.  For example, the embedding for the word *"kitten"* will be mathematically closer to *"puppy"* than to *"skyscraper."*  This allows computers to better understand the context of the data so it can calculate the semantic similarity of two words, *kitten* and *puppy* both commonly considers *pets*.  
+**Embeddings** are lists of floating-point numbers that represent unstructured data like text, images, audio, video, or code.  Models translate this unstructured data into this mathematical format so that items with similar meanings are placed close to each other.  For example, the embedding for the word *"kitten"* will be mathematically closer to *"puppy"* than to *"skyscraper."*  This allows computers to better understand the context of the data so it can calculate the semantic similarity of two words, for example, *kitten* and *puppy* both commonly refer to *pets* while *skyscraper* is a building.  
 
 Vector embeddings can be stored in a vector database.  [LanceDB](https://www.lancedb.com/) is an open-source vector database designed for AI applications.  Embeddings are stored in folders so running a server is not necessary.  While LanceDB can scale to handle billions of vector embeddings on low-cost object storage like Amazon S3, it can also be used for small projects.
 
