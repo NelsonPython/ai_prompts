@@ -1,7 +1,7 @@
 
 <img src="images/valid_prompt.jpg" width=1000 height=250>
 
-# Part 2:  Validating AI Prompt Responses
+# Part 2:  Validating AI Prompt Responses (draft in-progress)
 
 Running an AI Prompt seems easy for a human, just type instructions and wait for a response, then chat until you get an answer that you can fact check.  Programming an AI agent to perform a task autonomously, requires AI to work hard behind the scenes trying to understand instructions and validate responses.  Vector embeddings can help AI speed up performance and improve accuracy.  
 
