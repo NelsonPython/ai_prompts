@@ -21,8 +21,6 @@ At its core, this blog explores AI prompts tailored for technical communicators.
 
 ## Experimenting with Agentic AI
 
-[Experiment 1:  LangChain, Ollama, ReAct, and DuckDuckGo](articles/ollama_react_ddg.md)
-
 [Towards Agentic AI Coding the Docs](https://github.com/NelsonPython/publications/blob/main/code_to_docs/agentic_docs/readme.md)
 
 
@@ -32,6 +30,7 @@ These articles were co-authored with the AI via an iterative workflow.  A human 
 
 [Net Energy Metering](articles/net_energy_metering.md)
 
+[Experiment 1:  LangChain, Ollama, ReAct, and DuckDuckGo](articles/ollama_react_ddg.md)
 
 ---
 
