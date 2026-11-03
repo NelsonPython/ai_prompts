@@ -2,8 +2,7 @@
 
 # BLOG: The AI Prompt Investigator
 
-*At its core, this blog is an exploration of how humans and AI can effectively co-author technical content. My work focuses on communicating complex concepts where precision matters most — training, sales, and regulatory compliance. With a background spanning technical writing, software validation, linguistics, and self-taught Python, I look at AI collaboration through both a technical and linguistic lens. Check out my 
-[portfolio](https://github.com/NelsonPython/publications) for links to my publications.*
+*At its core, this blog is an exploration of how humans and AI can effectively co-author technical content.*
 
 ## AI Prompts
 
@@ -46,4 +45,12 @@ These articles were co-authored with the AI via an iterative workflow.  A human 
 [The 2026 Guide to AI Agents](https://www.ibm.com/think/ai-agents#605511093)
                                    
 [What is a vector database?](https://www.ibm.com/think/topics/vector-database)
+
+
+**Cy Nelson**
+
+*My work focuses on communicating complex concepts where precision matters most — training, sales, and regulatory compliance. With a background spanning technical writing, software validation, linguistics, and self-taught Python, I look at AI collaboration through both a technical and linguistic lens. Check out my [portfolio](https://github.com/NelsonPython/publications) for links to my publications.*
+
+
+
 
