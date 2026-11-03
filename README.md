@@ -11,17 +11,17 @@
 
 ## Beyond the Launch:  AI Prompts for Web Content Maintenance
 
-[Part 1:  Can AI uncover broken links in your website?](articles/curl_check_links.md)
+[Part 1:  Can AI uncover broken links in your website?](articles/part_1_can_ai_uncover_broken_links.md)
 
-[Part 2: AI Advice for Handling HTTP Status Codes 403 and 405](articles/http_403_405.md)
+[Part 2: AI Advice for Handling HTTP Status Codes 403 and 405](articles/part_2_ai_advice_for_handling_http_403_405.md)
 
 ## Experimenting with Agentic AI
 
 [AI Prompt Engineering for Code to Docs](https://github.com/NelsonPython/publications/blob/main/code_to_docs/agentic_docs/readme.md)
 
-[Part 1:  Validating AI Prompt Responses](articles/validating_prompt_output.md) - Prompt Engineering
+[Part 1:  Validating AI Prompt Responses](articles/part_1_validating_ai_prompt.md) - Prompt Engineering
 
-[Part 2:  Validating AI Prompt Responses](articles/part_2_validating_prompt_output.md) - RAG and vector databases
+[Part 2:  Validating AI Prompt Responses](articles/part_2_validating_ai_prompt.md) - RAG and vector databases
 
 
 
