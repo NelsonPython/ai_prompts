@@ -108,20 +108,20 @@ def run_pipeline(raw_jd_text: str, distance: float, limit: int, distance_calc: s
 
 ## Executing the LLM-powered Prompt Chain
 
-Set up and execute an LLM-powered prompt chain to ingest job description text and convert it to JSON format.  `ChatPromptTemplate.from_messages` creates a prompt template with `System Message` and `Human Message`.  The `System Message` named "system" gives the LLM a persona of "technical requirement parser".  It provides strict instructions on what to extract from the text and dictates that the output must follow a specific JSON schema with these four fields:
+Set up and execute an LLM-powered prompt chain to ingest job description text and convert it to JSON format.  `ChatPromptTemplate.from_messages` creates a prompt template with `System Message` and `Human Message`.  The `System Message` named "system" gives the LLM a persona of "technical requirement parser".  It provides strict instructions on what to extract from the text and dictates the specific JSON schema for output:
 * `raw_phrase`: Original text from the job description.
 * `canonical_skill`: A standardized version of a technical skill.
 * `execution_tier`: Categorized domains, *Software Validation*, *Training*, *Technical Writing*, or *Regulatory Compliance*.
 * `search_queries`: 2–3 semantic phrases designed for vector database searches.
 
-The `Human Message` named "human" passes `{raw_jd}` with the actual raw text of the job description into the prompt.  This separation of duties and structured format helps AI avoid hallucinations by finding a match between two job requirements. 
+The `Human Message` named "human" passes `{raw_jd}` into the prompt with the actual raw text of the job description.  This separation of duties and structured format helps AI avoid getting confused and hallucinating a match from two similar requirements rather than querying skills in the resume. 
 
 `normalizer_chain = normalizer_prompt | llm | JsonOutputParser()` uses LangChain's pipe operator (`|`) to link three components together into a single workflow:
-1. **`normalizer_prompt`**: Formats the input variables into the prompt.
+1. **`normalizer_prompt`**: Merges input variables into the prompt, for example replacing {raw_jd} with job description text.
 2. **`llm`**: Sends the formatted prompt to the local language model `llama3.2`.
 3. **`JsonOutputParser()`**: Forces the LLM's text output into a valid JSON object.
 
-`normalized_data = normalizer_chain.invoke(...)` runs the pipeline by passing it the raw job description text and storing the result in a structured Python dictionary, `normalized_data`.
+`normalized_data = normalizer_chain.invoke(...)` runs the pipeline and stores the result in `normalized_data`.
 
 ```
     print("Normalizing job description into structured criteria...")
