@@ -22,7 +22,7 @@ curl -L -I http://example.com
 
 *  `-L` tells `curl` to follow any redirects
 *  `-I` tells `curl` to display the HTTP headers including the status code
-*  `http://example.com` is the URL of the website to check for broken links
+*  `http://example.com` is the link to a website often used for testing
 
 ## Test Drive the Link Checker
 
