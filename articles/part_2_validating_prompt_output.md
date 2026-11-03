@@ -153,7 +153,7 @@ The `Human Message` named "human" passes `{raw_jd}` into the prompt with the act
     normalized_data = normalizer_chain.invoke({"raw_jd": raw_jd_text})
 ```
 
-Loop through the requirements stored in normalized_data.  For each requirement, extract the skill name and execution tier, either Software Validation, Training, Technical Writing, or Regulatory Compliance.
+Loop through the requirements stored in normalized_data.  For each requirement, extract the skill name and execution tier.
 
 ```
     print("Querying LanceDB using normalized search queries with distance filtering...")
