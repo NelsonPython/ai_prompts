@@ -189,7 +189,7 @@ In this experiment, Gemini generally made correct inferences, but the smaller Ol
 
 How can performance be improved?
 
-[Part 2:  Validating AI Prompt Responses](part_2_validating_prompt_output.md)
+[Part 2:  Validating AI Prompt Responses](part_2_validating_prompt_output.md) explains how RAG with a vector database can speed up queries and improve inferences.
    
 ---
 
