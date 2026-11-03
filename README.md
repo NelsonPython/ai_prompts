@@ -47,7 +47,7 @@ These articles were co-authored with the AI via an iterative workflow.  A human 
 [What is a vector database?](https://www.ibm.com/think/topics/vector-database)
 
 
-## About the Author, Cy Nelson
+## About the Author
 
 *My work focuses on communicating complex concepts where precision matters most — training, sales, and regulatory compliance. With a background spanning technical writing, software validation, linguistics, and self-taught Python, I look at AI collaboration through both a technical and linguistic lens. Check out my [portfolio](https://github.com/NelsonPython/publications) for links to my publications.*
 
