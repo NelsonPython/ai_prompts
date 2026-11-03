@@ -34,6 +34,7 @@ To run `curl` from your MacBook Pro, open Finder, go to Apps, and open a Termina
 
 To understand the technical output from `curl`, write a prompt telling Gemini to explain it.  Give Gemini a role, `You are a command line expert`.  Then, give Gemini a task, `Explain what this output means...`
 
+**Prompt**
 ```
 You are a command line expert.
 
@@ -55,8 +56,8 @@ alt-svc: h3=":443"; ma=86400
 
 Gemini often provides a comprehensive response, as well as anticipating future questions.  You may get a long-winded reply.  In this case, Gemini anticipated that I wanted markdown format.  I did a quick copy-and-paste so you can see the entire message.
 
+**Gemini's Response**
 ---
-
 Here is a breakdown of what each line of your `curl` header output means:
 
 #### 1. The Status Line
