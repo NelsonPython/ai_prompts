@@ -10,9 +10,9 @@
 
 ## Beyond the Launch:  AI Prompts for Web Content Maintenance
 
-[Part 1:  Can AI uncover broken links in your website?](articles/part_1_can_ai_uncover_broken_links.md)
+[Maintaining Web Links:  Can AI uncover broken links in your website?](articles/part_1_can_ai_uncover_broken_links.md)
 
-[Part 2: AI Advice for Handling HTTP Status Codes 403 and 405](articles/part_2_ai_advice_for_handling_http_403_405.md)
+[Maintaining Web Links: Can AI Resolve 403 and 405 Errors?](articles/part_2_ai_advice_for_handling_http_403_405.md)
 
 ## Experimenting with Agentic AI
 
