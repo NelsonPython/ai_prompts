@@ -26,13 +26,13 @@ curl -L -I http://example.com
 
 ## Test Drive the Link Checker
 
-To run curl from your MacBook Pro, open Finder, go to Apps, and open a Terminal window.  Enter the curl command and press enter.
+To run `curl` from your MacBook Pro, open Finder, go to Apps, and open a Terminal window.  Enter the `curl` command and press enter.
 
 <img src="images/curl_mac.png" width=500>
 
-`HTTP/2 200` indicates that curl found `https://www.example.com`.   
+`HTTP/2 200` indicates that `curl` found `https://www.example.com`.   
 
-To understand the technical output from curl, write a prompt directing Gemini to explain it.  Tell Gemini what role it is undertaking, `You are a command line expert`, then direct Gemini to perform the task, `Explain what this output means...`
+To understand the technical output from `curl`, write a prompt telling Gemini to explain it.  Give Gemini a role, `You are a command line expert`.  Then, give Gemini a task, `Explain what this output means...`
 
 ```
 You are a command line expert.
