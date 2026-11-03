@@ -2,7 +2,7 @@
 
 # BLOG:  AI Prompt Investigator
 
-## AI Advice for Handling HTTP Status Codes 403 and 405
+## Part 2:  AI Advice for Handling HTTP Status Codes 403 and 405
 
 This article addresses what happens when your linker checker receives a status of `HTTP 403 Forbidden` or `HTTP 405 Method Not Allowed`.   It builds on the blog post, *[Can AI uncover broken links in your website?](part_1_can_ai_uncover_broken_links.md)*. 
 
