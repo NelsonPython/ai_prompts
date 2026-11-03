@@ -17,7 +17,7 @@
 
 ## Experimenting with Agentic AI
 
-[Towards Agentic AI Coding the Docs](https://github.com/NelsonPython/publications/blob/main/code_to_docs/agentic_docs/readme.md)
+[AI Prompt Engineering for Code to Docs](https://github.com/NelsonPython/publications/blob/main/code_to_docs/agentic_docs/readme.md)
 
 [Part 1:  Validating AI Prompt Responses](articles/validating_prompt_output.md) - Prompt Engineering
 
