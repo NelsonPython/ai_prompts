@@ -2,7 +2,7 @@
 
 # BLOG: The AI Prompt Investigator
 
-*At its core, this blog is an exploration of best practices for co-authoring with AI.  Most of my work involves communicating highly technical concepts for training, sales, and regulatory compliance.  My background includes technical writing, software validation, and linguistics, plus self-taught Python.*
+*At its core, this blog is an exploration of best practices for co-authoring with AI.  Most of my work involves communicating highly technical concepts for training, sales, and regulatory compliance.  My background includes technical writing, software validation, and linguistics, plus self-taught Python.  For links to my publications, see my [portfolio]().*
 
 ## AI Prompts
 
