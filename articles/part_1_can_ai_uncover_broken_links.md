@@ -6,7 +6,7 @@
 
 Technical writing is more than just writing.  Your readers expect 100% up-time.  Broken links are frustrating and in some cases, can even introduce security or compliance issues.  
 
-When I was a content manager at Intel® I was responsible for maintaining over 700 external links!  Manually clicking 700 links to ensure continual up-time is daunting.  The reports I received were difficult to navigate.  Since, my content was publicly available, I wrote a Python script to automate checking and reporting broken links.  It took me some time to write the script and test it.  This blog post explores how AI can help speed up development of the broken-link checker.
+When I was a content manager at Intel® I was responsible for maintaining over 700 external links!  Manually clicking 700 links to ensure continual up-time is unrealistic.  The reports I received were difficult to navigate.  Since, my content was publicly available, I wrote a Python script to automate checking and reporting broken links.  It took me some time to write the script and test it.  This blog post explores how AI can help speed up development of the broken-link checker.
 
 ## The Reality of AI Capabilities
 
