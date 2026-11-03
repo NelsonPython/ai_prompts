@@ -95,7 +95,7 @@ Initialize the core components needed for the pipeline.  The `run_pipeline` func
 - `limit`: The maximum number of search results to fetch.
 - `distance_calc`: The metric used for distance calculation.  The default is `cosine`, but `L2` can also be chosen.
 
-Double check run parameters by printing a status message displaying the chosen limit, distance calculation method, and threshold.  Connect to an instance of **Ollama** running locally and use the `llama3.2` model with a `temperature=0.0`.  This temperature aims to report deterministic and factual results. Setup Ollama's `nomic-embed-text` model to convert job description text into numerical vectors for comparison with resume embeddings stored in the database in a local folder named `./lancedb_data`.  Open a table called `"resume_chunks"`.  This table is located inside the database and contains the pre-chunked and vectorized data from the resume.
+Double check run parameters by printing a status message displaying the chosen limit, distance calculation method, and threshold.  Connect to the instance of **Ollama** running locally.  Use the `llama3.2` model with a `temperature=0.0`.  This temperature setting tells the model to report deterministic and factual results. Setup Ollama's `nomic-embed-text` model to convert job description text into numerical vectors for comparison with resume embeddings already stored in the database in a folder named `./lancedb_data`.  Open the table called `resume_chunks`.  This table is located inside the database and contains the pre-chunked and vectorized data from the resume.
 
 ```
 def run_pipeline(raw_jd_text: str, distance: float, limit: int, distance_calc: str):
@@ -108,13 +108,13 @@ def run_pipeline(raw_jd_text: str, distance: float, limit: int, distance_calc: s
 
 ## Executing the LLM-powered Prompt Chain
 
-Set up and execute an LLM-powered prompt chain to ingest job description text and convert it to JSON format.  `ChatPromptTemplate.from_messages` creates a prompt template.  The `System Message (`"system"`)` gives the LLM a persona of "technical requirement parser" as well as strict instructions on what to extract from the text. It dictates that the output must follow a specific JSON schema with four key fields:
+Set up and execute an LLM-powered prompt chain to ingest job description text and convert it to JSON format.  `ChatPromptTemplate.from_messages` creates a prompt template with `System Message` and `Human Message`.  The `System Message` named "system" gives the LLM a persona of "technical requirement parser".  It provides strict instructions on what to extract from the text and dictates that the output must follow a specific JSON schema with these four fields:
 * `raw_phrase`: Original text from the job description.
 * `canonical_skill`: A standardized version of a technical skill.
 * `execution_tier`: Categorized domains, *Software Validation*, *Training*, *Technical Writing*, or *Regulatory Compliance*.
 * `search_queries`: 2–3 semantic phrases designed for vector database searches.
 
-The `Human Message (`"human"`)` passes the actual raw text of the job description `{raw_jd}` into the prompt.  This separation of duties and structured format helps AI avoid the hallucination of finding a match by comparing job requirements to other job requirements. 
+The `Human Message` named "human" passes `{raw_jd}` with the actual raw text of the job description into the prompt.  This separation of duties and structured format helps AI avoid hallucinations by finding a match between two job requirements. 
 
 `normalizer_chain = normalizer_prompt | llm | JsonOutputParser()` uses LangChain's pipe operator (`|`) to link three components together into a single workflow:
 1. **`normalizer_prompt`**: Formats the input variables into the prompt.
