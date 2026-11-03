@@ -8,11 +8,6 @@ At its core, this blog explores AI prompts tailored for technical communicators.
 
 [Graphic Design Prompt](articles/ai_prompt_graphic_design.md)
 
-[Part 1:  Validating AI Prompt Responses](articles/validating_prompt_output.md) - Prompt Engineering
-
-[Part 2:  Validating AI Prompt Responses](articles/part_2_validating_prompt_output.md) - RAG and vector databases
-
-
 ## Beyond the Launch:  AI Prompts for Web Content Maintenance
 
 [Part 1:  Can AI uncover broken links in your website?](articles/curl_check_links.md)
@@ -22,6 +17,11 @@ At its core, this blog explores AI prompts tailored for technical communicators.
 ## Experimenting with Agentic AI
 
 [Towards Agentic AI Coding the Docs](https://github.com/NelsonPython/publications/blob/main/code_to_docs/agentic_docs/readme.md)
+
+[Part 1:  Validating AI Prompt Responses](articles/validating_prompt_output.md) - Prompt Engineering
+
+[Part 2:  Validating AI Prompt Responses](articles/part_2_validating_prompt_output.md) - RAG and vector databases
+
 
 
 ## The AI Explainer
