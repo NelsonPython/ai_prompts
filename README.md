@@ -2,7 +2,8 @@
 
 # BLOG: The AI Prompt Investigator
 
-*At its core, this blog is an exploration of best practices for co-authoring with AI.  Most of my work involves communicating highly technical concepts for training, sales, and regulatory compliance.  My background includes technical writing, software validation, and linguistics, plus self-taught Python.  For links to my publications, see my [portfolio](https://github.com/NelsonPython/publications).*
+*At its core, this blog is an exploration of how humans and AI can effectively co-author technical content. My work focuses on communicating complex concepts where precision matters most — training, sales, and regulatory compliance. With a background spanning technical writing, software validation, linguistics, and self-taught Python, I look at AI collaboration through both a technical and linguistic lens. Check out my 
+[portfolio](https://github.com/NelsonPython/publications) for links to my publications.*
 
 ## AI Prompts
 
