@@ -40,6 +40,8 @@ These articles were co-authored with the AI via an iterative workflow.  A human 
 
 [DeepLearning.ai Agentic AI ](https://www.deeplearning.ai/courses/agentic-ai)
 
+[DeepLearning.ai RAG in Action](https://www.deeplearning.ai/courses/retrieval-augmented-generation)
+
 [The 2026 Guide to AI Agents](https://www.ibm.com/think/ai-agents#605511093)
                                    
 [What is a vector database?](https://www.ibm.com/think/topics/vector-database)
