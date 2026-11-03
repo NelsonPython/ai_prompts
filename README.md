@@ -7,7 +7,7 @@
 
 ## AI Prompts
 
-[Graphic Design Prompt](articles/ai_prompt_graphic_design.md)
+[AI Prompt for Graphic Design](articles/ai_prompt_graphic_design.md)
 
 ## Beyond the Launch:  AI Prompts for Web Content Maintenance
 
