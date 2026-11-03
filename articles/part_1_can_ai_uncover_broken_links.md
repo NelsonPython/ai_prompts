@@ -54,10 +54,10 @@ cf-ray: a4d094672bc153cb-LAX
 alt-svc: h3=":443"; ma=86400
 ```
 
-Gemini often provides a comprehensive response, as well as anticipating future questions.  You may get a long-winded reply.  In this case, Gemini anticipated that I wanted markdown format.  I did a quick copy-and-paste so you can see the entire message.
+Gemini often provides a comprehensive response, as well as anticipating and responding to possible future questions.  You may get a long-winded reply.  In this case, Gemini anticipated that I wanted markdown format.  I did a quick copy-and-paste so you can see the entire response.
 
 **Gemini's Response**
----
+
 Here is a breakdown of what each line of your `curl` header output means:
 
 #### 1. The Status Line
@@ -82,13 +82,10 @@ Here is a breakdown of what each line of your `curl` header output means:
 * **`cf-ray: a4d094672bc153cb-LAX`**: Cloudflare's unique tracking ID for this specific request, routing through their Los Angeles (`LAX`) data center edge.
 * **`alt-svc: h3=":443"; ma=86400`**: Advertises that HTTP/3 (`h3`) is available on port 443 for future faster connections.
 
----
 
 ## Verify the AI Prompt Response
 
-Google adds this disclaimer to responses, *"Gemini isn’t human. It can make mistakes, so double-check it."*
-
-When asked, Gemini explains further, *"AI-generated responses are provided for informational and educational purposes only. AI models may occasionally produce inaccurate, incomplete, or outdated information."*
+Google adds this disclaimer, *"Gemini isn’t human. It can make mistakes, so double-check it."*  When asked about prompt accuracy, Gemini explains further, *"AI-generated responses are provided for informational and educational purposes only. AI models may occasionally produce inaccurate, incomplete, or outdated information."*
 
 How much time you spend verifying an AI Prompt response depends on your environment and your needs.  In a regulated environment, you must perform a complete fact-check.
 
@@ -115,7 +112,7 @@ Notice that `curl` returned a status code of 301 when attempting to access `www.
 
 ## Recap and Next Steps
 
-This example introduced using AI Prompts to write `curl` command line code to check exposed links.  Some links are protected by security features that cause `curl` to output other response codes.  Google Gemini can help decipher these codes.  Upcoming articles dive deeper into how to use AI Prompts to further automate link checks.   *To be continued...*
+This example introduced using AI Prompts to write `curl` command line code to check exposed links.  Some links are protected by security features that cause `curl` to output other response codes.  Google Gemini can help decipher these codes.  
 
 
 
