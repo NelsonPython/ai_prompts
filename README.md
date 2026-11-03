@@ -2,7 +2,7 @@
 
 # BLOG: The AI Prompt Investigator
 
-At its core, this blog explores AI prompts tailored for technical communicators. Rather than relying on trial-and-error requests that can lead to hallucinations, it shares best practices for leveraging generative AI Prompts to organize complex information efficiently. Additionally, for professionals managing regulatory compliance, the blog addresses methods to validate the accuracy of AI responses.
+*At its core, this blog is an exploration of best practices for co-authoring with AI.  Most of my work involves communicating highly technical concepts for training, sales, and regulatory compliance.  My background includes technical writing, software validation, and linguistics, plus self-taught Python.*
 
 ## AI Prompts
 
