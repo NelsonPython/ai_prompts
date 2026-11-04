@@ -62,7 +62,7 @@ Although formatted as pure json, I can see the name of the report and the name o
 
 ### Status 405 Method Not Allowed
 
-Another NASA report, *Planning for V&V of the Mars Science Laboratory rover software*, is hosted on the Harvard Astrophysics Data System (ADS).  Automated checks against this endpoint return an HTTP 405 Method Not Allowed.  
+Another NASA report, *Planning for V&V of the Mars Science Laboratory Rover Software*, is hosted on the Harvard Astrophysics Data System (ADS).  Automated checks against this endpoint return an HTTP 405 Method Not Allowed.  
 
 [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.6) Paragraph 15.5.6 says *In plain English, a 405 Method Not Allowed error means that the server understood what you were trying to do, but it doesn't allow you to do it that way on that specific page or web address.*  While status code 405 presents strong evidence that the link is not broken, Gemini recommended a `curl` command to fetch the HTTP headers.
 
