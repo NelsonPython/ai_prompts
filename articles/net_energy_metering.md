@@ -4,7 +4,7 @@
 
 ## Why write about Net Energy Metering (NEM)?
 
-Because reading a solar utility bill can be notoriously confusing.  Take a look at a typical bill from Southern California Edison (SCE). At first glance, you might notice something perplexing: the amount due is $34.32, yet the year-to-date charges show $212.29. Which amount are you actually supposed to pay?
+Because reading a solar utility bill can be notoriously confusing.  Take a look at a typical bill from Southern California Edison (SCE). At first glance, you might notice something perplexing: the amount due is $34.32, but the year-to-date charges show $212.29. Which amount should you pay?
 
 ---
 
