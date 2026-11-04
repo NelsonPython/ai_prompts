@@ -34,7 +34,7 @@ To run `curl` from your MacBook Pro, open Finder, go to Apps, and open a Termina
 
 To understand the technical output from `curl`, write a prompt telling Gemini to explain it.  Give Gemini a role, `You are a command line expert`.  Then, give Gemini a task, `Explain what this output means...`
 
-**Prompt**
+**Explainer Prompt**
 ```
 You are a command line expert.
 
@@ -54,7 +54,7 @@ cf-ray: a4d094672bc153cb-LAX
 alt-svc: h3=":443"; ma=86400
 ```
 
-Gemini often provides a comprehensive response, as well as anticipating and responding to possible future questions.  You may get a long-winded reply.  In this case, Gemini anticipated that I wanted markdown format.  I did a quick copy-and-paste so you can see the entire response.
+Gemini often provides a comprehensive response, as well as anticipating and responding to possible future questions.  Since Gemini decided to respond in markdown, I did a quick copy-and-paste so you can see the entire response.
 
 **Gemini's Response**
 
@@ -87,11 +87,12 @@ Here is a breakdown of what each line of your `curl` header output means:
 
 Google adds this disclaimer, *"Gemini isn’t human. It can make mistakes, so double-check it."*  When asked about prompt accuracy, Gemini explains further, *"AI-generated responses are provided for informational and educational purposes only. AI models may occasionally produce inaccurate, incomplete, or outdated information."*
 
-How much time you spend verifying an AI Prompt response depends on your environment and your needs.  In a regulated environment, you must perform a complete fact-check.
-
-In this example, the first part of the response `1. The Status Line` revealed the status `HTTP/2 200` meaning "OK, I found the webpage associated with the link".  It is easy to verify that the `curl` command provided by Gemini functioned properly.  Enter the link into a browser, in this case "www.example.com" show below:
+Fact-checking a long-winded response takes time.  In this example, the first part of the response `1. The Status Line` reveals the status `HTTP/2 200` meaning "OK, I found the webpage associated with the link".  It is easy to verify that the `curl` command provided by Gemini functioned properly, simply enter "www.example.com" into a browser.
 
 <img src="images/curl_example_com.png" width=500>
+
+The additional information in sections 2 and 3 may be interesting, but fact-checking all this data is not necessary.  How much time you spend verifying an AI Prompt response depends on your environment and your needs. 
+
 
 ## Automate Checking Multiple Links
 
@@ -105,14 +106,14 @@ done
 
 <img src="images/curl_loop.png" width=500>
 
-Notice that `curl` returned a status code of 301 when attempting to access `www.google.com`.  Re-use the AI prompt to find out what 301 means.
+Notice that `curl` returned a status code of 301 when attempting to access `www.google.com`.  Use the Explainer Prompt to find out what 301 means.
 
 <img src="images/curl_gemini_response.png" width=500>
 
 
-## Recap and Next Steps
+## Recap
 
-This example introduced using AI Prompts to write `curl` command line code to check exposed links.  Some links are protected by security features that cause `curl` to output other response codes.  Google Gemini can help decipher these codes.  
+This example introduced how AI can co-author code to check the status of links.  Some links are protected by security features that cause `curl` to output response codes other than 200.  The Explainer Prompt can be used to help decipher these codes.  
 
 
 
