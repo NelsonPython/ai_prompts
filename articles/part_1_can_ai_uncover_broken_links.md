@@ -109,7 +109,7 @@ Notice that `curl` returned a status code of 301 when attempting to access `www.
 
 ## Recap
 
-This example introduced how AI can co-author code to check the status of links.  Some links are protected by security features that cause `curl` to output response codes other than 200.  The Explainer Prompt can be used to help decipher these codes.  
+This example introduced how AI can co-author code to check the status of links.  Some links are protected by security features that cause `curl` to output response codes other than 200.  The **Explainer Prompt** can be used to help decipher these codes.  
 
 
 
