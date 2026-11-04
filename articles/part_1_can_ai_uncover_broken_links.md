@@ -102,7 +102,7 @@ done
 
 <img src="images/curl_loop.png" width=500>
 
-Notice that `curl` returned a status code of 301 when attempting to access `www.google.com`.  Use the Explainer Prompt to find out what 301 means.
+Notice that `curl` returned a status code of 301 when attempting to access `www.google.com`.  Use the **Explainer Prompt** to find out what 301 means.
 
 <img src="images/curl_gemini_response.png" width=500>
 
