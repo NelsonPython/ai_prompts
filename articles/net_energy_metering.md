@@ -14,7 +14,7 @@ Because reading a solar utility bill can be notoriously confusing.  Take a look 
 
 ## Decoding the Electric Bill
 
-Under standard NEM billing, you are billed at the end of a 12-month cycle (called the "relevant period") for the net difference between the electricity you purchased and the excess power your solar panels generated and sold back to the grid. However, there is more to the story and the details are tucked deep inside an 8-page statement:
+Under standard NEM billing, you are billed at the end of a 12-month cycle (called the "relevant period") for the net difference between the electricity you purchased and the excess power your solar panels generated and sold back to the grid. However, there is more to the story and the details are tucked deep inside an 8-page statement.
 
 ---
 
