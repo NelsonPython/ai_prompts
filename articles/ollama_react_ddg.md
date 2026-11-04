@@ -43,7 +43,7 @@ llm = ChatOllama(
 
 ```
 
-Initial experiments using ChatOllama yielded results ranging from poetic to pedantic.  Ollama models can be focused.  **Appendix: Customize an Ollama Model** explains how `factual-llama3.2` was generated and run locally.  Setting `temperature=0` targets deterministic responses.  Setting the temperature higher may allow more creative responses.  Additionally, ChatOllama may not be optimum for this project.  Stay tuned...
+Initial experiments using ChatOllama yielded results ranging from poetic to pedantic.  Ollama models can be focused.  **Appendix: Customize an Ollama Model** explains how `factual-llama3.2` was generated and run locally.  Setting `temperature=0` targets deterministic responses.  Setting the temperature higher may allow more creative responses.  Perhaps ChatOllama is not the best LLM to use for this task because the goal is not to chat about job openings, but to find job postings.  
 
 ---
 
