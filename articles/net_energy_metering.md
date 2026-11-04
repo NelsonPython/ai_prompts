@@ -56,7 +56,7 @@ SCE participates in the [Green Button initiative](https://www.energy.gov/data/gr
 
 ---
 
-Clicking on the  `Green button download data` lets you download usage information in csv format.  I downloaded our data and used AI-assisted prompts (leveraging Python, MySQL, and PHP) to build a custom web application for energy reporting.
+Clicking on the  `Green Button Download Data` lets you download usage information in csv format.  I downloaded our data and used AI-assisted prompts (leveraging Python, MySQL, and PHP) to build a custom web application for energy reporting.
 
 ---
 
