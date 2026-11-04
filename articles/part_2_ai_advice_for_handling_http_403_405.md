@@ -43,10 +43,6 @@ In this function, the `curl` command is executed as a subprocess with these flag
 
 ---
 
-## Alternative Methods
-
-When queried, Gemini recommended alternative verification methods for links returning `403` or `405` status codes.
-
 ### Status 403 Forbidden
 
 When checking the link to our NASA report, titled *Toward V&V of neural network based controllers*, the script returned a 403 status.  The original URL is part of the ACM Digital Library which has strict automated security checks forbidding web crawlers. 
