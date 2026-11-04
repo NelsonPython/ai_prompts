@@ -28,7 +28,7 @@ To run `curl` from your MacBook Pro, open Finder, go to Apps, and open a Termina
 
 `HTTP/2 200` indicates that `curl` found `https://www.example.com`.   
 
-To understand the technical output from `curl`, write a prompt telling Gemini to explain it.  Give Gemini a role, `You are a command line expert`.  Then, give Gemini a task, `Explain what this output means:`.  Paste the output.
+To understand the technical output from `curl`, write a prompt telling Gemini to explain it.  Give Gemini a role, `You are a command line expert`.  Then, give Gemini a task, `Explain what this output means:`, paste the output.
 
 **Explainer Prompt**
 ```
