@@ -45,9 +45,9 @@ In this function, the `curl` command is executed as a subprocess with these flag
 
 ### Status 403 Forbidden
 
-When checking the link to our NASA report, titled *Toward V&V of neural network based controllers*, the script returned a 403 status.  The original URL is part of the ACM Digital Library which has strict automated security checks forbidding web crawlers. 
+When checking the link to our NASA report, titled *Toward V&V of Neural Network-based Controllers*, the script returned a 403 status.  The original URL is part of the ACM Digital Library which has strict automated security checks forbidding web crawlers. 
 
-According to [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.4), the 403 (Forbidden) status code indicates that the server understood the request but refused to fulfill it.  That may be sufficient evidence that the link is not broken, but Gemini suggested trying an alternative method of retrieving open-access metadata from the Unpaywall API.  Unpaywall is a non-profit, open-source service and database that helps researchers, developers, and the public find free, legal, open-access versions of academic research papers.
+According to [RFC 9110: STD 97: HTTP Semantics](https://www.rfc-editor.org/info/rfc9110/#section-15.5.4), the 403 (Forbidden) status code indicates that the server understood the request but refused to fulfill it.  Receiving status 403 may be sufficient evidence that the link is not broken, but Gemini suggested double-checking with an alternative method.  Retrieve open-access metadata from the Unpaywall API, a non-profit, open-source service and database that helps researchers, developers, and the public find free, legal, open-access versions of academic research papers.
 
 ```
 $ curl "https://api.unpaywall.org/v2/10.1145/582128.582141?email=Real@email.com"
