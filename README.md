@@ -30,8 +30,6 @@ These articles were co-authored with the AI via an iterative workflow.  A human 
 
 [Net Energy Metering](articles/net_energy_metering.md)
 
-[Experiment 1:  LangChain, Ollama, ReAct, and DuckDuckGo](articles/ollama_react_ddg.md)
-
 ---
 
 **References**
