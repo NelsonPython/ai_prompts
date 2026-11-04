@@ -83,7 +83,7 @@ Here is a breakdown of what each line of your `curl` header output means:
 
 Google adds this disclaimer, *"Gemini isn’t human. It can make mistakes, so double-check it."*  When asked about prompt accuracy, Gemini explains further, *"AI-generated responses are provided for informational and educational purposes only. AI models may occasionally produce inaccurate, incomplete, or outdated information."*
 
-Fact-checking a long-winded response takes time.  In this example, the first part of the response `1. The Status Line` reveals the status `HTTP/2 200` meaning "OK, I found the webpage associated with the link".  It is easy to verify that the `curl` command provided by Gemini functioned properly, simply enter "www.example.com" into a browser.
+Fact-checking a long-winded response takes time.  In this example, the first part of the response `1. The Status Line` reveals the status `HTTP/2 200` meaning "OK, I found the webpage associated with the link".  This is easy to verify, simply enter "www.example.com" into a browser.
 
 <img src="images/curl_example_com.png" width=500>
 
