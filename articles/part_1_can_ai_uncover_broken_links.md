@@ -36,8 +36,7 @@ You are a command line expert.
 
 Explain what this output means:
 
-$ curl -L -I https://www.example.com
-
+% curl -L -I https://www.example.com
 HTTP/2 200 
 date: Mon, 19 Oct 2026 14:47:44 GMT
 content-type: text/html; charset=utf-8
