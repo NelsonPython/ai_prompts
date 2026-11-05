@@ -49,9 +49,7 @@ These articles were co-authored with the AI via an iterative workflow.  A human 
 
 *My work focuses on communicating complex concepts where precision matters most — training, sales, and regulatory compliance. With a background spanning technical writing, software validation, and linguistics, I look at Human-AI collaboration through both a technical and linguistic lens. Check out my [portfolio](https://github.com/NelsonPython/publications) for links to my publications.*
 
-**Disclaimer**
-
-*Python scripts are for demonstration purposes only.*
+***Disclaimer**. Python scripts are for demonstration purposes only.*
 
 
 
