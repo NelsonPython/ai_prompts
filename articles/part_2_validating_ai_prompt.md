@@ -254,7 +254,7 @@ Print results in a format that is easy for humans to read.
 
 ## Results
 
-Part 1 identified two problems, timeouts and hallucinations.  In Part 1, the script ran quickly and did not time out.  It also more accurately matched experience to job requirements.
+Part 1 identified two problems, timeouts and hallucinations.  The script described here in Part 2 ran quickly and did not time out.  It also  matched experience to job requirements more accurately.
 
 ```
 {
