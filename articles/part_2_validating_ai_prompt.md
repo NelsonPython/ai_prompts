@@ -3,7 +3,7 @@
 
 # Part 2:  Validating AI Prompt Responses
 
-In Part 1, the small Ollama models struggled with ambiguity, hallucinated, and failed to complete tasks before timing out.  While humans can easily read and compare text, AI is better at math.  By converting text into lists of floating-point numbers called `embeddings`, AI can perform more computations with fewer timeouts and compute more accurate inferences.  
+In Part 1, the small Ollama models struggled with ambiguity, hallucinations, and failure to complete tasks before timing out.  While humans can easily read and compare text, AI is better at math.  By converting text into lists of numbers called "embeddings", AI can perform more computations with fewer timeouts and compute more accurate inferences.  
 
 ### What are Vector Embeddings?
 
@@ -13,7 +13,7 @@ Vector embeddings can be stored in a vector database.  [LanceDB](https://www.lan
 
 ## Example:  Matching Skills to Job Requirements
 
-Gemini wrote the following script to load the LanceDB database.  First, it ingests resume data into a LanceDB database.  Then, it opens the full resume and reads the Professional Experience section.  Next, it computes embeddings and stores them in a LanceDB database.  Run this script once to store resume embeddings for future queries. 
+Gemini wrote the following script to load the LanceDB database.  First, it ingests resume data into a LanceDB database.  Then, it opens the full resume and reads the Professional Experience section.  Next, it computes embeddings and stores them in a LanceDB database.  Run this script once to store embeddings for future queries. 
 
 ```
 import json
