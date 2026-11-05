@@ -1,7 +1,9 @@
 
 <img src="images/valid_prompt.jpg" width=1000 height=250>
 
-# Part 2:  Validating AI Prompt Responses - RAG and Vector Database
+# Part 2:  Validating AI Prompt Responses 
+
+## RAG and the Vector Database
 
 In Part 1, the small Ollama models struggled with ambiguity, hallucinations, and failure to complete tasks before timing out.  While humans can easily read and compare text, AI is better at math.  By converting text into lists of numbers called "embeddings", AI can perform more computations with fewer timeouts and compute more accurate inferences.  
 
