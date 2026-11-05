@@ -20,7 +20,7 @@
 
 [Part 1:  Validating AI Prompt Responses](articles/part_1_validating_ai_prompt.md) - Prompt Engineering
 
-[Part 2:  Validating AI Prompt Responses](articles/part_2_validating_ai_prompt.md) - RAG and Vector Databases
+[Part 2:  Validating AI Prompt Responses](articles/part_2_validating_ai_prompt.md) - RAG and the Vector Database
 
 
 
