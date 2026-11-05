@@ -139,7 +139,7 @@ The `Human Message` named "human" passes `{raw_jd}` into the prompt with the act
          "    {{\n"
          '      "raw_phrase": "String",\n'
          '      "canonical_skill": "String",\n'
-         '      "execution_tier": "Software Validation" | "Training" | "Technical Writing" | "Regulatory Compliance",\n'
+         '      "execution_tier": "Software Validation" | "Regulatory Compliance" | "Technical Writing" | "Training" ,\n'
          '      "search_queries": ["String"]\n'
          "    }}\n"
          "  ],\n"
