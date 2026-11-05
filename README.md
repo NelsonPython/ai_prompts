@@ -34,11 +34,11 @@ These articles were co-authored with the AI via an iterative workflow.  A human 
 
 **References**
 
-[DeepLearning.ai ChatGPT Prompt Engineering](https://www.deeplearning.ai/courses/chatgpt-prompt-eng)
+[DeepLearning.AI ChatGPT Prompt Engineering](https://www.deeplearning.ai/courses/chatgpt-prompt-eng)
 
-[DeepLearning.ai Agentic AI ](https://www.deeplearning.ai/courses/agentic-ai)
+[DeepLearning.AI Agentic AI ](https://www.deeplearning.ai/courses/agentic-ai)
 
-[DeepLearning.ai RAG in Action](https://www.deeplearning.ai/courses/retrieval-augmented-generation)
+[DeepLearning.AI RAG in Action](https://www.deeplearning.ai/courses/retrieval-augmented-generation)
 
 [The 2026 Guide to AI Agents](https://www.ibm.com/think/ai-agents#605511093)
                                    
