@@ -2,7 +2,7 @@
 
 # BLOG:  AI Prompt Investigator
 
-## Maintaining Web Links: Can AI uncover broken links in your website?
+## Maintaining Web Links: Can AI uncover broken links?
 
 Technical writing is more than just writing.  Your readers expect 100% up-time.  Broken links are frustrating and in some cases, can even introduce security or compliance issues.  
 
