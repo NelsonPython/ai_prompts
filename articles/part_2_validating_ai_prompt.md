@@ -297,3 +297,9 @@ Part 1 identified two problems, timeouts and hallucinations.  The script describ
     ]
 }
 ```
+
+---
+
+**References**
+
+DeepLearning.AI [Retrieval Augmented Generation](https://www.deeplearning.ai/courses/retrieval-augmented-generation?utm_campaign=rag-launch&utm_medium=video&utm_source=youtube)
