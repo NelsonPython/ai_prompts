@@ -111,7 +111,7 @@ def run_pipeline(raw_jd_text: str, distance: float, limit: int, distance_calc: s
 Set up and execute an LLM-powered prompt chain to ingest job description text and convert it to JSON format.  `ChatPromptTemplate.from_messages` creates a prompt template with `System Message` and `Human Message`.  The `System Message` named "system" gives the LLM a persona of "technical requirement parser".  It provides strict instructions on what to extract from the text and dictates the specific JSON schema for output:
 * `raw_phrase`: Original text from the job description.
 * `canonical_skill`: A standardized version of a technical skill.
-* `execution_tier`: Categorized domains, *Software Validation*, *Training*, *Technical Writing*, or *Regulatory Compliance*.
+* `execution_tier`: Roles in highly regulated fields, such as pharmaceuticals or aerospace, where **software validation** focuses on technical testing and verification of systems.  **Regulatory compliance** captures auditing, risk management, and adherence to standards such as 21 CFR Part 11 or DO-178B/C.  **Technical writing** covers authoring SOPs, protocols, and formal documentation.  **Training** targets the delivery and facilitation of educational workshops or on-boarding. 
 * `search_queries`: 2–3 semantic phrases designed for vector database searches.
 
 The `Human Message` named "human" passes `{raw_jd}` into the prompt with the actual raw text of the job description.  This separation of duties and structured format helps AI avoid getting confused and hallucinating a match from two similar requirements rather than querying skills in the resume. 
