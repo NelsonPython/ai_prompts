@@ -51,6 +51,10 @@ These changes demonstrate the growing importance of AI regulation worldwide, wit
 VALIDATION:  The term "recent" is vague.  
 
 1.  As of November 7, 2026, there is no dedicated national legislative act governing AI in Luxembourg. However, Luxembourg is directly subject to the Regulation (EU) 2024/1689 – Artificial Intelligence Act (“EU AI Act”), which establishes harmonised rules for AI across all EU member states. The Act introduces a risk-based approach, banning certain harmful AI practices, and imposes strict obligations on high-risk and general-purpose AI systems.  Bill of law 8476 was submitted to the Parliament on 23 December 2024 and supplements the EU AI Act with the necessary national provisions for Luxembourg.  It is still under discussion.
+2.  Fines were introduced in November 2025.
+3.  
+
+
 
  TEST CASE 3: "Search for enforcement actions or litigation related to artificial intelligence."
 ```
