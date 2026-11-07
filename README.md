@@ -32,7 +32,13 @@
 
 **How it Works**
 
-The AI Explainer documentation generation pipeline flows like this:  A human describes the task in an AI Prompt.  An AI model designs graphics, writes code, drafts content for the target audience, and provides references.  A human checks the facts and edits as necessary.  Currently, the continual improvement feedback loop requires the human to chat with AI to improve the prompt.
+Instructions: A person writes what they need in an AI prompt.
+
+Creation: AI creates images, writes code, types the content, and finds source references.
+
+Check: A person checks the facts and fixes any mistakes.
+
+Improve: The person talks with the AI about ways to improve the prompt and get better responses.
 
 ---
 
