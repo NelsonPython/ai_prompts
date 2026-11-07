@@ -10,13 +10,15 @@ Initializing connection to regulations.ai MCP server...
 MCP handshake successful.
 ```
 
-================================================================================
- TEST CASE 1: "What are the AI laws in California?"
-================================================================================
+TEST CASE 1: "What are the AI laws in California?"
+
+```
    🤖 Ollama invoked tool: `search_regulations` with args {"jurisdiction": "California", "query": "AI laws"}
       Retrieved live data from MCP server.
+```
 
 📝 **AI Analysis Response:**
+
 The AI laws in California include:
 
 1. Health care professions: deceptive terms or letters: artificial intelligence. (AB 489, enacted as Chapter 615 of the Statutes of 2025)
@@ -25,14 +27,15 @@ The AI laws in California include:
 
 These laws cover various aspects of AI, including transparency and disclosure, oversight and governance, safety testing and evaluation, liability and redress, and more.
 
+TEST CASE 2: "What has moved recently in AI regulation according to recent changes?"
 
-================================================================================
- TEST CASE 2: "What has moved recently in AI regulation according to recent changes?"
-================================================================================
-   🤖 Ollama invoked tool: `recent_changes` with args {}
+```
+🤖 Ollama invoked tool: `recent_changes` with args {}
       Retrieved live data from MCP server.
+```
 
 📝 **AI Analysis Response:**
+
 The AI regulation tracker shows changes in AI regulations worldwide. The recent changes include:
 
 1. Luxembourg AI Act Implementation Bill: This bill aims to implement the EU AI Act in Luxembourg and includes provisions on governance oversight, market surveillance, and enforcement penalties.
@@ -43,14 +46,14 @@ The AI regulation tracker shows changes in AI regulations worldwide. The recent 
 
 These changes demonstrate the growing importance of AI regulation worldwide, with countries implementing their own laws and regulations to address the risks and benefits of AI technologies.
 
-
-================================================================================
  TEST CASE 3: "Search for enforcement actions or litigation related to artificial intelligence."
-================================================================================
+```
    🤖 Ollama invoked tool: `search` with args {"query": "enforcement actions or litigation artificial intelligence"}
       Retrieved live data from MCP server.
+```
 
 📝 **AI Analysis Response:**
+
 Here are some enforcement actions and litigation related to artificial intelligence:
 
 1. Louisiana AI Medical Transcription Disclosure (Regulation ID: RAI-US-LA-HB47500-2026)
@@ -65,12 +68,11 @@ Here are some enforcement actions and litigation related to artificial intellige
 
 These sources provide information on various aspects of artificial intelligence, including governance, ethics, implementation, and enforcement. They also highlight the importance of regulating AI to ensure its safe and responsible use.
 
-
-================================================================================
  TEST CASE 4: "List the available tools and jurisdictions covered on regulations.ai."
-================================================================================
-   🤖 Ollama invoked tool: `search` with args {"query": "available tools and jurisdictions covered"}
+
+```   🤖 Ollama invoked tool: `search` with args {"query": "available tools and jurisdictions covered"}
       Retrieved live data from MCP server.
+```
 
 📝 **AI Analysis Response:**
 Based on the search results provided, the available tools covered on regulations.ai include:
