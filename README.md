@@ -32,13 +32,13 @@
 
 ### How the AI Explainer works
 
-**Instructions:** A person writes what they need in an AI prompt.
+**AI Prompt:** A human writes instructions for AI.
 
-**Creation:** AI creates images, writes code, types the content, and finds source references.
+**AI Model:** AI creates images, writes code, or types content.
 
-**Check:** A person checks the facts and fixes any mistakes.
+**Validator:** AI can run some fact checks, but a human has the final responsibility for correcting any mistakes.
 
-**Improve:** The person talks with the AI about ways to improve the prompt and get better responses.
+**Improve:** A human can chat with AI about clarifying prompt ambiguities, finding the best model, tuning model parameters, using MCP, RAG, and other technologies to improve the documentation pipeline and response accuracy.
 
 ---
 
