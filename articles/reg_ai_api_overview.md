@@ -2,7 +2,7 @@
 
 # How can I quickly find AI laws and regulations?
 
-[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp) and use the free MCP server that gives live access to AI laws around the world.  Here's the first example of output from the Python script `ai_regulations_chat.py` that invokes the `llama3.2:latest` Ollama model to answer a series of questions designed to test the key features of the API while also providing human analysis of the AI results.  *Results currently under review*
+[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp) and use the free MCP server that gives live access to AI laws around the world.  Here's the first example of output from the Python script `ai_regulations_chat.py` that invokes the Ollama model `llama3.2:latest` to answer a series of questions designed to test the key features of the API.  *Results currently under review*
 
 **Run ai_regulations_chat.py**
 ```
@@ -44,7 +44,7 @@ The AI regulation tracker shows changes in AI regulations worldwide. The recent 
 
 These changes demonstrate the growing importance of AI regulation worldwide, with countries implementing their own laws and regulations to address the risks and benefits of AI technologies.
 
-VALIDATION:  The term "recent" is vague.  
+**Validaton:**  The term "recent" is vague.  
 
 1.  As of November 7, 2026, there is no dedicated national legislative act governing AI in Luxembourg. However, Luxembourg is directly subject to the Regulation (EU) 2024/1689 – Artificial Intelligence Act (“EU AI Act”), which establishes harmonised rules for AI across all EU member states. The Act introduces a risk-based approach, banning certain harmful AI practices, and imposes strict obligations on high-risk and general-purpose AI systems.  Bill of law 8476 was submitted to the Parliament on 23 December 2024 and supplements the EU AI Act with the necessary national provisions for Luxembourg.  It is still under discussion.
 2. Kazakhstan introduced [new fines and sanctions for AI-related offenses](https://en.orda.kz/kazakhstan-introduces-fines-for-misuse-of-artificial-intelligence-9324/) in November 2025.
@@ -58,8 +58,6 @@ VALIDATION:  The term "recent" is vague.
    🤖 Ollama invoked tool: `search` with args {"query": "enforcement actions or litigation artificial intelligence"}
       Retrieved live data from MCP server.
 ```
-
-📝 **AI Analysis Response:**
 
 Here are some enforcement actions and litigation related to artificial intelligence:
 
