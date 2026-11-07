@@ -53,6 +53,7 @@ These changes demonstrate the growing importance of AI regulation worldwide, wit
 5. [National supervision of EU Artificial Intelligence Act to begin – laws on powers of authorities to take effect at start of the year](https://valtioneuvosto.fi/en/-/1410877/national-supervision-of-eu-artificial-intelligence-act-to-begin-laws-on-powers-of-authorities-to-take-effect-at-start-of-the-year) entered into force in January 2026.
 
 ### TEST CASE 3: "Search for enforcement actions or litigation related to artificial intelligence."
+
 ```
    🤖 Ollama invoked tool: `search` with args {"query": "enforcement actions or litigation artificial intelligence"}
       Retrieved live data from MCP server.
