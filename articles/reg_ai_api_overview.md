@@ -10,7 +10,7 @@ Initializing connection to regulations.ai MCP server...
 MCP handshake successful.
 ```
 
-TEST CASE 1: "What are the AI laws in California?"
+### TEST CASE 1: "What are the AI laws in California?"
 
 ```
    🤖 Ollama invoked tool: `search_regulations` with args {"jurisdiction": "California", "query": "AI laws"}
@@ -27,9 +27,8 @@ The AI laws in California include:
 
 VALIDATION:  This information is true.  Search [Legiscan](https://legiscan.com/gaits/search?sort=desc&order=Status&state=CA&keyword=artificial%20intelligence) for current legislation.
 
----
 
-TEST CASE 2: "What has moved recently in AI regulation according to recent changes?"
+### TEST CASE 2: "What has moved recently in AI regulation according to recent changes?"
 
 ```
 🤖 Ollama invoked tool: `recent_changes` with args {}
@@ -56,9 +55,8 @@ VALIDATION:  The term "recent" is vague.
 4.  
 
 
----
 
- TEST CASE 3: "Search for enforcement actions or litigation related to artificial intelligence."
+### TEST CASE 3: "Search for enforcement actions or litigation related to artificial intelligence."
 ```
    🤖 Ollama invoked tool: `search` with args {"query": "enforcement actions or litigation artificial intelligence"}
       Retrieved live data from MCP server.
@@ -80,9 +78,8 @@ Here are some enforcement actions and litigation related to artificial intellige
 
 These sources provide information on various aspects of artificial intelligence, including governance, ethics, implementation, and enforcement. They also highlight the importance of regulating AI to ensure its safe and responsible use.
 
----
 
-TEST CASE 4: "List the available tools and jurisdictions covered on regulations.ai."
+### TEST CASE 4: "List the available tools and jurisdictions covered on regulations.ai."
 
 ```   🤖 Ollama invoked tool: `search` with args {"query": "available tools and jurisdictions covered"}
       Retrieved live data from MCP server.
