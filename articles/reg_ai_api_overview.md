@@ -2,7 +2,7 @@
 
 # How can I quickly find AI laws and regulations?
 
-[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp) and use the free MCP server that gives live access to AI laws world-wide.  Here's an example of the key features.
+[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp) and use the free MCP server that gives live access to AI laws world-wide.  Here's an example of the key features run on November 7, 2026.
 
 ```
 $ python3 ai_regulations_chat.py 
