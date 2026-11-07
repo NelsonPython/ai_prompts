@@ -8,6 +8,7 @@
 $ python3 ai_regulations_chat.py 
 Initializing connection to regulations.ai MCP server...
 MCP handshake successful.
+```
 
 ================================================================================
  TEST CASE 1: "What are the AI laws in California?"
@@ -93,7 +94,6 @@ As for the jurisdictions covered, the search results provide information on the 
 7. United States
 
 These jurisdictions have been involved in cases related to AI regulation, data protection, and privacy, and the search results provide information on the enforcement actions taken by these authorities.
-```
 
 ### Python script
 
