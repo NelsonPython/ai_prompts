@@ -27,6 +27,7 @@ The AI laws in California include:
 
 VALIDATION:  This information is true.  Here is a [Legiscan Search](https://legiscan.com/gaits/search?sort=desc&order=Status&state=CA&keyword=artificial%20intelligence) for current legislation.
 
+---
 
 TEST CASE 2: "What has moved recently in AI regulation according to recent changes?"
 
@@ -46,6 +47,8 @@ The AI regulation tracker shows changes in AI regulations worldwide. The recent 
 5. Finland AI Supervision Act: This act supplements the EU AI Act by allocating supervision, designating a central contact point, and creating an administrative sanctions board.
 
 These changes demonstrate the growing importance of AI regulation worldwide, with countries implementing their own laws and regulations to address the risks and benefits of AI technologies.
+
+---
 
  TEST CASE 3: "Search for enforcement actions or litigation related to artificial intelligence."
 ```
@@ -69,7 +72,9 @@ Here are some enforcement actions and litigation related to artificial intellige
 
 These sources provide information on various aspects of artificial intelligence, including governance, ethics, implementation, and enforcement. They also highlight the importance of regulating AI to ensure its safe and responsible use.
 
- TEST CASE 4: "List the available tools and jurisdictions covered on regulations.ai."
+---
+
+TEST CASE 4: "List the available tools and jurisdictions covered on regulations.ai."
 
 ```   🤖 Ollama invoked tool: `search` with args {"query": "available tools and jurisdictions covered"}
       Retrieved live data from MCP server.
