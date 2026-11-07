@@ -30,15 +30,15 @@
 
 [Law:  AI Regulations](articles/reg_ai_overview.md)
 
-**How it Works**
+### How the AI Explainer works
 
-Instructions: A person writes what they need in an AI prompt.
+**Instructions:** A person writes what they need in an AI prompt.
 
-Creation: AI creates images, writes code, types the content, and finds source references.
+**Creation:** AI creates images, writes code, types the content, and finds source references.
 
-Check: A person checks the facts and fixes any mistakes.
+**Check:** A person checks the facts and fixes any mistakes.
 
-Improve: The person talks with the AI about ways to improve the prompt and get better responses.
+**Improve:** The person talks with the AI about ways to improve the prompt and get better responses.
 
 ---
 
