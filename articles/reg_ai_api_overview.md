@@ -70,7 +70,7 @@ Here are some enforcement actions and litigation related to artificial intellige
 6. Artificial intelligence in governance: recent trends, risks, challenges, innovative frameworks and future directions (Research Paper)
 7. Artificial intelligence policy worldwide: a comparative analysis (Research Paper)
 8. Agencia de Acceso a la Informacion Publica (AAIP) v Public and private entities using AI (Enforcement Action)
-9. Berlin Commissioner for Data Protection (BlnBDI) v Hangzhou DeepSeek Artificial Intelligence Co., Ltd. (Enforcement Action)
+9. [Berlin Commissioner for Data Protection (BlnBDI) v Hangzhou DeepSeek Artificial Intelligence Co., Ltd.](https://www.datenschutz-berlin.de/fileadmin/user_upload/pdf/pressemitteilungen/2025/20250627-BlnBDI-Press-Release_DeepSeek.pdf) (Enforcement Action)
 
 These sources provide information on various aspects of artificial intelligence, including governance, ethics, implementation, and enforcement. They also highlight the importance of regulating AI to ensure its safe and responsible use.
 
