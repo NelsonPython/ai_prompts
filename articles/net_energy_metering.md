@@ -2,9 +2,9 @@
 
 # BLOG: AI Prompt Investigator
 
-## Electric Bill:  Net Energy Metering (NEM)
+## Why ask AI to explain your electric bill?
 
-Why ask AI to help explain net energy metering?  Because reading a solar utility bill can be notoriously confusing.  Take a look at a typical bill from Southern California Edison (SCE). At first glance, you might notice something perplexing: the amount due is $34.32, but the year-to-date charges show $212.29. Which amount should you pay?
+Because reading a solar energy utility bill with net energy metering can be notoriously confusing.  Take a look at a typical bill from Southern California Edison (SCE). At first glance, you might notice something perplexing: the amount due is $34.32, but the year-to-date charges show $212.29. Which amount should you pay?
 
 ---
 
