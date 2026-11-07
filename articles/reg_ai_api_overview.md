@@ -44,7 +44,7 @@ The AI regulation tracker shows changes in AI regulations worldwide. The recent 
 
 These changes demonstrate the growing importance of AI regulation worldwide, with countries implementing their own laws and regulations to address the risks and benefits of AI technologies.
 
-**Validaton:**  The term "recent" is vague.  Change the AI prompt (test case question) to ask for a specific date range.  AI provided regulations in various stages of implementation:
+**Validaton:**  The term "recent" is vague.  Change the AI prompt (test case question) to ask for a specific date range.
 
 1.  As of November 7, 2026, there is no dedicated [national legislative act governing AI in Luxembourg](https://cms.law/en/int/expert-guides/ai-regulation-scanner/luxembourg). However, Luxembourg is directly subject to the Regulation (EU) 2024/1689 – Artificial Intelligence Act (“EU AI Act”), which establishes harmonised rules for AI across all EU member states. The Act introduces a risk-based approach, banning certain harmful AI practices, and imposes strict obligations on high-risk and general-purpose AI systems.  Bill of law 8476 was submitted to the Parliament on 23 December 2024 and supplements the EU AI Act with the necessary national provisions for Luxembourg.  It is still under discussion.
 2. Kazakhstan introduced [new fines and sanctions for AI-related offenses](https://en.orda.kz/kazakhstan-introduces-fines-for-misuse-of-artificial-intelligence-9324/) in November 2025.
