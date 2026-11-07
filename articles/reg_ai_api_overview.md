@@ -40,7 +40,7 @@ TEST CASE 2: "What has moved recently in AI regulation according to recent chang
 
 The AI regulation tracker shows changes in AI regulations worldwide. The recent changes include:
 
-1. Luxembourg AI Act Implementation Bill: This bill aims to implement the [EU AI Act]() in Luxembourg and includes provisions on governance oversight, market surveillance, and enforcement penalties.
+1. Luxembourg AI Act Implementation Bill: This bill aims to implement the [EU AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng) in Luxembourg and includes provisions on governance oversight, market surveillance, and enforcement penalties.
 2. Kazakhstan AI Administrative Penalties Law: This law introduces new fines and sanctions for AI-related offenses, including disclosure failures and harmful failures to manage high-risk systems.
 3. Italy ChatGPT Privacy Safeguards Order: This regulation requires companies to implement ChatGPT privacy safeguards and provides a framework for data protection and transparency.
 4. UK Workplace AI and Workers' Rights Bill: This bill aims to regulate AI technologies in the workplace and provide workers' rights, but its status is stalled.
