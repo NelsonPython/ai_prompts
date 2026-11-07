@@ -95,7 +95,8 @@ As for the jurisdictions covered, the search results provide information on the 
 6. Philippines
 7. United States
 
-These jurisdictions have been involved in cases related to AI regulation, data protection, and privacy, and the search results provide information on the enforcement actions taken by these authorities.
+These jurisdictions have been involved in cases related to AI regulation, data protection,
+and privacy, and the search results provide information on the enforcement actions taken by these authorities.
 
 ### Python script
 
