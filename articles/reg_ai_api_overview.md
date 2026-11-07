@@ -25,7 +25,8 @@ The AI laws in California include:
 2. California Executive Order N-9-26 — Independent Oversight of Frontier AI (in force)
 3. California SB 243 - Companion Chatbot Disclosure Requirements (enacted as Chapter 677 of the Statutes of 2025)
 
-This information is true.  [Legiscan Search for current legislation](https://legiscan.com/gaits/search?sort=desc&order=Status&state=CA&keyword=artificial%20intelligence)
+VALIDATION:  This information is true.  Here is a [Legiscan Search](https://legiscan.com/gaits/search?sort=desc&order=Status&state=CA&keyword=artificial%20intelligence) for current legislation.
+
 
 TEST CASE 2: "What has moved recently in AI regulation according to recent changes?"
 
