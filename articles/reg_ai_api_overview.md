@@ -109,12 +109,10 @@ except ImportError:
     print("Error: The 'ollama' package is required. Install it using: pip install ollama")
     sys.exit(1)
 
-# Configurations
 SERVER_URL = "https://regulations.ai/api/mcp/v1"
 OLLAMA_MODEL = "llama3.2:latest"
-API_KEY = None  # Optional: "rai_..." if you have an API key for higher limits
+API_KEY = None  # Optional: "using an API key raises the response limits
 
-# Test data curated from our conversation
 TEST_QUESTIONS = [
     "What are the AI laws in California?",
     "What has moved recently in AI regulation according to recent changes?",
