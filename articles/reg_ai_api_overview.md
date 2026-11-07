@@ -2,7 +2,7 @@
 
 # How can I quickly find AI laws and regulations?
 
-[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp) and use the free MCP server that gives live access to AI laws world-wide.  Here's an example of the key features run on November 7, 2026.  *Currently under review*
+[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp) and use the free MCP server that gives live access to AI laws world-wide.  Here's an example of the key features.  *Currently under review*
 
 ```
 $ python3 ai_regulations_chat.py 
@@ -25,7 +25,7 @@ The AI laws in California include:
 2. California Executive Order N-9-26 — Independent Oversight of Frontier AI (in force)
 3. California SB 243 - Companion Chatbot Disclosure Requirements (enacted as Chapter 677 of the Statutes of 2025)
 
-These laws cover various aspects of AI, including transparency and disclosure, oversight and governance, safety testing and evaluation, liability and redress, and more.
+This information is true.  [Legiscan Search for current legislation](https://legiscan.com/gaits/search?sort=desc&order=Status&state=CA&keyword=artificial%20intelligence)
 
 TEST CASE 2: "What has moved recently in AI regulation according to recent changes?"
 
