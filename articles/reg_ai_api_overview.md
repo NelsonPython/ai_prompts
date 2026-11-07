@@ -1,4 +1,4 @@
-<img src="images/regulations_ai.jpg" width=1000 height=250>
+<img src="images/reg_ai.jpg" width=1000 height=250>
 
 # AI Regulations Chat
 
