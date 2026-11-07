@@ -7,13 +7,13 @@
 ```
 $ python3 ai_regulations_chat.py 
 Initializing connection to regulations.ai MCP server...
-✅ MCP handshake successful.
+MCP handshake successful.
 
 ================================================================================
  TEST CASE 1: "What are the AI laws in California?"
 ================================================================================
    🤖 Ollama invoked tool: `search_regulations` with args {"jurisdiction": "California", "query": "AI laws"}
-   📥 Retrieved live data from MCP server.
+      Retrieved live data from MCP server.
 
 📝 **AI Analysis Response:**
 The AI laws in California include:
@@ -29,7 +29,7 @@ These laws cover various aspects of AI, including transparency and disclosure, o
  TEST CASE 2: "What has moved recently in AI regulation according to recent changes?"
 ================================================================================
    🤖 Ollama invoked tool: `recent_changes` with args {}
-   📥 Retrieved live data from MCP server.
+      Retrieved live data from MCP server.
 
 📝 **AI Analysis Response:**
 The AI regulation tracker shows changes in AI regulations worldwide. The recent changes include:
@@ -47,7 +47,7 @@ These changes demonstrate the growing importance of AI regulation worldwide, wit
  TEST CASE 3: "Search for enforcement actions or litigation related to artificial intelligence."
 ================================================================================
    🤖 Ollama invoked tool: `search` with args {"query": "enforcement actions or litigation artificial intelligence"}
-   📥 Retrieved live data from MCP server.
+      Retrieved live data from MCP server.
 
 📝 **AI Analysis Response:**
 Here are some enforcement actions and litigation related to artificial intelligence:
@@ -69,7 +69,7 @@ These sources provide information on various aspects of artificial intelligence,
  TEST CASE 4: "List the available tools and jurisdictions covered on regulations.ai."
 ================================================================================
    🤖 Ollama invoked tool: `search` with args {"query": "available tools and jurisdictions covered"}
-   📥 Retrieved live data from MCP server.
+      Retrieved live data from MCP server.
 
 📝 **AI Analysis Response:**
 Based on the search results provided, the available tools covered on regulations.ai include:
@@ -213,9 +213,9 @@ def run_legal_chat_suite():
             "capabilities": {},
             "clientInfo": {"name": "Legal-Chat-Agent", "version": "1.0.0"}
         }, request_id=1)
-        print("   ✅ MCP handshake successful.\n")
+        print("   MCP handshake successful.\n")
     except Exception as e:
-        print(f"   ❌ MCP Initialization failed: {e}")
+        print(f"   MCP Initialization failed: {e}")
         return
 
     available_tools = {
@@ -241,7 +241,7 @@ def run_legal_chat_suite():
                 tools=[search_regulations, search, recent_changes, list_jurisdictions]
             )
         except Exception as e:
-            print(f"❌ Ollama error: {e}")
+            print(f"Ollama error: {e}")
             continue
 
         # Handle tool calls if requested by the model
@@ -256,7 +256,7 @@ def run_legal_chat_suite():
 
                 if func_name in available_tools:
                     tool_output = available_tools[func_name](**func_args)
-                    print(f"   📥 Retrieved live data from MCP server.")
+                    print(f"   Retrieved live data from MCP server.")
 
                     messages.append({
                         "role": "tool",
