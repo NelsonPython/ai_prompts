@@ -28,7 +28,7 @@
 
 [Electric Bill:  Net Energy Metering](articles/net_energy_metering.md)
 
-[Law:  AI Regulations](articles/reg_ai_overview.md)
+[Law:  AI Regulations](articles/reg_ai_api_overview.md)
 
 ### How the AI Explainer works
 
