@@ -22,7 +22,7 @@ TEST CASE 1: "What are the AI laws in California?"
 The AI laws in California include:
 
 1. Health care professions: deceptive terms or letters: artificial intelligence. (AB 489, enacted as Chapter 615 of the Statutes of 2025)
-2. California Executive Order N-9-26 — Independent Oversight of Frontier AI (in force)
+2. [California Executive Order N-9-26 — Independent Oversight of Frontier AI](https://www.gov.ca.gov/wp-content/uploads/2026/09/FINAL-N-9-26-AI-EO-9.18.26-SIGNED.pdf)
 3. California SB 243 - Companion Chatbot Disclosure Requirements (enacted as Chapter 677 of the Statutes of 2025)
 
 VALIDATION:  This information is true.  Search [Legiscan](https://legiscan.com/gaits/search?sort=desc&order=Status&state=CA&keyword=artificial%20intelligence) for current legislation.
