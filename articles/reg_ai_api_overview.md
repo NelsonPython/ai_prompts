@@ -1,8 +1,8 @@
 <img src="images/reg_ai.jpg" width=1000 height=250>
 
-# AI Regulations Chat
+# AI Regulations
 
-[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp) offers a free MCP server giving live access to AI laws world-wide.  Here's an example using AI Regulations Chat with Ollama model llama3.2:latest.
+[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp) offers a free MCP server giving live access to AI laws world-wide.  Here's an example using key features with the Ollama model llama3.2:latest.
 
 ```
 $ python3 ai_regulations_chat.py 
