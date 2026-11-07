@@ -4,6 +4,7 @@
 
 [Connect your AI assistant to AI regulation data](https://regulations.ai/mcp) and use the free MCP server that gives live access to AI laws around the world.  Here's the first example of the key features along with validation of results.  *Results currently under review*
 
+**Run the Python script, ai_regulations_chat.py**
 ```
 $ python3 ai_regulations_chat.py 
 Initializing connection to regulations.ai MCP server...
