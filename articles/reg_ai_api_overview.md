@@ -60,7 +60,7 @@ These changes demonstrate the growing importance of AI regulation worldwide, wit
 
 Here are some enforcement actions and litigation related to artificial intelligence:
 
-1. Louisiana AI Medical Transcription Disclosure (Regulation ID: RAI-US-LA-HB47500-2026)
+1. [Louisiana AI Medical Transcription Disclosure (Regulation ID: RAI-US-LA-HB47500-2026)](https://www.legis.la.gov/legis/ViewDocument.aspx?d=1445230)
 2. AI, Governance and Ethics: Global Perspectives. (Research Paper)
 3. A robust governance for the AI act: AI office, AI Board, scientific panel, and national authorities (Research Paper)
 4. Assessing European Union Member States' Implementation of the Artificial Intelligence Act (Research Paper)
