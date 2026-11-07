@@ -5,6 +5,7 @@
 [Connect your AI assistant to AI regulation data](https://regulations.ai/mcp) and use the free MCP server that gives live access to AI laws around the world.  Here's the first example of output from the Python script `ai_regulations_chat.py` that invokes the Ollama model `llama3.2:latest` to answer a series of questions designed to test the key features of the API.  *Results currently under review*
 
 **Run ai_regulations_chat.py**
+
 ```
 $ python3 ai_regulations_chat.py 
 Initializing connection to regulations.ai MCP server...
@@ -14,8 +15,8 @@ MCP handshake successful.
 ### TEST CASE 1: "What are the AI laws in California?"
 
 ```
-   🤖 Ollama invoked tool: `search_regulations` with args {"jurisdiction": "California", "query": "AI laws"}
-      Retrieved live data from MCP server.
+🤖 Ollama invoked tool: `search_regulations` with args {"jurisdiction": "California", "query": "AI laws"}
+   Retrieved live data from MCP server.
 ```
 
 The AI laws in California include:
@@ -31,7 +32,7 @@ The AI laws in California include:
 
 ```
 🤖 Ollama invoked tool: `recent_changes` with args {}
-      Retrieved live data from MCP server.
+   Retrieved live data from MCP server.
 ```
 
 The AI regulation tracker shows changes in AI regulations worldwide. The recent changes include:
@@ -55,9 +56,9 @@ These changes demonstrate the growing importance of AI regulation worldwide, wit
 ### TEST CASE 3: "Search for enforcement actions or litigation related to artificial intelligence."
 
 ```
-   🤖 Ollama invoked tool: `search` with args {"query": "enforcement actions or litigation artificial intelligence"}
-      Retrieved live data from MCP server.
-```
+🤖 Ollama invoked tool: `search` with args {"query": "enforcement actions or litigation artificial intelligence"}
+   Retrieved live data from MCP server.
+```      
 
 Here are some enforcement actions and litigation related to artificial intelligence:
 
@@ -76,8 +77,9 @@ These sources provide information on various aspects of artificial intelligence,
 
 ### TEST CASE 4: "List the available tools and jurisdictions covered on regulations.ai."
 
-```   🤖 Ollama invoked tool: `search` with args {"query": "available tools and jurisdictions covered"}
-      Retrieved live data from MCP server.
+```
+🤖 Ollama invoked tool: `search` with args {"query": "available tools and jurisdictions covered"}
+   Retrieved live data from MCP server.
 ```
 
 Based on the search results provided, the available tools covered on regulations.ai include:
