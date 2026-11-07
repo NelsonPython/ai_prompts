@@ -30,6 +30,8 @@
 
 [Law:  AI Regulations](articles/reg_ai_api_overview.md)
 
+---
+
 ### How the AI Explainer works:
 
 **AI Prompt:** A human writes instructions for AI.
