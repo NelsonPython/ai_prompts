@@ -41,7 +41,7 @@ TEST CASE 2: "What has moved recently in AI regulation according to recent chang
 The AI regulation tracker shows changes in AI regulations worldwide. The recent changes include:
 
 1. Luxembourg AI Act Implementation Bill: This bill aims to implement the [EU AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng) in Luxembourg and includes provisions on governance oversight, market surveillance, and enforcement penalties.
-2. Kazakhstan AI Administrative Penalties Law: This law introduces [new fines and sanctions for AI-related offenses](https://en.orda.kz/kazakhstan-introduces-fines-for-misuse-of-artificial-intelligence-9324/), including disclosure failures and harmful failures to manage high-risk systems.
+2. Kazakhstan AI Administrative Penalties Law: This law introduces new fines and sanctions for AI-related offenses, including disclosure failures and harmful failures to manage high-risk systems.
 3. Italy ChatGPT Privacy Safeguards Order: This regulation requires companies to implement ChatGPT privacy safeguards and provides a framework for data protection and transparency.
 4. UK Workplace AI and Workers' Rights Bill: This bill aims to regulate AI technologies in the workplace and provide workers' rights, but its status is stalled.
 5. Finland AI Supervision Act: This act supplements the EU AI Act by allocating supervision, designating a central contact point, and creating an administrative sanctions board.
@@ -51,7 +51,7 @@ These changes demonstrate the growing importance of AI regulation worldwide, wit
 VALIDATION:  The term "recent" is vague.  
 
 1.  As of November 7, 2026, there is no dedicated national legislative act governing AI in Luxembourg. However, Luxembourg is directly subject to the Regulation (EU) 2024/1689 – Artificial Intelligence Act (“EU AI Act”), which establishes harmonised rules for AI across all EU member states. The Act introduces a risk-based approach, banning certain harmful AI practices, and imposes strict obligations on high-risk and general-purpose AI systems.  Bill of law 8476 was submitted to the Parliament on 23 December 2024 and supplements the EU AI Act with the necessary national provisions for Luxembourg.  It is still under discussion.
-2.  Fines were introduced in November 2025.
+2. Kazakhstan introduced [new fines and sanctions for AI-related offenses](https://en.orda.kz/kazakhstan-introduces-fines-for-misuse-of-artificial-intelligence-9324/) in November 2025.
 3.  
 
 
