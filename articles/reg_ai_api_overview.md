@@ -48,10 +48,9 @@ These changes demonstrate the growing importance of AI regulation worldwide, wit
 
 1.  As of November 7, 2026, there is no dedicated national legislative act governing AI in Luxembourg. However, Luxembourg is directly subject to the Regulation (EU) 2024/1689 – Artificial Intelligence Act (“EU AI Act”), which establishes harmonised rules for AI across all EU member states. The Act introduces a risk-based approach, banning certain harmful AI practices, and imposes strict obligations on high-risk and general-purpose AI systems.  Bill of law 8476 was submitted to the Parliament on 23 December 2024 and supplements the EU AI Act with the necessary national provisions for Luxembourg.  It is still under discussion.
 2. Kazakhstan introduced [new fines and sanctions for AI-related offenses](https://en.orda.kz/kazakhstan-introduces-fines-for-misuse-of-artificial-intelligence-9324/) in November 2025.
-3.  [Artificial intelligence: stop to ChatGPT by the Italian SA Personal data is collected unlawfully, no age verification system is in place for children](https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/9870847#english) was enacted in March 2023.
-4.  
-
-
+3. [Artificial intelligence: stop to ChatGPT by the Italian SA Personal data is collected unlawfully, no age verification system is in place for children](https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/9870847#english) was enacted in March 2023.
+4. [UK Workplace AI and Workers' Rights Bill](https://bills.parliament.uk/bills/3464#timeline) stalled in 2023.
+5. [National supervision of EU Artificial Intelligence Act to begin – laws on powers of authorities to take effect at start of the year](https://valtioneuvosto.fi/en/-/1410877/national-supervision-of-eu-artificial-intelligence-act-to-begin-laws-on-powers-of-authorities-to-take-effect-at-start-of-the-year) entered into force in January 2026.
 
 ### TEST CASE 3: "Search for enforcement actions or litigation related to artificial intelligence."
 ```
