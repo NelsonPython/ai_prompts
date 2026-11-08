@@ -5,7 +5,7 @@
 [Connect your AI assistant to AI regulation data](https://regulations.ai/mcp) and use the free MCP server that gives live access to AI laws around the world.  Here's the first example of output from the Python script `ai_regulations_chat.py` that invokes the Ollama model `llama3.2:latest` to answer a series of questions designed to test the key features of the API.  *Results currently under review*
 
 
-### TEST CASE 1: "What are the AI laws in California?"
+## TEST CASE 1: "What are the AI laws in California?"
 
 ```API 
 🤖 Ollama invoked tool: `search_regulations` with args {"jurisdiction": "California", "query": "AI laws"}
@@ -20,11 +20,11 @@ The AI laws in California include:
 
 **Validation** AI responded with California Assembly Bill AB 489, California Senate Bill SB 243, and Executive Order N-9-26 issued by the California governor.  Search [Legiscan](https://legiscan.com/gaits/search?sort=desc&order=Status&state=CA&keyword=artificial%20intelligence) for current legislation.
 
-### TEST CASE 2
+## TEST CASE 2
 
 Whether communicating with AI or a Human, you must ask clear, concise questions.  In the first run, the question was vague.
 
-**"What has moved recently in AI regulation according to recent changes?"**
+### Example 1:  "What has moved recently in AI regulation according to recent changes?"
 
 ```
 🤖 Ollama invoked tool: `recent_changes` with args {}
@@ -50,7 +50,7 @@ These changes demonstrate the growing importance of AI regulation worldwide, wit
 5. [National supervision of EU Artificial Intelligence Act to begin – laws on powers of authorities to take effect at start of the year](https://valtioneuvosto.fi/en/-/1410877/national-supervision-of-eu-artificial-intelligence-act-to-begin-laws-on-powers-of-authorities-to-take-effect-at-start-of-the-year) entered into force in January 2026.
 
 
-**"What are the recent changes in AI regulations?"**
+### Example 2:  "What are the recent changes in AI regulations?"
 
 ```
    🤖 Ollama invoked tool: `recent_changes` with args {}
@@ -66,11 +66,11 @@ Based on the provided information, the recent changes in AI regulations can be s
 5. **CCPA Updates, Cybersecurity Audits, Risk Assessments, Automated Decision-making Technology (ADMT), and Insurance Regulations (California)**: Adopted in 2026, this regulation updates CCPA rules, requires risk assessments and annual cybersecurity audits, and establishes ADMT access and opt-out rights.
 
 
-### TEST CASE 3: 
+## TEST CASE 3 
 
 When using limited resources, keep the question simple.  In the first run, the question had two parts, search for enforcement actions and find litigation related to AI.
 
-**"Search for enforcement actions or litigation related to artificial intelligence."**
+### Example 1: "Search for enforcement actions or litigation related to artificial intelligence."
 
 ```
 🤖 Ollama invoked tool: `search` with args {"query": "enforcement actions or litigation artificial intelligence"}
@@ -93,7 +93,7 @@ These sources provide information on various aspects of artificial intelligence,
 
 **Validation:**  The response is very broad covering enforcement actions as well as research papers.
 
-**"What are the top enforcement actions related to artificial intelligence."**
+### Example 2: "What are the top enforcement actions related to artificial intelligence?"
 
 ```
    🤖 Ollama invoked tool: `search` with args {"query": "artificial intelligence enforcement actions"}
@@ -113,27 +113,12 @@ The top enforcement actions related to artificial intelligence (AI) can be summa
 9. Colombia - National AI Policy (CONPES 4144): This policy aims to promote the development and use of AI in Colombia.
 10. Germany AI Act Implementation Law: This law aims to implement the AI Act in Germany and ensure its effective enforcement.
 
-Research papers:
 
-1. "AI, Governance and Ethics: Global Perspectives."
-2. "A robust governance for the AI act: AI office, AI Board, scientific panel, and national authorities"
-3. "Assessing European Union Member States' Implementation of the Artificial Intelligence Act"
-4. "Towards the effective extraterritorial enforcement of the AI Act"
-5. "Artificial intelligence in governance: recent trends, risks, challenges, innovative frameworks and future directions"
-6. "Artificial intelligence policy worldwide: a comparative analysis"
+## TEST CASE 4: 
 
-Enforcement actions:
+The first request had two parts, list the available tools and list the jurisdictions covered in regulations.ai.
 
-1. Argentina - Agencia de Acceso a la Información Pública (AAIP) v Public and private entities using AI
-2. Germany - Berlin Commissioner for Data Protection (BlnBDI) v Hangzhou DeepSeek Artificial Intelligence Co., Ltd.
-
-These enforcement actions and research papers demonstrate the growing importance of AI governance, ethics, and regulation, and the need for effective enforcement mechanisms to ensure the responsible development and use of AI.
-
-These jurisdictions have been involved in cases related to AI regulation, data protection,
-and privacy, and the search results provide information on the enforcement actions taken by these authorities.
-
-
-### TEST CASE 4: "List the available tools and jurisdictions covered on regulations.ai."
+### "List the available tools and jurisdictions covered in regulations.ai."
 
 ```
 🤖 Ollama invoked tool: `search` with args {"query": "available tools and jurisdictions covered"}
@@ -159,6 +144,9 @@ As for the jurisdictions covered, the search results provide information on the 
 5. Kenya
 6. Philippines
 7. United States
+
+### "List the jurisdictions covered in regulations.ai"
+
 
 
 
