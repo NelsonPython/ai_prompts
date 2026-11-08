@@ -5,7 +5,9 @@
 *[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp)* and use the free MCP server that gives live access to AI laws around the world.  Here's an example of output from the Python script `ai_regulations_chat.py` that invokes the Ollama model `llama3.2:latest` to answer a series of questions designed to try out key features of the API.
 
 
-## TEST CASE 1: "What are the AI laws in California?"
+## search_regulations
+
+### Example 1: "What are the AI laws in California?"
 
 ```API 
 🤖 Ollama invoked tool: `search_regulations` with args {"jurisdiction": "California", "query": "AI laws"}
@@ -20,7 +22,7 @@ The AI laws in California include:
 
 **Validation** AI responded with California Assembly Bill AB 489, California Senate Bill SB 243, and Executive Order N-9-26 issued by the California governor.  Search [Legiscan](https://legiscan.com/gaits/search?sort=desc&order=Status&state=CA&keyword=artificial%20intelligence) for current legislation.
 
-## TEST CASE 2
+## recent_changes
 
 Whether communicating with AI or a Human, you must ask clear, concise questions.  In the first run, the question was vague.
 
@@ -66,7 +68,7 @@ Based on the provided information, the recent changes in AI regulations can be s
 5. **CCPA Updates, Cybersecurity Audits, Risk Assessments, Automated Decision-making Technology (ADMT), and Insurance Regulations (California)**: Adopted in 2026, this regulation updates CCPA rules, requires risk assessments and annual cybersecurity audits, and establishes ADMT access and opt-out rights.
 
 
-## TEST CASE 3 
+## search with args 
 
 When using limited resources, keep the question simple.  In the first run, the question had two parts, search for enforcement actions and find litigation related to AI.
 
@@ -114,11 +116,11 @@ The top enforcement actions related to artificial intelligence (AI) can be summa
 10. Germany AI Act Implementation Law: This law aims to implement the AI Act in Germany and ensure its effective enforcement.
 
 
-## TEST CASE 4: 
+## search with args 
 
 The first request had two parts, list the available tools and list the jurisdictions covered in regulations.ai.
 
-### "List the available tools and jurisdictions covered in regulations.ai."
+### Example 1: "List the available tools and jurisdictions covered in regulations.ai."
 
 ```
 🤖 Ollama invoked tool: `search` with args {"query": "available tools and jurisdictions covered"}
@@ -145,7 +147,7 @@ As for the jurisdictions covered, the search results provide information on the 
 6. Philippines
 7. United States
 
-### "List the jurisdictions covered in regulations.ai"
+### Example 2: "List the jurisdictions covered in regulations.ai"
 
 
 
