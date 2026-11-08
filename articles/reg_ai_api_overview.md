@@ -24,7 +24,7 @@ One instrument: jurisdiction, status, dates, official source.
 
 What has moved recently. A general model cannot answer this — the corpus is rescanned weekly.
 
-Example 1: "What are the recent changes AI regulations?"
+Example 1: "What are the recent changes in AI regulations?"
 
 ```
    🤖 Ollama invoked tool: `recent_changes` with args {}
