@@ -2,7 +2,7 @@
 
 # How can I quickly find AI regulations?
 
-*[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp)* and use the free MCP server that gives live access to AI laws around the world.  Here's the first example of output from the Python script `ai_regulations_chat.py` that invokes the Ollama model `llama3.2:latest` to answer a series of questions designed to test the key features of the API.  *Results currently under review*
+*[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp)* and use the free MCP server that gives live access to AI laws around the world.  Here's an example of output from the Python script `ai_regulations_chat.py` that invokes the Ollama model `llama3.2:latest` to answer a series of questions designed to try out key features of the API.
 
 
 ## TEST CASE 1: "What are the AI laws in California?"
