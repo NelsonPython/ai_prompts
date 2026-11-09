@@ -39,8 +39,6 @@
 
 **Validator:** AI can run some fact checks, but a human has the final responsibility for correcting any mistakes.
 
-**Improve:** A human can chat with AI about clarifying prompt ambiguities, finding the best model, tuning model parameters, using MCP, RAG, and other technologies to improve the documentation pipeline and response accuracy.
-
 ---
 
 **References**
