@@ -98,7 +98,7 @@ https://www.gov.ca.gov/2026/09/30/californias-nation-leading-ai-framework-just-g
 
 **Summary in JSON format**
 
-This script uses AI to summarize AB 1979 into JSON format for easy ingestion into downstream systems.
+AI summarizes AB 1979 into JSON format for easy ingestion into downstream systems.  
 
 ```
 [SUMMARY] {
