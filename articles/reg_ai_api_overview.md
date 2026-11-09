@@ -79,7 +79,13 @@ Validating title with a keyword search followed with a semantic search if no key
                                ╰──────────────────────────────────────────────────────────────────────────────╯                                
 
 [11/08/26 17:14:30] INFO Starting MCP server 'Job Processing Server' with transport 'stdio' transport.py:241
+
 -> Running keyword search...
+[TITLE] California AB 1979 — Health Care Services: Artificial Intelligence
+
+-> Running semantic search...
+True
+The input text 'AB-1979 Health care services: artificial intelligence' is essentially the same as the official name 'California AB 1979 — Health Care Services: Artificial Intelligence'. The only difference is the abbreviation 'AB' at the beginning, which is a common practice in legislation numbering systems. The rest of the text is identical, including the name of the legislation and the description of the subject matter. Therefore, these two texts refer to the same legislation.
 [TITLE] California AB 1979 — Health Care Services: Artificial Intelligence
 ```
 
