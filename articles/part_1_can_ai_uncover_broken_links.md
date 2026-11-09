@@ -6,11 +6,11 @@
 
 Technical writing is more than just writing.  Your readers expect 100% up-time.  Broken links are frustrating and in some cases, can even introduce security or compliance issues.  
 
-As a content manager at Intel®, I was responsible for external links in [Tuning Guides for Intel® Xeon® Scalable Processor-Based Systems](https://www.intel.com/content/www/us/en/developer/articles/guide/xeon-performance-tuning-and-solution-guides.html).  Manually clicking over 700 links to ensure continual up-time was unrealistic and checking reports for each webpage was time-consuming.  Since, my content was publicly available, I wrote a Python script to automate checking and reporting broken links.  Without AI, I had to research StackOverflow and other articles in order to develop the script.  The work paid off because the script found quite a few broken links in the initial run.  I repaired these and scheduled the script to run daily, reporting any new link failures.  Now that AI has learned how to write code syntax, it can aid in developing a more generic tool to check for broken links on other public websites.  Gemini recommended using `curl`.
+As a content manager at Intel®, I was responsible for external links in [Tuning Guides for Intel® Xeon® Scalable Processor-Based Systems](https://www.intel.com/content/www/us/en/developer/articles/guide/xeon-performance-tuning-and-solution-guides.html).  Manually clicking over 700 links to ensure continual up-time was unrealistic and checking reports for each webpage was time-consuming.  Since, my content was publicly available, I wrote a Python script to automate checking and reporting broken links.  Without AI, I had to research StackOverflow and other articles in order to develop the script.  The work paid off because the script found quite a few broken links in the initial run.  I repaired these and scheduled the script to run daily, reporting any new link failures.  Now that AI has learned how to write code, it can do the research and write a first draft.  Here's a simple example that checks for broken links in public websites.
 
 ## Harnessing `curl` for Link Checks
 
-`curl` is a command-line tool capable of retrieving data from a web server.  It can send HTTP requests, retrieve web page content, and report a status such as `200 OK` or `404 Not found`.  Gemini suggested this example:  
+Gemini recommended `curl`, a command-line tool capable of retrieving data from a web server.  It can send HTTP requests, retrieve web page content, and report a status such as `200 OK` or `404 Not found`.  
 
 ```bash
 curl -L -I http://example.com
