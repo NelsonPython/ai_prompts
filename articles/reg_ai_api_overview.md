@@ -1,12 +1,12 @@
 <img src="images/reg_ai.jpg" width=1000 height=250>
 
-# Regulation.ai
+# Regulations.ai
 
-*[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp)* explains how to use the MCP server that gives live access to AI laws around the world.
+*[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp)* explains how to use the Regulations.ai MCP server that gives live access to AI laws around the world.
 
 ## recent_changes
 
-What has moved recently. A general model cannot answer this — the corpus is re-scanned weekly.
+A general model may not be able to find recent changes — the Regulations.ai corpus is re-scanned weekly.
 
 Prompt:  "What are the recent changes in AI regulations?"
 
@@ -15,7 +15,7 @@ Prompt:  "What are the recent changes in AI regulations?"
    Retrieved live data from MCP server.
 ```
 
-November 7, 2026:
+November 7, 2026 results:
 
 1. **New York FAIR News Act**: Adopted in 2026, this law addresses transparency when generative AI creates news media content.
 2. **Política Nacional de Inteligencia Artificial (National Policy on Artificial Intelligence)**: Updated in 2026, this policy in Chile focuses on governance oversight, risk management, and accountability documentation.
