@@ -23,10 +23,11 @@
 [Part 2:  Validating AI Prompt Responses](articles/part_2_validating_ai_prompt.md) - RAG and the Vector Database
 
 
-
 ## The AI Explainer
 
 [Electric Bill:  Net Energy Metering](articles/net_energy_metering.md)
+
+[Regulations.ai](articles/reg_ai_api_overview.md)
 
 ---
 
