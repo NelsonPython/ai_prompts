@@ -1,4 +1,4 @@
-<img src="images/curl_link_rot.jpg" width=1000 height=200>
+<img src="images/404.png" width=1000 height=200>
 
 # BLOG:  AI Prompt Investigator
 
