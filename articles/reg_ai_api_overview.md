@@ -36,9 +36,9 @@ Use `search_regulations("AB 1979", "California")` to find information about Cali
       ],
       "contentChangedAt": "2026-10-09T09:11:07.255Z",
       "snippet": "California AB 1979 adds AI-specific limits for health care settings and expands
-CMIA privacy protections to certain health care chatbots. It preserves licensed professional judgment
- in clinical care, restricts AI from performing licensed clinical functions, and brings covered chatbot
- businesses under provider-like…",
+CMIA privacy protections to certain health care chatbots. It preserves licensed professional judgment 
+in clinical care, restricts AI from performing licensed clinical functions, and brings covered chatbot
+businesses under provider-like…",
       "fullAnalysisAt": "https://regulations.ai/regulations/RAI-US-CA-AB19790-2026"
     }
   ],
