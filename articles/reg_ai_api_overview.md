@@ -51,7 +51,13 @@ Validate results by checking against other reputable sources.  The ground_truth 
         "titleEnglish": (
             "AB-1979 Health care services: artificial intelligence."
         ),
-        "snippet": ("This bill would require a health facility, clinic, physician’s office, or office of a group practice to take reasonable steps to ensure that a licensed health care professional, acting within their scope of practice, retains the ability to exercise independent professional judgment in their care of a patient whenever that care is informed by the output of a clinical decision support system, as defined. The bill would prohibit a health facility, clinic, physician’s office, or office of a group practice from using or deploying a tool, system, or device that includes artificial intelligence to independently perform any clinical function that is required by law to be performed by a person with a professional license.")
+        "snippet": ("This bill would require a health facility, clinic, physician’s office, or office of a group practice
+to take reasonable steps to ensure that a licensed health care professional, acting within their scope of practice,
+retains the ability to exercise independent professional judgment in their care of a patient whenever that care is
+informed by the output of a clinical decision support system, as defined. The bill would prohibit a health facility,
+clinic, physician’s office, or office of a group practice from using or deploying a tool, system, or device that
+includes artificial intelligence to independently perform any clinical function that is required by law to be performed
+by a person with a professional license.")
     }
 ```
 Validate results against the ground truth.
