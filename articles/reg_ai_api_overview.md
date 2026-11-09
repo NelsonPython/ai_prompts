@@ -25,14 +25,10 @@ November 7, 2026 results:
 
 ## search_regulations
 
-Filter AI laws by jurisdiction, status or instrument type.
+Use `search_regulations("AB 1979", "California")` to find information.
 
 ```
-$ python3 get_valid_ai_reg.py 
-Initializing connection to regulations.ai MCP server...
-    MCP handshake successful.
-
-[DEBUG] {
+{
   "total": 1,
   "returned": 1,
   "results": [
@@ -66,8 +62,20 @@ Initializing connection to regulations.ai MCP server...
 }
 ```
 
+Validate results by checking against other reputable sources.  The ground_truth comes from [Bill Text: CA AB1979 | 2025-2026 | Regular Session | Chaptered](https://legiscan.com/CA/text/AB1979/id/3461144)
+
 ```
-Validating...
+    ground_truth = {
+        "jurisdiction": "California",
+        "titleEnglish": (
+            "AB-1979 Health care services: artificial intelligence."
+        ),
+        "snippet": ("This bill would require a health facility, clinic, physician’s office, or office of a group practice to take reasonable steps to ensure that a licensed health care professional, acting within their scope of practice, retains the ability to exercise independent professional judgment in their care of a patient whenever that care is informed by the output of a clinical decision support system, as defined. The bill would prohibit a health facility, clinic, physician’s office, or office of a group practice from using or deploying a tool, system, or device that includes artificial intelligence to independently perform any clinical function that is required by law to be performed by a person with a professional license.")
+    }
+```
+
+```
+Validating with a keyword search
 [JURISDICTION] California, United States
 
 [DEBUG]
