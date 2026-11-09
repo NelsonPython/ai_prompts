@@ -75,13 +75,10 @@ Validate results by checking against other reputable sources.  The ground_truth 
 ```
 
 ```
-Validating with a keyword search
+Validating with a keyword search:
 [JURISDICTION] California, United States
 
-[DEBUG]
-AB-1979 Health care services: artificial intelligence.
-California AB 1979 — Health Care Services: Artificial Intelligence
-
+Validating with a keyword search and semantic search.
 
                                ╭──────────────────────────────────────────────────────────────────────────────╮                                
                                │                                                                              │                                
@@ -99,13 +96,13 @@ California AB 1979 — Health Care Services: Artificial Intelligence
                                │                                                                              │                                
                                ╰──────────────────────────────────────────────────────────────────────────────╯                                
 
-
-[11/08/26 17:14:30] INFO     Starting MCP server 'Job Processing Server' with transport 'stdio'                                transport.py:241
+[11/08/26 17:14:30] INFO Starting MCP server 'Job Processing Server' with transport 'stdio' transport.py:241
 -> Running keyword search...
 [TITLE] California AB 1979 — Health Care Services: Artificial Intelligence
 ```
 
-```
+**Results for Human review**
+
 Last Updated
 2026-10-09T09:22:47.205Z
 
@@ -114,12 +111,12 @@ https://regulations.ai/regulations/RAI-US-CA-AB19790-2026
 
 Official sources:
 https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB1979
+
 https://www.gov.ca.gov/2026/09/30/californias-nation-leading-ai-framework-just-got-stronger-governor-newsom-signs-more-first-in-the-nation-worker-protections-and-more/
-```
 
+**Summary in JSON format**
 
 ```
-[11/08/26 17:14:31] INFO     Starting MCP server 'Job Processing Server' with transport 'stdio'                                transport.py:241
 [SUMMARY] {
   "keyRequirements": [
     {
