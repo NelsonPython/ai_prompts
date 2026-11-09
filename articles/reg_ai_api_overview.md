@@ -2,25 +2,9 @@
 
 *In-progress*
 
-# How can I find AI regulations?
+# AI regulation Review
 
 *[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp)* and use the MCP server that gives live access to AI laws around the world.
-
-## search
-
-Search everything — laws, definitions, enforcement, research, news. Returns ids, titles and links.
-
-## fetch
-
-Retrieve one record by id: the key facts, a summary, and the page it came from.
-
-## search_regulations
-
-Filter AI laws by jurisdiction, status or instrument type.
-
-## get_regulation
-
-One instrument: jurisdiction, status, dates, official source.
 
 ## recent_changes
 
@@ -41,14 +25,9 @@ November 7, 2026:
 4. **Circular Externa 002 de 2024 (Colombia AI Personal Data Rules)**: In force since 2024, this circular outlines guidelines for the processing of personal data in AI systems.
 5. **CCPA Updates, Cybersecurity Audits, Risk Assessments, Automated Decisionmaking Technology (ADMT), and Insurance Regulations (California)**: Adopted in 2026, this regulation updates CCPA rules, requires risk assessments and annual cybersecurity audits, and establishes ADMT access and opt-out rights.
 
+## search_regulations
 
-## get_glossary_term
-
-A term of art, with how many separate laws define it and how they differ.
-
-## list_jurisdictions
-
-Every jurisdiction covered, with counts.
+Filter AI laws by jurisdiction, status or instrument type.
 
 
 
