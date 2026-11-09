@@ -1,16 +1,14 @@
 <img src="images/reg_ai.jpg" width=1000 height=250>
 
-*In-progress*
+# Regulation.ai
 
-# Regulation.ai Overview
-
-*[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp)* and use the MCP server that gives live access to AI laws around the world.
+*[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp)* explains how to use the MCP server that gives live access to AI laws around the world.
 
 ## recent_changes
 
 What has moved recently. A general model cannot answer this — the corpus is re-scanned weekly.
 
-Example 1: "What are the recent changes in AI regulations?"
+Prompt:  "What are the recent changes in AI regulations?"
 
 ```
 🤖 Ollama invoked tool: `recent_changes` with args {}
