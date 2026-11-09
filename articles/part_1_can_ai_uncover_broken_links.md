@@ -22,7 +22,7 @@ curl -L -I http://example.com
 
 ## Test Drive the Link Checker
 
-To run `curl` from your MacBook Pro, open Finder, go to Apps, and open a Terminal window.  Enter the `curl` command and press enter.
+To run `curl` from your MacBook Pro, open Finder, go to Apps and open a Terminal window.  Enter the `curl` command and press enter.
 
 <img src="images/curl_mac.png" width=500>
 
