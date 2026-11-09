@@ -4,7 +4,7 @@
 
 ## Maintaining Web Links: Can AI Resolve 403 and 405 Errors?
 
-This article addresses what happens when your linker checker receives a status of `HTTP 403 Forbidden` or `HTTP 405 Method Not Allowed`.  In my [Portfolio](https://github.com/NelsonPython/publications) there more than 200 links.  The following Python function is part of a script that could verify most of the links, but it was not able to fully access some because it received `403` or `405` status codes.
+This article addresses what happens when your linker checker receives a status of `HTTP 403 Forbidden` or `HTTP 405 Method Not Allowed`.  In my [Portfolio](https://github.com/NelsonPython/publications) there more than 200 links.  The following Python function is part of a script that can verify most of the links, but it is not able to fully access some because it received `403` or `405` status codes.
 
 ```
 def check_link_with_curl(url):
