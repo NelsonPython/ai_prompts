@@ -45,7 +45,6 @@ CMIA privacy protections to certain health care chatbots. It preserves licensed 
   "note": "Free tier: facts and a snippet. The full analysis, sources and timeline are on the page — open the url and cite it."
 }
 ```
-
 Validate results by checking against other reputable sources.  The ground_truth comes from [Bill Text: CA AB1979 | 2025-2026 | Regular Session | Chaptered](https://legiscan.com/CA/text/AB1979/id/3461144)
 
 ```
@@ -63,7 +62,8 @@ using or deploying a tool, system, or device that includes artificial intelligen
 any clinical function that is required by law to be performed by a person with a professional license.")
     }
 ```
-Validate results against the ground truth.
+
+Results can be validated locally using keyword search and semantic search via FastMCP and small Ollama models. 
 
 ```
 Validating jurisdiction with a keyword search:
@@ -98,7 +98,7 @@ The input text 'AB-1979 Health care services: artificial intelligence' is essent
 [TITLE] California AB 1979 — Health Care Services: Artificial Intelligence
 ```
 
-**Results for Human review**
+**Sources for Human review**
 
 Last Updated
 2026-10-09T09:22:47.205Z
@@ -111,9 +111,10 @@ https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260A
 
 https://www.gov.ca.gov/2026/09/30/californias-nation-leading-ai-framework-just-got-stronger-governor-newsom-signs-more-first-in-the-nation-worker-protections-and-more/
 
+
 **Summary in JSON format**
 
-AI summarizes AB 1979 into JSON format for easy ingestion into downstream systems.  
+AI can summarize AB 1979 into JSON format for easy ingestion into downstream systems.  
 
 ```
 [SUMMARY] {
@@ -150,5 +151,6 @@ an injunction or restraining order to enforce these provisions."
       ]
     }
   ]
+}
 }
 ```
