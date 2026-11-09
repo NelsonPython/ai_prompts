@@ -2,30 +2,11 @@
 
 # Regulations.ai
 
-*[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp)* explains how to use the Regulations.ai MCP server that gives live access to AI laws around the world.
-
-## recent_changes
-
-A general model may not be able to find recent changes — the Regulations.ai corpus is re-scanned weekly.
-
-Prompt:  "What are the recent changes in AI regulations?"
-
-```
-🤖 Ollama invoked tool: `recent_changes` with args {}
-   Retrieved live data from MCP server.
-```
-
-November 7, 2026 results:
-
-1. **New York FAIR News Act**: Adopted in 2026, this law addresses transparency when generative AI creates news media content.
-2. **Política Nacional de Inteligencia Artificial (National Policy on Artificial Intelligence)**: Updated in 2026, this policy in Chile focuses on governance oversight, risk management, and accountability documentation.
-3. **Singapore Legal Sector GenAI Guide**: Adopted in 2026, this guide provides guidelines for using generative AI in the legal sector, emphasizing professional ethics, confidentiality, and transparency.
-4. **Circular Externa 002 de 2024 (Colombia AI Personal Data Rules)**: In force since 2024, this circular outlines guidelines for the processing of personal data in AI systems.
-5. **CCPA Updates, Cybersecurity Audits, Risk Assessments, Automated Decisionmaking Technology (ADMT), and Insurance Regulations (California)**: Adopted in 2026, this regulation updates CCPA rules, requires risk assessments and annual cybersecurity audits, and establishes ADMT access and opt-out rights.
+*[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp)* explains how to use the Regulations.ai MCP server to gain live access to AI laws around the world.
 
 ## search_regulations
 
-Use `search_regulations("AB 1979", "California")` to find information.
+Use `search_regulations("AB 1979", "California")` to find information about California AB 1979 — Health Care Services: Artificial Intelligence.  The results are in JSON format.
 
 ```
 {
@@ -73,12 +54,13 @@ Validate results by checking against other reputable sources.  The ground_truth 
         "snippet": ("This bill would require a health facility, clinic, physician’s office, or office of a group practice to take reasonable steps to ensure that a licensed health care professional, acting within their scope of practice, retains the ability to exercise independent professional judgment in their care of a patient whenever that care is informed by the output of a clinical decision support system, as defined. The bill would prohibit a health facility, clinic, physician’s office, or office of a group practice from using or deploying a tool, system, or device that includes artificial intelligence to independently perform any clinical function that is required by law to be performed by a person with a professional license.")
     }
 ```
+Validate results against the ground truth.
 
 ```
-Validating with a keyword search:
+Validating jurisdiction with a keyword search:
 [JURISDICTION] California, United States
 
-Validating with a keyword search and semantic search.
+Validating title with a keyword search followed with a semantic search if no keywords are found.
 
                                ╭──────────────────────────────────────────────────────────────────────────────╮                                
                                │                                                                              │                                
@@ -115,6 +97,8 @@ https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260A
 https://www.gov.ca.gov/2026/09/30/californias-nation-leading-ai-framework-just-got-stronger-governor-newsom-signs-more-first-in-the-nation-worker-protections-and-more/
 
 **Summary in JSON format**
+
+This script uses AI to summarize AB 1979 into JSON format for easy ingestion into downstream systems.
 
 ```
 [SUMMARY] {
