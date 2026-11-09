@@ -2,18 +2,18 @@
 
 *In-progress*
 
-# AI regulation Review
+# Regulation.ai Overview
 
 *[Connect your AI assistant to AI regulation data](https://regulations.ai/mcp)* and use the MCP server that gives live access to AI laws around the world.
 
 ## recent_changes
 
-What has moved recently. A general model cannot answer this — the corpus is rescanned weekly.
+What has moved recently. A general model cannot answer this — the corpus is re-scanned weekly.
 
 Example 1: "What are the recent changes in AI regulations?"
 
 ```
-   🤖 Ollama invoked tool: `recent_changes` with args {}
+🤖 Ollama invoked tool: `recent_changes` with args {}
    Retrieved live data from MCP server.
 ```
 
@@ -29,8 +29,7 @@ November 7, 2026:
 
 Filter AI laws by jurisdiction, status or instrument type.
 
-
-
+```
 $ python3 get_valid_ai_reg.py 
 Initializing connection to regulations.ai MCP server...
     MCP handshake successful.
@@ -67,8 +66,9 @@ Initializing connection to regulations.ai MCP server...
   ],
   "note": "Free tier: facts and a snippet. The full analysis, sources and timeline are on the page — open the url and cite it."
 }
+```
 
-
+```
 Validating...
 [JURISDICTION] California, United States
 
@@ -97,7 +97,9 @@ California AB 1979 — Health Care Services: Artificial Intelligence
 [11/08/26 17:14:30] INFO     Starting MCP server 'Job Processing Server' with transport 'stdio'                                transport.py:241
 -> Running keyword search...
 [TITLE] California AB 1979 — Health Care Services: Artificial Intelligence
+```
 
+```
 Last Updated
 2026-10-09T09:22:47.205Z
 
@@ -107,25 +109,10 @@ https://regulations.ai/regulations/RAI-US-CA-AB19790-2026
 Official sources:
 https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB1979
 https://www.gov.ca.gov/2026/09/30/californias-nation-leading-ai-framework-just-got-stronger-governor-newsom-signs-more-first-in-the-nation-worker-protections-and-more/
+```
 
 
-                               ╭──────────────────────────────────────────────────────────────────────────────╮                                
-                               │                                                                              │                                
-                               │                                                                              │                                
-                               │                         ▄▀▀ ▄▀█ █▀▀ ▀█▀ █▀▄▀█ █▀▀ █▀█                        │                                
-                               │                         █▀  █▀█ ▄▄█  █  █ ▀ █ █▄▄ █▀▀                        │                                
-                               │                                                                              │                                
-                               │                                                                              │                                
-                               │                                                                              │                                
-                               │                                FastMCP 4.1.6                                 │                                
-                               │                            https://gofastmcp.com                             │                                
-                               │                                                                              │                                
-                               │                 🖥  Server:      Job Processing Server, 4.1.6                 │                                
-                               │                 🚀 Deploy free: https://horizon.prefect.io                   │                                
-                               │                                                                              │                                
-                               ╰──────────────────────────────────────────────────────────────────────────────╯                                
-
-
+```
 [11/08/26 17:14:31] INFO     Starting MCP server 'Job Processing Server' with transport 'stdio'                                transport.py:241
 [SUMMARY] {
   "keyRequirements": [
@@ -155,9 +142,4 @@ https://www.gov.ca.gov/2026/09/30/californias-nation-leading-ai-framework-just-g
     }
   ]
 }
-
-
-## compare_regulations
-
-Two to five instruments side by side.
-
+```
