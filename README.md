@@ -8,6 +8,8 @@
 
 [AI Prompt for Graphic Design](articles/ai_prompt_graphic_design.md)
 
+[AI Prompt for Drafting an Executive Summary](articles/NIST_SP_2400_102.md)
+
 ## Beyond the Launch:  AI Prompts for Web Content Maintenance
 
 [Maintaining Web Links:  Can AI Uncover Broken Links?](articles/part_1_can_ai_uncover_broken_links.md)
