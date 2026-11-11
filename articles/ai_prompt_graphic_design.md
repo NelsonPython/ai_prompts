@@ -27,7 +27,7 @@ Take a look at this bill from Southern California Edison.  Notice anything confu
 
 <img src="images/nem_sce_electric_bill.jpg" width=700>
 
-If you are curious, click on [Net Energy Metering](net_energy_metering.md) for the explanation.
+If you are curious, click on [Electric Bill:  Net Energy Metering](net_energy_metering.md) for the explanation.
 
 
 
