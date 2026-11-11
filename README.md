@@ -2,7 +2,7 @@
 
 # BLOG: The AI Prompt Investigator
 
-*At its core, this blog is an exploration of how humans and AI can effectively co-author technical content.*
+*At its core, this blog is an exploration of how Humans and AI can effectively co-author technical content.*
 
 ## AI Prompts
 
@@ -10,19 +10,13 @@
 
 [AI Prompt for Drafting an Executive Summary](articles/NIST_SP_2400_102.md)
 
+[AI Prompt Engineering for Code to Docs](https://github.com/NelsonPython/publications/blob/main/code_to_docs/agentic_docs/readme.md)
+
 ## Beyond the Launch:  AI Prompts for Web Content Maintenance
 
 [Maintaining Web Links:  Can AI Uncover Broken Links?](articles/part_1_can_ai_uncover_broken_links.md)
 
 [Maintaining Web Links: Can AI Resolve 403 and 405 Errors?](articles/part_2_ai_advice_for_handling_http_403_405.md)
-
-## Experimenting with Agentic AI
-
-[AI Prompt Engineering for Code to Docs](https://github.com/NelsonPython/publications/blob/main/code_to_docs/agentic_docs/readme.md)
-
-[Part 1:  Validating AI Prompt Responses](articles/part_1_validating_ai_prompt.md) - Prompt Engineering
-
-[Part 2:  Validating AI Prompt Responses](articles/part_2_validating_ai_prompt.md) - RAG and the Vector Database
 
 
 ## The AI Explainer
@@ -35,11 +29,19 @@
 
 ### How the AI Explainer works:
 
-**AI Prompt:** A human writes instructions for AI.
+**AI Prompt:** A human writes instructions.
 
-**AI Model:** AI creates images, writes code, or types content.
+**AI Model:** AI creates content.
 
 **Validator:** AI can run some fact checks, but a human has the final responsibility for correcting any mistakes.
+
+---
+
+## Experimenting with Agentic AI
+
+[Part 1:  Validating AI Prompt Responses](articles/part_1_validating_ai_prompt.md) - Prompt Engineering
+
+[Part 2:  Validating AI Prompt Responses](articles/part_2_validating_ai_prompt.md) - RAG and the Vector Database
 
 ---
 
