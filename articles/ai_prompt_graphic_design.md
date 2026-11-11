@@ -23,7 +23,7 @@ Gemini produced this graphic:
 
 ## Why write about Net Energy Metering (NEM)?
 
-Take a look at this bill from Southern California Edison.  Notice anything confusing?
+Take a look at this electric bill from Southern California Edison.  Notice anything confusing?
 
 <img src="images/nem_sce_electric_bill.jpg" width=700>
 
