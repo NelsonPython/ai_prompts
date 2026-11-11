@@ -37,7 +37,7 @@
 
 ---
 
-## Experimenting with Agentic AI
+## Agentic AI Experiments
 
 [Part 1:  Validating AI Prompt Responses](articles/part_1_validating_ai_prompt.md) - Prompt Engineering
 
