@@ -47,9 +47,9 @@
 
 **References**
 
-[DeepLearning.AI ChatGPT Prompt Engineering](https://www.deeplearning.ai/courses/chatgpt-prompt-eng)
-
 [DeepLearning.AI Agentic AI ](https://www.deeplearning.ai/courses/agentic-ai)
+
+[DeepLearning.AI ChatGPT Prompt Engineering](https://www.deeplearning.ai/courses/chatgpt-prompt-eng)
 
 [DeepLearning.AI RAG in Action](https://www.deeplearning.ai/courses/retrieval-augmented-generation)
 
