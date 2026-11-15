@@ -8,6 +8,8 @@ When I first tried using AI to distill my sprawling work history into a sharp, t
 
 I revised the prompt - same result.  I asked Gemini to revise the prompt - same result.  I asked other AI to revise the prompt - same.  I stopped revising the prompt and started preprocessing the data.
 
+<img src="images/hockey_mask_json.jpeg" width=1000 height=250>
+
 ## JSON
 
 In 2001, JSON (JavaScript Object Notation) was introduced as a human and machine readable format.  It became the universal standard for sending data over the internet.  Today, AI can use JSON to organize its unpredictable responses. 
