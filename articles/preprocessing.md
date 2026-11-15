@@ -123,4 +123,7 @@ def fuzzy_search_rapidfuzz(target_phrase: str, text_lines: list[str], score_cuto
 
 Given that preprocessing found 13 or 17 skill sets listed in my resume, the semantic search only has to process the remaining 4.  This dramatically reduces the amount of time and resources used by AI.
 
+The pipeline produces a prompt for the model to analyze.  In this case, AI did not find another match.  Preprocessing data may not be glamorous but it is fast and effective.
+
+
 
