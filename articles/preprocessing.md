@@ -61,6 +61,8 @@ I encoded my entire resume into JSON format with separate sections for Core Comp
 }
 
 ```
+<img src="images/count_vectorizer.jpeg" width=1000 height=250>
+
 ## [CountVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html)
 
 ```
