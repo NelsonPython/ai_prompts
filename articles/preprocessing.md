@@ -89,3 +89,35 @@ def extract_job_desc_keywords(text, custom_stopwords=None, top_n=20):
     return job_keyword_counts, job_keywords
 ```
 
+## Fuzzy Search
+
+Fuzzy searching looks for near matches and returns a percentage.  I selected 70% as the match criteria.
+
+```
+def fuzzy_search_rapidfuzz(target_phrase: str, text_lines: list[str], score_cutoff: int = 70):
+    """
+    Uses RapidFuzz token_set_ratio which handles typos, word order changes, 
+    and matching short phrases within long lines.
+    """
+    # process.extract returns tuples of (matched_string, score, index)
+    results = process.extract(
+        target_phrase, 
+        text_lines, 
+        scorer=fuzz.token_set_ratio, 
+        score_cutoff=score_cutoff
+    )
+
+    matches = []
+    for line, score, idx in results:
+        matches.append({
+            "line_number": idx + 1,
+            "score": round(score, 2),
+            "line": line
+        })
+    
+    return matches
+```
+
+## Semantic Search
+
+Having found 
