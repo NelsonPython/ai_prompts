@@ -69,7 +69,7 @@ I encoded my entire resume into JSON format with separate sections for Core Comp
 
 ## [CountVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html)
 
-Job descriptions are keyword-heavy documents listing skills, tools, and methodologies.  This function extracts words along with counts.  If you change `ngram_range=(1,2)` it will extract short phrases such as "machine learning".  ENGLISH_STOP_WORDS contains grammar words such as "the or a".  I added a custom list of terms, `custom_stopwords`, including "collaborate, desired, experience..."  I also overrode the `top_n=20` limit and chose the top 150 words.
+Job descriptions are keyword-heavy documents listing skills, tools, and methodologies.  This function extracts words along with counts.  If you change `ngram_range=(1,2)` it will extract short phrases such as "machine learning".  ENGLISH_STOP_WORDS contains grammar words such as "the or a".  I added a custom list of terms, `custom_stopwords`, including "collaborate, desired, experience..."  I also overrode the `top_n=20` limit and chose the top 150 words.  This simple keyword search found that 12 out of 17 skills listed in my experience aligned with the job requirements. 
 
 ```
 from sklearn.feature_extraction.text import CountVectorizer, ENGLISH_STOP_WORDS
@@ -92,7 +92,7 @@ def extract_job_desc_keywords(text, custom_stopwords=None, top_n=20):
 
 ## Fuzzy Search
 
-Fuzzy searching looks for near matches and returns a percentage.  I used [RapidFuzz](https://pypi.org/project/RapidFuzz/) and selected a match criteria or score of 70%.
+Fuzzy searching looks for near matches and returns a percentage.  I used [RapidFuzz](https://pypi.org/project/RapidFuzz/) and selected a match criteria or score of 70%.  The pipeline is smart so that the fuzzy search targets any experience that the keyword search missed.  In this case, it processed 5 skill sets and found one match.
 
 ```
 def fuzzy_search_rapidfuzz(target_phrase: str, text_lines: list[str], score_cutoff: int = 70):
@@ -123,4 +123,6 @@ def fuzzy_search_rapidfuzz(target_phrase: str, text_lines: list[str], score_cuto
 
 ## Semantic Search
 
-Having found 
+Given that preprocessing found 13 or 17 skill sets listed in my resume, the semantic search only has to process the remaining 4.  This dramatically reduces the amount of time and resources used by AI.
+
+
