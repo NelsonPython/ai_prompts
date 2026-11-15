@@ -91,7 +91,7 @@ def extract_job_desc_keywords(text, custom_stopwords=None, top_n=20):
 
 ## Fuzzy Search
 
-Fuzzy searching looks for near matches and returns a percentage.  I selected 70% as the match criteria.
+Fuzzy searching looks for near matches and returns a percentage.  I used [RapidFuzz](https://pypi.org/project/RapidFuzz/) and selected a match criteria or score of 70%.
 
 ```
 def fuzzy_search_rapidfuzz(target_phrase: str, text_lines: list[str], score_cutoff: int = 70):
