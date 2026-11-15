@@ -10,7 +10,7 @@ I revised the prompt - same result.  I asked Gemini to revise the prompt - same 
 
 ## Preprocessing Data
 
-<img src="images/hockey_mask_json.jpeg" width=1000 height=250>
+<img src="images/json.jpeg" width=1000 height=250>
 
 ## JSON
 
