@@ -88,6 +88,7 @@ def extract_job_desc_keywords(text, custom_stopwords=None, top_n=20):
     job_keywords = [item[0] for item in job_keyword_counts]
     return job_keyword_counts, job_keywords
 ```
+<img src="images/fuzzy_search.jpeg" width=1000 height=250>
 
 ## Fuzzy Search
 
@@ -117,6 +118,8 @@ def fuzzy_search_rapidfuzz(target_phrase: str, text_lines: list[str], score_cuto
     
     return matches
 ```
+<img src="images/semantic_search.jpeg" width=1000 height=250>
+
 
 ## Semantic Search
 
