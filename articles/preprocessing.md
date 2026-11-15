@@ -69,6 +69,8 @@ I encoded my entire resume into JSON format with separate sections for Core Comp
 
 ## [CountVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html)
 
+Job descriptions are keyword-heavy documents listing skills, tools, and methodologies.  This function extracts words along with counts.  If you change `ngram_range=(1,2)` it will extract short phrases such as "machine learning".  ENGLISH_STOP_WORDS contains grammar words such as "the or a".  I added a custom list of terms, `custom_stopwords`, including "collaborate, desired, experience..."  I also overrode the `top_n=20` limit and chose the top 150 words.
+
 ```
 from sklearn.feature_extraction.text import CountVectorizer, ENGLISH_STOP_WORDS
 
