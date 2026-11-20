@@ -15,7 +15,7 @@ Vector embeddings can be stored in a vector database.  [LanceDB](https://www.lan
 
 ## Example:  Matching Skills to Job Requirements
 
-Gemini wrote the following script to load the LanceDB database.  First, it ingests resume data into a LanceDB database.  Then, it opens the full resume and reads the Professional Experience section.  Next, it computes embeddings and stores them in a LanceDB database.  Run this script once to store embeddings for future queries. 
+Gemini wrote the following script to load the LanceDB database.  First, it ingests resume data into a LanceDB database.  Then, it opens the full resume and reads the Professional Experience section.  Next, it computes embeddings and stores them in a LanceDB database.  This script was executed once to store embeddings for future queries. 
 
 ```
 import json
