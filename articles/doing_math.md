@@ -28,7 +28,7 @@ Calculating 23775 * 400:
 23775 * 4 is 95100,
 then times 100 is 9,510,000.
 
-Then 23775 * 12:Let's compute that.
+Then 23775 * 12:  Let's compute that.
 23775 * 10 is 237750, and
 23775 * 2 is 47550.
 Adding those together: 237750 + 47550 = 285,300.
