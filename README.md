@@ -45,6 +45,8 @@
 
 [Part 2:  Validating AI Prompt Responses](articles/part_2_validating_ai_prompt.md) - RAG and the Vector Database
 
+[Agentic Loops](articles/doing_math.md)
+
 ---
 
 **References**
