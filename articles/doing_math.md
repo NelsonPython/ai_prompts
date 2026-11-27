@@ -170,4 +170,4 @@ while True:
 ```
 
 
-**Reference** [Tool-calling](https://docs.ollama.com/capabilities/tool-calling)
+**Reference** [Multi-turn tool-calling agent loop]([)](https://docs.ollama.com/capabilities/tool-calling#multi-turn-tool-calling-agent-loop)
