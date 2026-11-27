@@ -1,6 +1,7 @@
 
 # AI Doing Math
 
+[Tool-calling](https://docs.ollama.com/capabilities/tool-calling)
 
 
 
