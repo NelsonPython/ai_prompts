@@ -3,7 +3,7 @@
 
 # Ollama Agentic Tool-Calling Loops
 
-LLMs struggle with complex arithmetic, date calculations, and financial formulas.   These computing tasks can be offloaded to functions while the model acts as a conversational interface.  Ollama models have a thinking mode that exposes their thought processes.  Here's an example of the inner most thoughts of `qwen3:1.7b` when asked to solve a math problem.  The model has been given two tools that it may or may not decide to use.
+LLMs struggle with complex arithmetic, date calculations, and financial formulas.   These computing tasks can be offloaded to functions while the model acts as a conversational interface.  Some Ollama models have a thinking mode that exposes their thought processes.  Here's an example of the inner most thoughts of `qwen3:1.7b` when asked to solve a math problem.  The model has been given two tools that it may or may not decide to use.
 
 ```
 Thinking:  Okay, let's see. The user is asking for the calculation of (11434 + 12341) multiplied by 412.
