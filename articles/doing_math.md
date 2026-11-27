@@ -1,9 +1,11 @@
 
-# AI Using Tools
+# Agentic Loops
 
+Below are the inner most thoughts of AI as it attempts to solve a math equation:
 
 ```
 $ python3 test_do_math.py 
+
 Thinking:  Okay, let's see. The user is asking for the calculation of (11434 + 12341) multiplied by 412.
 First, I need to break this down step by step.
 
