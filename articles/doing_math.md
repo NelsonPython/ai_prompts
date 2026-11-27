@@ -1,4 +1,6 @@
 
+<img src="images/ollama_doing_math.jpg" width=1000 height=250>
+
 # Agentic Loops
 
 Below are the inner most thoughts of AI as it attempts to solve a math equation:
