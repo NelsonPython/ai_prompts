@@ -76,9 +76,9 @@ Final Answer: 9,795,300
 
 ```
 
-## Agent Loop
+## How it works
 
-An agent loop allows the model to decide when to call tools.  Depending on the task, it may be necessary to tell the model that it can loop through multiple calls.  The model used in this example required 1.4 GB of space.
+First, install the model.  This model required 1.4 GB of space.
 
 ```
 $ ollama pull qwen3:1.7b
@@ -89,12 +89,15 @@ writing manifest
 success 
 ```
 
-In this example, the Python function `add` adds two integers. 
+Next, review the Python script.  In this example, an agent loop allows the model to decide when to call tools.  Begin by importing the ollama chat function so you can send messages to the model.  It will respond with a structure object called `ChatResponse`.
 
 ```
 from ollama import chat, ChatResponse
+```
 
+The first  Python function `add` adds two integers. 
 
+```
 def add(a: int, b: int) -> int:
   """Add two numbers"""
   """
@@ -108,7 +111,7 @@ def add(a: int, b: int) -> int:
   return a + b
 ```
 
-The Python function `multiply` multiplies two integers.
+The second Python function `multiply` multiplies two integers.
 
 ```
 def multiply(a: int, b: int) -> int:
@@ -124,7 +127,7 @@ def multiply(a: int, b: int) -> int:
   return a * b
 ```
 
-There are two available functions, `add` and `multiply`.
+Next, the script tells the model that there are two available functions, `add` and `multiply`.
 
 ```
 available_functions = {
@@ -132,13 +135,14 @@ available_functions = {
   'multiply': multiply,
 }
 ```
-A message is sent to the model by the user asking "What is the sum of 11434 + 12341, multiplied by 412?  
+
+A message has been sent to the model by the user asking *What is the sum of 11434 + 12341, multiplied by 412?*  
 
 ```
 messages = [{'role': 'user', 'content': 'What is (11434+12341)*412?'}]
 ```
 
-While processing, the model can call the available tools and output messages.  
+The agent loops through this block of instructions while the model is working to answer the user's question.  It can output messages and call the available tools.  Because this model can `think`, messages can be printed to the console as shown above.  This provides insight into how the model uses tools to solve the equation.  
 
 ```
 while True:
