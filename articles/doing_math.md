@@ -65,12 +65,12 @@ Then I had to multiply that result by 412. The multiply function was called with
 resulting in 9795300. The user's final answer was 9795300, which matches my calculation.
 So the correct answer is 9795300.
 
-Content:  The result of (11434 + 12341) * 412 is calculated as follows:
+Content:  The result of (11,434 + 12,341) * 412 is calculated as follows:
 
-1. **Addition**: 11434 + 12341 = 23775
-2. **Multiplication**: 23775 * 412 = 9795300
+1. **Addition**: 11,434 + 12,341 = 23,775
+2. **Multiplication**: 23,775 * 412 = 9,795,300
 
-Final Answer: $\boxed{9795300}$
+Final Answer: 9,795,300
 
 ```
 
