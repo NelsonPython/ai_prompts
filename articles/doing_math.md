@@ -23,9 +23,14 @@ Now, multiply that result by 412. So 23775 * 412. Hmm, that's a big number. Let 
 to compute this. Maybe break it down using the distributive property. 412 can be broken into
 400 + 12. So, 23775 * 400 + 23775 * 12.
 
-Calculating 23775 * 400: 23775 * 4 * 100. 23775 * 4 is 95100, then times 100 is 9,510,000.
+Calculating 23775 * 400:
+23775 * 4 * 100.
+23775 * 4 is 95100,
+then times 100 is 9,510,000.
 
-Then 23775 * 12: Let's compute that. 23775 * 10 is 237750, and 23775 * 2 is 47550.
+Then 23775 * 12:Let's compute that.
+23775 * 10 is 237750, and
+23775 * 2 is 47550.
 Adding those together: 237750 + 47550 = 285,300.
 
 Now add the two results: 9,510,000 + 285,300 = 9,795,300.
