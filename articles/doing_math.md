@@ -3,7 +3,7 @@
 
 # Agentic Loops
 
-Below are the inner most thoughts of AI as it attempts to solve a math equation:
+Below are the inner most thoughts of AI as it solves a math problem:
 
 ```
 $ python3 test_do_math.py 
