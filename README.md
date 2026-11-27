@@ -12,12 +12,24 @@
 
 [AI Prompt Engineering for Code to Docs](https://github.com/NelsonPython/publications/blob/main/code_to_docs/agentic_docs/readme.md)
 
-## Beyond the Launch:  AI Prompts for Web Content Maintenance
-
 [Maintaining Web Links:  Can AI Uncover Broken Links?](articles/part_1_can_ai_uncover_broken_links.md)
 
 [Maintaining Web Links: Can AI Resolve 403 and 405 Errors?](articles/part_2_ai_advice_for_handling_http_403_405.md)
 
+
+---
+
+## Agentic AI Experiments
+
+[Ollama Agentic Tool-Calling Loops](articles/doing_math.md)
+
+[Part 1:  Validating AI Prompt Responses](articles/part_1_validating_ai_prompt.md) - Prompt Engineering
+
+[Part 2:  Validating AI Prompt Responses](articles/part_2_validating_ai_prompt.md) - RAG and the Vector Database
+
+[The Power of Preprocessing Data](articles/preprocessing.md)
+
+---
 
 ## The AI Explainer
 
@@ -34,18 +46,6 @@
 **AI Model:** AI creates content.
 
 **Validator:** AI can run some fact checks, but a human has the final responsibility for correcting any mistakes.
-
----
-
-## Agentic AI Experiments
-
-[Ollama Agentic Tool-Calling Loops](articles/doing_math.md)
-
-[Part 1:  Validating AI Prompt Responses](articles/part_1_validating_ai_prompt.md) - Prompt Engineering
-
-[Part 2:  Validating AI Prompt Responses](articles/part_2_validating_ai_prompt.md) - RAG and the Vector Database
-
-[The Power of Preprocessing Data](articles/preprocessing.md)
 
 ---
 
