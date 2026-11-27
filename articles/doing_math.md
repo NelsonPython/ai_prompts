@@ -1,12 +1,9 @@
 
-# AI Doing Math
-
-[Tool-calling](https://docs.ollama.com/capabilities/tool-calling)
-
+# AI Using Tools
 
 
 ```
-$ python3 test_ollama.py 
+$ python3 test_do_math.py 
 Thinking:  Okay, let's see. The user is asking for the calculation of (11434 + 12341) multiplied by 412. First, I need to break this down step by step.
 
 Starting with the addition part: 11434 plus 12341. Let me add those numbers. 11434 + 12341... Let's do the addition. 11434 + 12341. Adding the thousands: 11 + 12 is 23, then the hundreds: 4 + 3 is 7, tens: 3 + 4 is 7, and units: 4 + 1 is 5. So combined, that's 23775? Wait, let me check again. 11434 + 12341. Maybe I should add them properly. 11434 + 12341. Let's line them up:
@@ -48,7 +45,14 @@ Content:  The result of $(11434 + 12341) \times 412$ is calculated as follows:
 
 1. **Addition**: $11434 + 12341 = 23775$
 2. **Multiplication**: $23775 \times 412 = 9795300$
+
+Final Answer: $\boxed{9795300}$
+
 ```
+
+## Agent Loop
+
+An agent loop allows the model to decide when to call tools.  Depending on the task, it may be necessary to tell the model that it can loop through multiple calls.  The model used in this example required 1.4 GB of space.
 
 ```
 $ ollama pull qwen3:1.7b
@@ -59,6 +63,7 @@ writing manifest
 success 
 ```
 
+In this example, the Python function `add` adds two integers. 
 
 ```
 from ollama import chat, ChatResponse
@@ -75,8 +80,11 @@ def add(a: int, b: int) -> int:
     The sum of the two numbers
   """
   return a + b
+```
 
+The Python function `multiply` multiplies two integers.
 
+```
 def multiply(a: int, b: int) -> int:
   """Multiply two numbers"""
   """
@@ -88,14 +96,25 @@ def multiply(a: int, b: int) -> int:
     The product of the two numbers
   """
   return a * b
+```
 
+There are two available functions, `add` and `multiply`.
 
+```
 available_functions = {
   'add': add,
   'multiply': multiply,
 }
+```
+A message is sent to the model by the user asking "What is the sum of 11434 + 12341, multiplied by 412?  
 
+```
 messages = [{'role': 'user', 'content': 'What is (11434+12341)*412?'}]
+```
+
+While processing, the model can call the available tools and output messages.  
+
+```
 while True:
     response: ChatResponse = chat(
         model='qwen3:1.7b',
@@ -120,4 +139,5 @@ while True:
   # continue the loop with the updated messages
 ```
 
-Final Answer: $\boxed{9795300}$
+
+**Reference** [Tool-calling](https://docs.ollama.com/capabilities/tool-calling)
