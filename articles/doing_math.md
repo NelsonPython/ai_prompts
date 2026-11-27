@@ -3,7 +3,7 @@
 
 # Ollama Agentic Tool-Calling Loops
 
-Below are the inner most thoughts of AI as it solves a math problem:
+Some Ollama models have a thinking mode that exposes their thought processes.  Here's an example of the inner most thoughts of `qwen3:1.7b` when asked to solve a math problem:
 
 ```
 $ python3 test_do_math.py 
