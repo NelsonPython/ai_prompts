@@ -6,8 +6,6 @@
 Some Ollama models have a thinking mode that exposes their thought processes.  Here's an example of the inner most thoughts of `qwen3:1.7b` when asked to solve a math problem:
 
 ```
-$ python3 test_do_math.py 
-
 Thinking:  Okay, let's see. The user is asking for the calculation of (11434 + 12341) multiplied by 412.
 First, I need to break this down step by step.
 
