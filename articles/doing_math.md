@@ -35,8 +35,10 @@ Adding those together: 237750 + 47550 = 285,300.
 
 Now add the two results: 9,510,000 + 285,300 = 9,795,300.
 
-Wait, let me verify that again. 9,510,000 plus 285,300. Adding the thousands:
-9,510,000 + 200,000 = 9,710,000. Then add 85,300: 9,710,000 + 85,300 = 9,795,300.
+Wait, let me verify that again. 9,510,000 plus 285,300.
+Adding the thousands:
+9,510,000 + 200,000 = 9,710,000.
+Then add 85,300: 9,710,000 + 85,300 = 9,795,300.
 Yes, that seems right.
 
 So the final answer is 9,795,300. But let me check if there's a simpler way or
