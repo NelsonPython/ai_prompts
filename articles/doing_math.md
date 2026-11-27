@@ -1,7 +1,7 @@
 
 <img src="images/ollama_doing_math.jpg" width=1000 height=250>
 
-# Agentic Loops
+# Agentic Tool Calling Loop
 
 Below are the inner most thoughts of AI as it solves a math problem:
 
